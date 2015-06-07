@@ -44,7 +44,8 @@ class I18nMessageSearch extends I18nMessage
         $query = I18nMessage::find()->with('sourceMessageModel')->joinWith('sourceMessageModel');
 
         $dataProvider = new ActiveDataProvider([
-            'query' => $query
+            'query' => $query,
+            'sort'=> ['defaultOrder' => ['id'=>SORT_DESC]]
         ]);
 
         if (!($this->load($params) && $this->validate())) {

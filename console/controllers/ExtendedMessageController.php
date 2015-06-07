@@ -16,6 +16,7 @@ use yii\helpers\VarDumper;
 /**
  * Class ExtendedMessageController
  * @package console\controllers
+ * use as: yii message/migrate @common/config/messages/php.php @common/config/messages/db.php
  */
 class ExtendedMessageController extends \yii\console\controllers\MessageController
 {

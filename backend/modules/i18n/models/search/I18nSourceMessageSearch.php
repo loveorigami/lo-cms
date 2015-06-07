@@ -45,6 +45,7 @@ class I18nSourceMessageSearch extends I18nSourceMessage
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['id'=>SORT_DESC]]
         ]);
 
         if (!($this->load($params) && $this->validate())) {

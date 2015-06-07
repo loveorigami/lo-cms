@@ -148,17 +148,17 @@ use yii\widgets\Breadcrumbs;
                             ]
                         ],
                         [
-                            'label'=>Yii::t('backend', 'Users'),
+                            'label'=>Yii::t('rbac-admin', 'Users'),
                             'icon'=>'<i class="fa fa-users"></i>',
                             'options'=>['class'=>'treeview'],
                             'visible'=>Yii::$app->user->can('root'),
                             'items'=>[
                                 ['label'=>Yii::t('backend', 'Users'), 'url'=>['/user/admin/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Assignment'), 'url'=>['/admin/assignment/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Permission'), 'url'=>['/admin/permission/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Role'), 'url'=>['/admin/role/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Route'), 'url'=>['/admin/route/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Rule'), 'url'=>['/admin/rule/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
+                                ['label'=>Yii::t('rbac-admin', 'Assignment'), 'url'=>['/admin/assignment/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
+                                ['label'=>Yii::t('rbac-admin', 'Permission'), 'url'=>['/admin/permission/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
+                                ['label'=>Yii::t('rbac-admin', 'Role'), 'url'=>['/admin/role/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
+                                ['label'=>Yii::t('rbac-admin', 'Route'), 'url'=>['/admin/route/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
+                                ['label'=>Yii::t('rbac-admin', 'Rule'), 'url'=>['/admin/rule/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
                             ]
                         ],
                         [
