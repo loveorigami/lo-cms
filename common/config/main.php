@@ -4,13 +4,7 @@ return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'sourceLanguage' => 'en-US',
     'language' => 'ru-Ru',
-    'modules' => [
-        'rbac' => [
-            'class' => 'dektrium\rbac\Module',
-            'enableFlashMessages' => false,
-            'admins'=>['webmaster'],
-        ],
-    ],
+    'modules' => [],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

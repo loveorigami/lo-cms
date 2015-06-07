@@ -16,13 +16,34 @@ return [
             'class' => 'dektrium\user\Module',
             'enableFlashMessages' => false,
             'enableRegistration' => false,
+            'enableGeneratingPassword' => false,
+            'enableConfirmation' => false,
             'enableUnconfirmedLogin' => false,
+            'enablePasswordRecovery' => false,
             'confirmWithin' => 21600,
             'cost' => 12,
             'admins' => ['webmaster']
         ],
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
+            'controllerMap' => [
+                'assignment' => [
+                    'class' => 'mdm\admin\controllers\AssignmentController',
+                    'userClassName' => 'dektrium\user\models\User',
+                    'idField' => 'id', // id field of model User
+                ]
+            ],
+        ],
     ],
-
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'site/login',
+            'site/error',
+            'site/logout'
+        ]
+    ],
     'components' => [
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -33,10 +54,10 @@ return [
                 ],
             ],
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+        ],
 		'urlManager'=>require(__DIR__.'/_urlManager.php'),
-/*        'session' => [
-            'name' => 'BACKENDSESSID',
-        ],*/
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
