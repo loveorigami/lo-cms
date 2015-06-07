@@ -14,6 +14,7 @@ return [
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
+           // 'layout' => '@backend/views/layouts/common',
             'enableFlashMessages' => false,
             'enableRegistration' => false,
             'enableGeneratingPassword' => false,
@@ -22,11 +23,11 @@ return [
             'enablePasswordRecovery' => false,
             'confirmWithin' => 21600,
             'cost' => 12,
-            'admins' => ['webmaster']
+            'admins' => ['webmaster'],
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
-            'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
+           // 'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
             'controllerMap' => [
                 'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
@@ -35,29 +36,24 @@ return [
                 ]
             ],
         ],
+        'i18n' => [
+            'class' => 'backend\modules\i18n\Module',
+            'defaultRoute' => 'i18n-message/index'
+        ]
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'site/login',
             'site/error',
-            'site/logout'
+            'user/security/login',
+            'user/security/logout'
         ]
     ],
     'components' => [
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
         ],
-		'urlManager'=>require(__DIR__.'/_urlManager.php'),
+        'urlManager' => require(__DIR__ . '/_urlManager.php'),
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

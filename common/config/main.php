@@ -24,5 +24,51 @@ return [
             'thousandSeparator' => ' ',
             // 'currencyCode' => 'EUR',
         ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                'db'=>[
+                    'class' => 'yii\log\DbTarget',
+                    'levels' => ['error', 'warning'],
+                    'except'=>['yii\web\HttpException:*', 'yii\i18n\I18N\*'],
+                    'prefix'=>function () {
+                        $url = !Yii::$app->request->isConsoleRequest ? Yii::$app->request->getUrl() : null;
+                        return sprintf('[%s][%s]', Yii::$app->id, $url);
+                    },
+                    'logVars'=>[],
+                    'logTable'=>'{{%system_log}}'
+                ]
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'app'=>[
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath'=>'@common/messages',
+                ],
+                '*'=> [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath'=>'@common/messages',
+                    'fileMap'=>[
+                        'common'=>'common.php',
+                        'backend'=>'backend.php',
+                        'frontend'=>'frontend.php',
+                    ]
+                ],
+                /* Uncomment this code to use DbMessageSource
+                 '*'=> [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'sourceMessageTable'=>'{{%i18n_source_message}}',
+                    'messageTable'=>'{{%i18n_message}}',
+                    'enableCaching' => YII_ENV_DEV,
+                    'cachingDuration' => 3600
+                ],
+                */
+
+            ],
+        ],
+        'keyStorage' => [
+            'class' => 'common\components\keyStorage\KeyStorage'
+        ],
     ],
 ];

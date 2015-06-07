@@ -11,15 +11,18 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
-    'components' => [
-        'log' => [
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
+    'controllerMap'=>[
+        'message'=>[
+            'class'=>'console\controllers\ExtendedMessageController'
         ],
+        'migrate'=>[
+            'class'=>'yii\console\controllers\MigrateController',
+            'migrationPath'=>'@common/migrations',
+            'migrationTable'=>'{{%system_migration}}'
+        ],
+/*        'rbac'=>[
+            'class'=>'console\controllers\RbacController'
+        ]*/
     ],
     'params' => $params,
 ];
