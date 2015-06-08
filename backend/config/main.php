@@ -27,14 +27,14 @@ return [
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
-           // 'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
+            //'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
             'controllerMap' => [
                 'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
                     'userClassName' => 'dektrium\user\models\User',
                     'idField' => 'id', // id field of model User
-                ]
-            ],
+                ],
+            ]
         ],
         'i18n' => [
             'class' => 'backend\modules\i18n\Module',

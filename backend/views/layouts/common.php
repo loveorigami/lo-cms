@@ -8,8 +8,9 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
-
+use mdm\admin\components\MenuHelper;
 ?>
+
 <?php $this->beginContent('@backend/views/layouts/base.php'); ?>
     <div class="wrapper">
         <!-- header logo: style can be found in header.less -->
@@ -119,82 +120,45 @@ use yii\widgets\Breadcrumbs;
                         </a>
                     </div>
                 </div>
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                <?php echo Menu::widget([
+
+              <?php
+
+              $callback = function($menu){
+                  $data = eval($menu['data']);
+                  $data['icon'] = isset($data['icon']) ? '<i class="fa fa-'.$data['icon'].'"></i>' : '<i class="fa fa-angle-double-right"></i>';
+                  $badge='';
+                  $badgeBgClass='';
+
+                  switch($menu['route']){
+                      case '/timeline-event/index':
+                          $badge=TimelineEvent::find()->today()->count();
+                          $badgeBgClass='label-success';
+                          break;
+                      case '/log/index':
+                          $badge=\backend\models\SystemLog::find()->count();
+                          $badgeBgClass='label-danger';
+                          break;
+                  }
+
+                  return [
+                      'label' => Yii::t('backend', $menu['name']),
+                      'url' => [$menu['route']],
+                      'icon' => $data['icon'],
+                      'badge' => $badge,
+                      'badgeBgClass'=>$badgeBgClass,
+                      'items' => $menu['children']
+                  ];
+              };
+
+              echo Menu::widget([
                     'options'=>['class'=>'sidebar-menu'],
                     'labelTemplate' => '<a href="#">{icon}<span>{label}</span>{right-icon}{badge}</a>',
                     'linkTemplate' => '<a href="{url}">{icon}<span>{label}</span>{right-icon}{badge}</a>',
                     'submenuTemplate'=>"\n<ul class=\"treeview-menu\">\n{items}\n</ul>\n",
                     'activateParents'=>true,
-                    'items'=>[
-                        [
-                            'label'=>Yii::t('backend', 'Timeline'),
-                            'icon'=>'<i class="fa fa-bar-chart-o"></i>',
-                            'url'=>['/timeline-event/index'],
-                            'badge'=> TimelineEvent::find()->today()->count(),
-                            'badgeBgClass'=>'label-success',
-                        ],
-                        [
-                            'label'=>Yii::t('backend', 'Content'),
-                            'icon'=>'<i class="fa fa-edit"></i>',
-                            'options'=>['class'=>'treeview'],
-                            'items'=>[
-                                ['label'=>Yii::t('backend', 'Static pages'), 'url'=>['/page/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Articles'), 'url'=>['/article/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Article Categories'), 'url'=>['/article-category/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Text Widgets'), 'url'=>['/widget-text/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Menu Widgets'), 'url'=>['/widget-menu/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Carousel Widgets'), 'url'=>['/widget-carousel/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                            ]
-                        ],
-                        [
-                            'label'=>Yii::t('rbac-admin', 'Users'),
-                            'icon'=>'<i class="fa fa-users"></i>',
-                            'options'=>['class'=>'treeview'],
-                            'visible'=>Yii::$app->user->can('root'),
-                            'items'=>[
-                                ['label'=>Yii::t('backend', 'Users'), 'url'=>['/user/admin/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('rbac-admin', 'Assignment'), 'url'=>['/admin/assignment/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('rbac-admin', 'Permission'), 'url'=>['/admin/permission/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('rbac-admin', 'Role'), 'url'=>['/admin/role/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('rbac-admin', 'Route'), 'url'=>['/admin/route/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('rbac-admin', 'Rule'), 'url'=>['/admin/rule/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                            ]
-                        ],
-                        [
-                            'label'=>Yii::t('backend', 'System'),
-                            'icon'=>'<i class="fa fa-cogs"></i>',
-                            'options'=>['class'=>'treeview'],
-                            'items'=>[
-                                [
-                                    'label'=>Yii::t('backend', 'i18n'),
-                                    'icon'=>'<i class="fa fa-flag"></i>',
-                                    'options'=>['class'=>'treeview'],
-                                    'items'=>[
-                                        ['label'=>Yii::t('backend', 'i18n Source Message'), 'url'=>['/i18n/i18n-source-message/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                        ['label'=>Yii::t('backend', 'i18n Message'), 'url'=>['/i18n/i18n-message/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                    ]
-                                ],
-                                ['label'=>Yii::t('backend', 'Key-Value Storage'), 'url'=>['/key-storage/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'File Storage'), 'url'=>['/file-storage/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'Cache'), 'url'=>['/cache/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                ['label'=>Yii::t('backend', 'File Manager'), 'url'=>['/file-manager/index'], 'icon'=>'<i class="fa fa-angle-double-right"></i>'],
-                                [
-                                    'label'=>Yii::t('backend', 'System Information'),
-                                    'url'=>['/system-information/index'],
-                                    'icon'=>'<i class="fa fa-angle-double-right"></i>'
-                                ],
-                                [
-                                    'label'=>Yii::t('backend', 'Logs'),
-                                    'url'=>['/log/index'],
-                                    'icon'=>'<i class="fa fa-angle-double-right"></i>',
-                                    'badge'=>\backend\models\SystemLog::find()->count(),
-                                    'badgeBgClass'=>'label-danger',
-                                ],
-                            ]
-                        ]
-                    ]
-                ]) ?>
+                    'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback)
+                ]);
+          ?>
             </section>
             <!-- /.sidebar -->
         </aside>

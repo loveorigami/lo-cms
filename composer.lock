@@ -468,7 +468,8 @@
             },
             "license": [
                 "MIT"
-            ]
+            ],
+            "time": "2015-03-08 21:03:11"
         },
         {
             "name": "cebe/markdown",
@@ -826,12 +827,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "06d2c79886d3d4388bf4eb8c471be4dcba331751"
+                "reference": "fd52649a3609d0ef2441c88e55c042e97a3fc304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/06d2c79886d3d4388bf4eb8c471be4dcba331751",
-                "reference": "06d2c79886d3d4388bf4eb8c471be4dcba331751",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/fd52649a3609d0ef2441c88e55c042e97a3fc304",
+                "reference": "fd52649a3609d0ef2441c88e55c042e97a3fc304",
                 "shasum": ""
             },
             "require": {
@@ -906,7 +907,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-06-05 19:53:24"
+            "time": "2015-06-07 13:30:49"
         },
         {
             "name": "yiisoft/yii2-authclient",
