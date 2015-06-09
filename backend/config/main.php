@@ -11,6 +11,33 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'controllerMap'=>[
+        'elfinder' => [
+            'class' => '\mihaildev\elfinder\PathController',
+            'access' => ['admin'], //глобальный доступ к фаил менеджеру @ - для авторизорованных , ? - для гостей , чтоб открыть всем ['@', '?']
+            'disabledCommands' => ['netmount'], //отключение ненужных команд https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#commands
+            'root' => [
+                'baseUrl' => '@storageUrl',
+                'basePath' => '@storage',
+                'access' => ['read' => '*', 'write' => 'UserFilesAccess', 'locked' => 'admin'] ,
+                'name' => ['category' => 'backend', 'message' => 'Category'], // Yii::t($category, $message)
+                'options' => [
+                    'tmbSize' => '48',
+                    'acceptedName' => '/^[0-9a-z_\-.]+$/i', // i любой регистр только англ
+                    'imgLib' => 'gd',
+                    'attributes' => [
+                        [
+                            'pattern' => '!^/test!',
+                            'read' => true,
+                            'locked' => true,
+                            'write' => false,
+                            'hidden' => false,
+                        ],
+                    ]
+                ]
+            ]
+        ]
+    ],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
