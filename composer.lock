@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "111be02d5bf03e1603335202326a6b4d",
+    "hash": "38c9fbba67c7983e8637a49d404a608e",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
-            "version": "2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/almasaeed2010/AdminLTE.git",
-                "reference": "e55c2b85aa037e9ecd4ef30f913104dde91a2826"
+                "reference": "406de4e708e84ed0abbc08b09870828254a6b2ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/e55c2b85aa037e9ecd4ef30f913104dde91a2826",
-                "reference": "e55c2b85aa037e9ecd4ef30f913104dde91a2826",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/406de4e708e84ed0abbc08b09870828254a6b2ef",
+                "reference": "406de4e708e84ed0abbc08b09870828254a6b2ef",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -733,6 +733,50 @@
             "time": "2015-06-04 02:31:20"
         },
         {
+            "name": "mihaildev/yii2-elfinder",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MihailDev/yii2-elfinder.git",
+                "reference": "8a0cd68c51b9fc345b0cf2b132212494e14c0db8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/8a0cd68c51b9fc345b0cf2b132212494e14c0db8",
+                "reference": "8a0cd68c51b9fc345b0cf2b132212494e14c0db8",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-jui": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "mihaildev\\elfinder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mihail",
+                    "email": "mihail.kucher@gmail.com",
+                    "homepage": "https://github.com/MihailDev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 ElFinder",
+            "homepage": "https://github.com/MihailDev/yii2-elfinder",
+            "keywords": [
+                "elfinder",
+                "filemanager",
+                "yii"
+            ],
+            "time": "2014-11-28 16:23:43"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "5.x-dev",
             "source": {
@@ -822,17 +866,68 @@
             "time": "2015-06-03 19:29:22"
         },
         {
+            "name": "vlucas/phpdotenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "1f207799d61a7d0fc50dfcedbe0ecf350a770af4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1f207799d61a7d0fc50dfcedbe0ecf350a770af4",
+                "reference": "1f207799d61a7d0fc50dfcedbe0ecf350a770af4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "homepage": "http://github.com/vlucas/phpdotenv",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2015-05-31 10:25:50"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "fd52649a3609d0ef2441c88e55c042e97a3fc304"
+                "reference": "bc69c48efb2afff074ba279040337186e4fd26f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/fd52649a3609d0ef2441c88e55c042e97a3fc304",
-                "reference": "fd52649a3609d0ef2441c88e55c042e97a3fc304",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bc69c48efb2afff074ba279040337186e4fd26f8",
+                "reference": "bc69c48efb2afff074ba279040337186e4fd26f8",
                 "shasum": ""
             },
             "require": {
@@ -907,7 +1002,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-06-07 13:30:49"
+            "time": "2015-06-09 10:04:04"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1320,12 +1415,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "16ff3853e992a40266b8b9154f99107ca9597531"
+                "reference": "09454f3cd0614f1e6ddf23f92ef227d87a33853e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/16ff3853e992a40266b8b9154f99107ca9597531",
-                "reference": "16ff3853e992a40266b8b9154f99107ca9597531",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/09454f3cd0614f1e6ddf23f92ef227d87a33853e",
+                "reference": "09454f3cd0614f1e6ddf23f92ef227d87a33853e",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1454,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2015-06-02 09:55:26"
+            "time": "2015-06-08 08:58:10"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -1414,12 +1509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "c10afb648124fb27bebb803645a2af91d8f6651a"
+                "reference": "bc7df9d8fa44b3308cc899ffc8e4204316304e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/c10afb648124fb27bebb803645a2af91d8f6651a",
-                "reference": "c10afb648124fb27bebb803645a2af91d8f6651a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/bc7df9d8fa44b3308cc899ffc8e4204316304e41",
+                "reference": "bc7df9d8fa44b3308cc899ffc8e4204316304e41",
                 "shasum": ""
             },
             "require": {
@@ -1459,7 +1554,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-05-31 10:41:25"
+            "time": "2015-06-07 17:22:13"
         }
     ],
     "aliases": [],

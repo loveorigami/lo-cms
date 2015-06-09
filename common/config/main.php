@@ -12,7 +12,8 @@ return [
         'assetManager' => [
             'linkAssets'=>true,
             'basePath' => '@webroot/assets',
-            'baseUrl' => '@web/assets'
+            'baseUrl' => '@web/assets',
+            'appendTimestamp' => YII_ENV_DEV
         ],
         'formatter' => [
             'class' => 'yii\i18n\Formatter',

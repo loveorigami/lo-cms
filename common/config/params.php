@@ -1,7 +1,8 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
+    'adminEmail' => getenv('ADMIN_EMAIL'),
+    'supportEmail' => getenv('ADMIN_EMAIL'),
+    'robotEmail' => getenv('ROBOT_EMAIL'),
     'user.passwordResetTokenExpire' => 3600,
 
     // для модуля переводов

@@ -33,26 +33,6 @@ return [
             ],
         ],
         'urlManager'=>require(__DIR__.'/_urlManager.php'),
-		'authClientCollection' => [
-    'class' => yii\authclient\Collection::className(),
-    'clients' => [
-        'facebook' => [
-            'class'        => 'dektrium\user\clients\Facebook',
-            'clientId'     => 'CLIENT_ID',
-            'clientSecret' => 'CLIENT_SECRET',
-        ],
-        'twitter' => [
-            'class'          => 'dektrium\user\clients\Twitter',
-            'consumerKey'    => 'CONSUMER_KEY',
-            'consumerSecret' => 'CONSUMER_SECRET',
-        ],
-        'google' => [
-            'class'        => 'dektrium\user\clients\Google',
-            'clientId'     => 'CLIENT_ID',
-            'clientSecret' => 'CLIENT_SECRET',
-        ],
-    ],
-],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
