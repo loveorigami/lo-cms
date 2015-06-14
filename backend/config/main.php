@@ -19,21 +19,13 @@ return [
             'root' => [
                 'baseUrl' => '@storageUrl',
                 'basePath' => '@storage',
-                'access' => ['read' => '*', 'write' => 'UserFilesAccess', 'locked' => 'admin'] ,
+                'access' => ['read' => '*', 'write' => 'root'],
                 'name' => ['category' => 'backend', 'message' => 'Category'], // Yii::t($category, $message)
+                'driver'	 => 'LocalFileSystem',
                 'options' => [
                     'tmbSize' => '48',
                     'acceptedName' => '/^[0-9a-z_\-.]+$/i', // i любой регистр только англ
-                    'imgLib' => 'gd',
-                    'attributes' => [
-                        [
-                            'pattern' => '!^/test!',
-                            'read' => true,
-                            'locked' => true,
-                            'write' => false,
-                            'hidden' => false,
-                        ],
-                    ]
+                    'imgLib' => 'gd'
                 ]
             ]
         ]
@@ -63,6 +55,14 @@ return [
                 ],
             ]
         ],
+        'backuprestore' => [
+            'class' => '\oe\modules\backuprestore\Module',
+            'layout' => '@backend/views/layouts/common',
+            //'path'=>'@backend/_backup'
+        ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ],
         'i18n' => [
             'class' => 'backend\modules\i18n\Module',
             'defaultRoute' => 'i18n-message/index'
@@ -79,6 +79,10 @@ return [
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+        ],
+        'user' => [
+            //'class' => 'dektrium\user\Module',
+            'identityClass' => 'dektrium\user\models\User',
         ],
         'urlManager' => require(__DIR__ . '/_urlManager.php'),
         'errorHandler' => [
