@@ -181,7 +181,7 @@ use mdm\admin\components\MenuHelper;
             </section>
 
             <!-- Main content -->
-            <section class="content">
+            <section class="content" id="ajax-loader">
                 <?php if (Yii::$app->session->hasFlash('alert')):?>
                     <?php echo \yii\bootstrap\Alert::widget([
                         'body'=>ArrayHelper::getValue(Yii::$app->session->getFlash('alert'), 'body'),
@@ -193,4 +193,7 @@ use mdm\admin\components\MenuHelper;
         </aside><!-- /.right-side -->
     </div><!-- ./wrapper -->
 
+<? $this->registerJs("$(window).on('beforeunload', function(){
+        $('.content-wrapper').loading();
+    });") ?>
 <?php $this->endContent(); ?>

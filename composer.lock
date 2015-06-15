@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a1617730f3bd34e1696f1253d47c3cc2",
+    "hash": "256d9551910c628dedbe378d7902f77d",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -296,6 +296,40 @@
                 }
             },
             "time": "2015-05-27 15:36:08"
+        },
+        {
+            "name": "bower-asset/jquery-loading",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CarlosBonetti/jquery-loading.git",
+                "reference": "88ce0e61c18d16075b9b343a4493efdde369807f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CarlosBonetti/jquery-loading/zipball/88ce0e61c18d16075b9b343a4493efdde369807f",
+                "reference": "88ce0e61c18d16075b9b343a4493efdde369807f",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-ignore": [
+                    "node_modules"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Easily add and manipulate loading states of any element on the page",
+            "keywords": [
+                "ajax",
+                "jquery",
+                "loading",
+                "overlay"
+            ]
         },
         {
             "name": "bower-asset/jquery-slimscroll",
@@ -744,12 +778,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "3598d4cc28e79d9774bf87f5e6e57e6ffc7cdb34"
+                "reference": "6ca9f207ad33deeb8556cbdd762182678c67bf10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/3598d4cc28e79d9774bf87f5e6e57e6ffc7cdb34",
-                "reference": "3598d4cc28e79d9774bf87f5e6e57e6ffc7cdb34",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/6ca9f207ad33deeb8556cbdd762182678c67bf10",
+                "reference": "6ca9f207ad33deeb8556cbdd762182678c67bf10",
                 "shasum": ""
             },
             "type": "library",
@@ -784,7 +818,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2015-06-14 15:05:13"
+            "time": "2015-06-14 19:58:04"
         },
         {
             "name": "kartik-v/yii2-grid",
@@ -1266,12 +1300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "a0772d118275c9edfba90010fb750e0ad45777f5"
+                "reference": "bfa5a597269e89f946a0b44ef408ef6142ada2a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a0772d118275c9edfba90010fb750e0ad45777f5",
-                "reference": "a0772d118275c9edfba90010fb750e0ad45777f5",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bfa5a597269e89f946a0b44ef408ef6142ada2a9",
+                "reference": "bfa5a597269e89f946a0b44ef408ef6142ada2a9",
                 "shasum": ""
             },
             "require": {
@@ -1346,7 +1380,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-06-11 22:55:12"
+            "time": "2015-06-15 13:50:49"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1676,12 +1710,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "7d786165527ad532b09e306107d682f21f3de67a"
+                "reference": "9eed6c2a6fc9944903df92f9850b9dcc5a373410"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/7d786165527ad532b09e306107d682f21f3de67a",
-                "reference": "7d786165527ad532b09e306107d682f21f3de67a",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9eed6c2a6fc9944903df92f9850b9dcc5a373410",
+                "reference": "9eed6c2a6fc9944903df92f9850b9dcc5a373410",
                 "shasum": ""
             },
             "require": {
@@ -1720,7 +1754,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-06-12 13:48:54"
+            "time": "2015-06-15 08:56:21"
         },
         {
             "name": "phpspec/php-diff",

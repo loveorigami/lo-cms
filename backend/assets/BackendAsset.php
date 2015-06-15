@@ -26,6 +26,7 @@ class BackendAsset extends AssetBundle
         'yii\web\YiiAsset',
         'common\assets\AdminLte',
         'common\assets\Bootbox',
+        'common\assets\JqueryLoading',
         'common\assets\Html5shiv'
     ];
 }
