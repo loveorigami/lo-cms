@@ -29,9 +29,6 @@
 
     "mihaildev/yii2-ckeditor": "*",
     "mihaildev/yii2-elfinder": "*",
-    "open-ecommerce/yii2-backuprestore": "dev-master",
-    "kartik-v/yii2-grid": "dev-master",
-    "kartik-v/yii2-widget-fileinput": "*",
 
     "trntv/probe": "dev-master",
     "vlucas/phpdotenv": "~2.0",

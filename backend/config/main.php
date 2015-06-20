@@ -55,14 +55,6 @@ return [
                 ],
             ]
         ],
-        'backuprestore' => [
-            'class' => '\oe\modules\backuprestore\Module',
-            'layout' => '@backend/views/layouts/common',
-            //'path'=>'@backend/_backup'
-        ],
-        'gridview' =>  [
-            'class' => '\kartik\grid\Module'
-        ],
         'i18n' => [
             'class' => 'backend\modules\i18n\Module',
             'defaultRoute' => 'i18n-message/index'

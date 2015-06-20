@@ -43,6 +43,10 @@ return [
         ],
         'i18n' => [
             'translations' => [
+			    'app'=>[
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath'=>'@common/messages',
+                ],
                 /* Uncomment this code to use DbMessageSource **/
                 '*'=> [
                     'class' => 'yii\i18n\DbMessageSource',
