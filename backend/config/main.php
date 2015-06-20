@@ -72,6 +72,10 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
         ],
+        'translate' => [
+            'class' => 'wfstudioru\translate\Translation',
+            'key' => getenv('YANDEX_API_KEY'), // https://tech.yandex.ru/keys/
+        ],
         'user' => [
             //'class' => 'dektrium\user\Module',
             'identityClass' => 'dektrium\user\models\User',
