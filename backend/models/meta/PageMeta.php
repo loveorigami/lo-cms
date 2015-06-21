@@ -42,6 +42,15 @@ class PageMeta extends MetaFields
                 ],
                 "params" => [$this->owner, "slug"]
             ],
+            "text" => [
+                "definition" => [
+                    "class" => \common\db\fields\TextAreaField::className(),
+                    "title" => Yii::t('common', 'Text'),
+                    "showInGrid" => false,
+                    "isRequired" => true,
+                ],
+                "params" => [$this->owner, "text"]
+            ],
         ];
     }
 }
