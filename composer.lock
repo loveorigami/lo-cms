@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1379fae85cb4ed0f655a370cb22f10fc",
+    "hash": "4b441cecd84bdd552b388f2668c6040c",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -770,6 +770,49 @@
             "time": "2015-05-02 08:35:27"
         },
         {
+            "name": "marciocamello/yii2-x-editable",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marciocamello/yii2-x-editable.git",
+                "reference": "6e0b042db7240cc1ef99e40d45743e213e30b1be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marciocamello/yii2-x-editable/zipball/6e0b042db7240cc1ef99e40d45743e213e30b1be",
+                "reference": "6e0b042db7240cc1ef99e40d45743e213e30b1be",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "mcms\\xeditable\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "MarcioCamello",
+                    "email": "marciocamello@outlook.com"
+                }
+            ],
+            "description": "X-editable extensions for Yii 2, based in X-editable with Bootstrap",
+            "keywords": [
+                "extension",
+                "mcms",
+                "x-editable",
+                "yii2"
+            ],
+            "time": "2014-08-08 13:22:56"
+        },
+        {
             "name": "marekpetras/yii2-calendarview-widget",
             "version": "dev-master",
             "source": {
@@ -969,6 +1012,53 @@
             "time": "2015-05-21 12:28:42"
         },
         {
+            "name": "sjaakp/yii2-alphapager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sjaakp/yii2-alphapager.git",
+                "reference": "a6714f621fd8fe023e613f988b593edade1376b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sjaakp/yii2-alphapager/zipball/a6714f621fd8fe023e613f988b593edade1376b9",
+                "reference": "a6714f621fd8fe023e613f988b593edade1376b9",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "sjaakp\\alphapager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sjaak Priester",
+                    "email": "sjaak@sjaakpriester.nl",
+                    "homepage": "http://sjaakpriester.nl"
+                }
+            ],
+            "description": "Page data on initial character in Yii2.",
+            "keywords": [
+                "ListView",
+                "extension",
+                "gridview",
+                "pagination",
+                "paging",
+                "widget",
+                "yii",
+                "yii2"
+            ],
+            "time": "2015-06-17 13:19:56"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "5.x-dev",
             "source": {
@@ -1107,48 +1197,6 @@
                 "environment"
             ],
             "time": "2015-05-31 10:25:50"
-        },
-        {
-            "name": "wfstudioru/yii2-yandex-translate-api",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wfstudioru/yii2-yandex-translate-api.git",
-                "reference": "3bfa903c84ab0037acea32e3e6eb14abe48e906c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wfstudioru/yii2-yandex-translate-api/zipball/3bfa903c84ab0037acea32e3e6eb14abe48e906c",
-                "reference": "3bfa903c84ab0037acea32e3e6eb14abe48e906c",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "wfstudioru\\translate\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "BaBL86",
-                    "email": "babl1986@gmail.com"
-                }
-            ],
-            "description": "Yii2 extension to Yandex Translate API",
-            "keywords": [
-                "api",
-                "translate",
-                "yandex",
-                "yii2"
-            ],
-            "time": "2015-05-02 20:36:13"
         },
         {
             "name": "yiisoft/yii2",
@@ -1842,10 +1890,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wfstudioru/yii2-yandex-translate-api": 20,
         "trntv/probe": 20,
         "dektrium/yii2-user": 20,
-        "marekpetras/yii2-calendarview-widget": 20
+        "marekpetras/yii2-calendarview-widget": 20,
+        "marciocamello/yii2-x-editable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

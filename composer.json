@@ -29,7 +29,6 @@
 
     "mihaildev/yii2-ckeditor": "*",
     "mihaildev/yii2-elfinder": "*",
-    "wfstudioru/yii2-yandex-translate-api": "dev-master",
 
     "trntv/probe": "dev-master",
     "vlucas/phpdotenv": "~2.0",
@@ -37,6 +36,8 @@
     "mdmsoft/yii2-admin": "~2.0",
     "insolita/yii2-adminlte-widgets": "*",
     "marekpetras/yii2-calendarview-widget": "dev-master",
+    "sjaakp/yii2-alphapager": "*",
+    "marciocamello/yii2-x-editable": "dev-master",
 
     "bower-asset/admin-lte": "~2.0",
     "bower-asset/font-awesome": "~4.0",

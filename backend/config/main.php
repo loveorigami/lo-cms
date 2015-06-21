@@ -63,6 +63,9 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+            'page/update',
+            'page/delete',
+            'page/view',
             'site/error',
             'user/security/login',
             'user/security/logout'
@@ -73,7 +76,7 @@ return [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
         ],
         'translate' => [
-            'class' => 'wfstudioru\translate\Translation',
+            'class' => 'common\components\Translation',
             'key' => getenv('YANDEX_API_KEY'), // https://tech.yandex.ru/keys/
         ],
         'user' => [

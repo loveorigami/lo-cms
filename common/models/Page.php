@@ -19,7 +19,7 @@ use yii\behaviors\BlameableBehavior;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Page extends \yii\db\ActiveRecord
+class Page extends \common\db\ActiveRecord
 {
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;
@@ -30,6 +30,14 @@ class Page extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return '{{%page}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function metaClass()
+    {
+        return \backend\models\meta\PageMeta::className();
     }
 
     /**
@@ -55,7 +63,7 @@ class Page extends \yii\db\ActiveRecord
 
     /**
      * @inheritdoc
-     */
+
     public function rules()
     {
         return [
@@ -67,7 +75,7 @@ class Page extends \yii\db\ActiveRecord
             [['name'], 'string', 'max' => 512],
         ];
     }
-
+*/
     /**
      * @inheritdoc
      */
