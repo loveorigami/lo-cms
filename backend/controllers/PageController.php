@@ -41,6 +41,15 @@ class PageController extends Controller
                 'class'=> crud\Delete::className(),
                 'modelClass'=>$class,
             ],
+            'groupdelete'=>[
+                'class'=>crud\GroupDelete::className(),
+                'modelClass'=>$class,
+            ],
+
+            'editable'=>[
+                'class'=>crud\XEditable::className(),
+                'modelClass'=>$class,
+            ],
         ];
     }
 

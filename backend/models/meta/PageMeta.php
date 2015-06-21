@@ -26,7 +26,7 @@ class PageMeta extends MetaFields
                     "showInGrid" => true,
                     "showInFilter" => true,
                     "isRequired" => true,
-                    "editInGrid" => false,
+                    "editInGrid" => true,
                 ],
                 "params" => [$this->owner, "name"]
             ],
