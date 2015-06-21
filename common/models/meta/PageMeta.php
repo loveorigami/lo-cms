@@ -1,10 +1,9 @@
 <?php
-namespace backend\models\meta;
+namespace common\models\meta;
 
 use Yii;
 use common\db\MetaFields;
-use common\models\Page;
-use yii\helpers\ArrayHelper;
+
 
 /**
  * Class PageMeta

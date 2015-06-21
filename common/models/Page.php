@@ -7,6 +7,8 @@ use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
 
+use common\models\meta\PageMeta;
+
 /**
  * This is the model class for table "page".
  *
@@ -37,7 +39,7 @@ class Page extends \common\db\ActiveRecord
      */
     public function metaClass()
     {
-        return \backend\models\meta\PageMeta::className();
+        return PageMeta::className();
     }
 
     /**
