@@ -23,6 +23,9 @@ use common\models\meta\PageMeta;
  */
 class Page extends \common\db\ActiveRecord
 {
+
+    use \common\rbac\PermissionTrait;
+
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;
 
@@ -48,17 +51,11 @@ class Page extends \common\db\ActiveRecord
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
             'slug'=>[
                 'class'=>SluggableBehavior::className(),
                 'attribute'=>'name',
                 'ensureUnique'=>true,
                 'immutable'=>true
-            ],
-            [
-                'class' => BlameableBehavior::className(),
-                'createdByAttribute' => 'author_id',
-                'updatedByAttribute' => 'updater_id',
             ],
         ];
     }

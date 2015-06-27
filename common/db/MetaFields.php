@@ -114,6 +114,7 @@ abstract class MetaFields extends Object
                         "fromAttr" => "createdAtFrom",
                         "toAttr" => "createdAtTo",
                     ],
+                    "widgetOptions" =>['dateFormat' => 'yyyy-MM-dd'],
                     "queryModifier" => [$this, "createdAtQueryModifier"],
                 ],
                 "params" => [$this->owner, "created_at"]
@@ -147,9 +148,16 @@ abstract class MetaFields extends Object
     {
         $table = $f->model->tableName();
         $attr = $f->attr;
-        $toDate = $f->model->createdAtTo ? $f->model->createdAtTo . " 23:59:59" : $f->model->createdAtTo;
-        $q->andFilterWhere([">=", "{{%$table}}.{{%$attr}}", $f->model->createdAtFrom]);
-        $q->andFilterWhere(["<=", "{{%$table}}.{{%$attr}}", $toDate]);
+
+
+        if($f->model->createdAtFrom){
+            $q->andFilterWhere([">=", "$table.$attr", strtotime($f->model->createdAtFrom)]);
+        }
+
+        if($f->model->createdAtTo){
+            $q->andFilterWhere(["<=", "$table.$attr", strtotime($f->model->createdAtTo)]);
+        }
+
     }
 
     /**

@@ -6,6 +6,7 @@ use yii\data\ActiveDataProvider;
 use yii\db\ActiveRecord as YiiRecord;
 use yii\db\Expression;
 use dektrium\user\models\User;
+use Yii\helpers\ArrayHelper;
 
 /**
  * Class ActiveRecord
@@ -178,7 +179,7 @@ abstract class ActiveRecord extends YiiRecord
 
         foreach ($fields AS $field) {
 
-            $labels[$field->attr] = $field->title;
+            $labels = ArrayHelper::merge($labels, $field->getAttributeLabel());
 
         }
 
@@ -199,11 +200,6 @@ abstract class ActiveRecord extends YiiRecord
         $behaviors = [
             'timestamp' => [
                 'class' => \yii\behaviors\TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
-                ],
-                'value' => Yii::createObject(["class"=>Expression::className()],['NOW()']),
             ],
             'blameable' => [
                 'class' => \yii\behaviors\BlameableBehavior::className(),
@@ -240,11 +236,6 @@ abstract class ActiveRecord extends YiiRecord
         $fields = $this->getMetaFields()->getFields();
 
         $query = $query ? $query : static::find();
-
-        // если не редактор - показываем записи пользователя
-/*        if(!Yii::$app->user->can('editor')){
-            $query->andWhere(["author_id" => Yii::$app->user->id]);
-        }*/
 
         $config = array_merge([
             'class' => ActiveDataProvider::className(),

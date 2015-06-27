@@ -24,8 +24,10 @@ class ActiveQuery extends YiiQuery
 
 		$table = $class::tableName();
 
-        $this->andWhere(["$table.active" => $state]);
+        $this->andWhere(["$table.status" => $state]);
+
         return $this;
+
     }
 
 }
