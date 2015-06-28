@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 27 2015 г., 19:08
+-- Время создания: Июн 28 2015 г., 12:22
 -- Версия сервера: 5.6.22-log
 -- Версия PHP: 5.5.19
 
@@ -44,6 +44,33 @@ INSERT INTO `mx_auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `mx_auth_constraint`
+--
+
+CREATE TABLE IF NOT EXISTS `mx_auth_constraint` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` smallint(6) NOT NULL DEFAULT '0',
+  `author_id` int(11) DEFAULT NULL,
+  `updater_id` int(11) DEFAULT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
+  `role` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `constraint` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `forbidden_attrs` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `mx_auth_constraint`
+--
+
+INSERT INTO `mx_auth_constraint` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `role`, `model`, `constraint`, `forbidden_attrs`) VALUES
+(1, 1, 1, 1, 1435476532, 1435476568, 'author', '\\common\\models\\Page', '\\common\\rbac\\AuthorConstraint', '');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `mx_auth_item`
 --
 
@@ -75,6 +102,13 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('/admin/rule/index', 2, NULL, NULL, NULL, 1433777940, 1433777940),
 ('/backuprestore/default/index', 2, NULL, NULL, NULL, 1434299727, 1434299727),
 ('/cache/index', 2, NULL, NULL, NULL, 1433778712, 1433778712),
+('/constraint/*', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/create', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/delete', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/editable', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/index', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/update', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/constraint/view', 2, NULL, NULL, NULL, 1435475984, 1435475984),
 ('/debug/default/index', 2, NULL, NULL, NULL, 1433779978, 1433779978),
 ('/elfinder/*', 2, NULL, NULL, NULL, 1433859876, 1433859876),
 ('/elfinder/connect', 2, NULL, NULL, NULL, 1433936006, 1433936006),
@@ -85,18 +119,15 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('/i18n/i18n-source-message/index', 2, NULL, NULL, NULL, 1433778752, 1433778752),
 ('/key-storage/index', 2, NULL, NULL, NULL, 1433779324, 1433779324),
 ('/log/index', 2, NULL, NULL, NULL, 1433778675, 1433778675),
-('/page/*', 2, NULL, NULL, NULL, 1434384273, 1434384273),
-('/page/create', 2, NULL, NULL, NULL, 1434384265, 1434384265),
-('/page/delete', 2, NULL, NULL, NULL, 1434384265, 1434384265),
-('/page/index', 2, NULL, NULL, NULL, 1434309767, 1434309767),
-('/page/update', 2, NULL, NULL, NULL, 1434384265, 1434384265),
-('/permission/*', 2, NULL, NULL, NULL, 1435405684, 1435405684),
-('/permission/create', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/permission/delete', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/permission/editable', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/permission/index', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/permission/update', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/permission/view', 2, NULL, NULL, NULL, 1435405755, 1435405755),
+('/page/*', 2, NULL, NULL, NULL, 1435480880, 1435480880),
+('/page/item/*', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/create', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/delete', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/editable', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/groupdelete', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/index', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/update', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/page/item/view', 2, NULL, NULL, NULL, 1435480873, 1435480873),
 ('/site/index', 2, NULL, NULL, NULL, 1433660961, 1433660961),
 ('/system-information/index', 2, NULL, NULL, NULL, 1433779454, 1433779454),
 ('/timeline-event/index', 2, NULL, NULL, NULL, 1433742183, 1433742183),
@@ -108,6 +139,8 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('BRoot', 2, 'Only for root', NULL, NULL, 1435405792, 1435405792),
 ('BUpdate', 2, 'Can update item', NULL, NULL, 1433922980, 1433922980),
 ('BUpdateOwn', 2, 'Can update own item', 'OwnModelRule', NULL, 1433921045, 1433921045),
+('BView', 2, 'Can view item', NULL, NULL, 1435481086, 1435481125),
+('BViewOwn', 2, 'Can view own item', 'OwnModelRule', NULL, 1435481173, 1435481173),
 ('editor', 1, 'редактор', NULL, NULL, 1433660710, 1433660799),
 ('root', 1, 'владелец', NULL, NULL, 1433583350, 1433660882),
 ('user', 1, 'пользователь', NULL, NULL, 1433660785, 1433685296);
@@ -131,20 +164,21 @@ CREATE TABLE IF NOT EXISTS `mx_auth_item_child` (
 
 INSERT INTO `mx_auth_item_child` (`parent`, `child`) VALUES
 ('root', '/*'),
+('BRoot', '/constraint/*'),
+('BRoot', '/constraint/create'),
+('BRoot', '/constraint/delete'),
+('BRoot', '/constraint/editable'),
+('BRoot', '/constraint/index'),
+('BRoot', '/constraint/update'),
+('BRoot', '/constraint/view'),
 ('author', '/elfinder/*'),
 ('admin', '/file-manager/index'),
 ('admin', '/log/index'),
-('BCreate', '/page/create'),
-('BDelete', '/page/delete'),
-('author', '/page/index'),
-('BUpdate', '/page/update'),
-('BRoot', '/permission/*'),
-('BRoot', '/permission/create'),
-('BRoot', '/permission/delete'),
-('BRoot', '/permission/editable'),
-('BRoot', '/permission/index'),
-('BRoot', '/permission/update'),
-('BRoot', '/permission/view'),
+('BCreate', '/page/item/create'),
+('BDelete', '/page/item/delete'),
+('BUpdate', '/page/item/editable'),
+('BUpdate', '/page/item/update'),
+('BView', '/page/item/view'),
 ('author', '/site/index'),
 ('root', 'admin'),
 ('editor', 'author'),
@@ -156,6 +190,9 @@ INSERT INTO `mx_auth_item_child` (`parent`, `child`) VALUES
 ('BUpdateOwn', 'BUpdate'),
 ('editor', 'BUpdate'),
 ('author', 'BUpdateOwn'),
+('BViewOwn', 'BView'),
+('editor', 'BView'),
+('author', 'BViewOwn'),
 ('admin', 'editor'),
 ('author', 'user');
 
@@ -685,7 +722,9 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 (1155, 'ru', 'Отмена'),
 (1156, 'ru', 'Редактировать разрешения'),
 (1157, 'ru', 'Вид'),
-(1158, 'ru', NULL);
+(1158, 'ru', 'Роль'),
+(1159, 'ru', 'Ограничение'),
+(1160, 'ru', 'Создать ограничение');
 
 -- --------------------------------------------------------
 
@@ -698,7 +737,7 @@ CREATE TABLE IF NOT EXISTS `mx_i18n_source_message` (
   `category` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   `message` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1159 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1161 ;
 
 --
 -- Дамп данных таблицы `mx_i18n_source_message`
@@ -1193,7 +1232,9 @@ INSERT INTO `mx_i18n_source_message` (`id`, `category`, `message`) VALUES
 (1155, 'core', 'Cancel'),
 (1156, 'common', 'Update Permission'),
 (1157, 'core', 'View'),
-(1158, 'common', 'Role');
+(1158, 'common', 'Role'),
+(1159, 'common', 'Constraint'),
+(1160, 'common', 'Create Constraint');
 
 -- --------------------------------------------------------
 
@@ -1247,7 +1288,7 @@ INSERT INTO `mx_menu` (`id`, `name`, `parent`, `route`, `order`, `data`) VALUES
 (1, 'Main', NULL, '/site/index', 0, 'return [''icon''=>''dashboard''];'),
 (2, 'Timeline', NULL, '/timeline-event/index', 1, 'return [''icon''=>''bar-chart-o''];'),
 (3, 'Content', NULL, NULL, 3, 'return [''icon''=>''edit''];'),
-(4, 'Pages', 3, '/page/index', 1, NULL),
+(4, 'Pages', 3, '/page/item/index', 1, NULL),
 (5, 'Users (main)', NULL, NULL, 4, 'return [''icon''=>''users''];'),
 (6, 'Users', 5, '/user/admin/index', 1, NULL),
 (7, 'Assignment', 5, '/admin/assignment/index', 2, NULL),
@@ -1267,7 +1308,7 @@ INSERT INTO `mx_menu` (`id`, `name`, `parent`, `route`, `order`, `data`) VALUES
 (21, 'Gii', 13, '/gii/default/index', 31, NULL),
 (22, 'Debug', 13, '/debug/default/index', 30, NULL),
 (23, 'File Manager', 13, '/file-manager/index', 6, NULL),
-(25, 'Constraint', 5, '/permission/index', 20, NULL);
+(25, 'Constraint', 5, '/constraint/index', 20, NULL);
 
 -- --------------------------------------------------------
 
@@ -1295,34 +1336,7 @@ CREATE TABLE IF NOT EXISTS `mx_page` (
 INSERT INTO `mx_page` (`id`, `author_id`, `updater_id`, `slug`, `name`, `text`, `status`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 'about', 'About', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. here good', 1, 1434309683, 1434383915),
 (2, 2, 1, 'dobro-pozalovat-na-sajt', 'Добро пожаловать на сайт', 'тут текст', 0, 1434310283, 1435407403),
-(3, 1, 1, '465', 'Добро пожаловать на сайт', 'hgjghj арпа оа', 1, 1435416397, 1435416397);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `mx_permission`
---
-
-CREATE TABLE IF NOT EXISTS `mx_permission` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status` smallint(6) NOT NULL DEFAULT '0',
-  `author_id` int(11) DEFAULT NULL,
-  `updater_id` int(11) DEFAULT NULL,
-  `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL,
-  `role` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `model` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `constraint` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `forbidden_attrs` text COLLATE utf8_unicode_ci,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
-
---
--- Дамп данных таблицы `mx_permission`
---
-
-INSERT INTO `mx_permission` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `role`, `model`, `constraint`, `forbidden_attrs`) VALUES
-(1, 1, 1, 1, 1435421215, 1435421215, 'author', '\\common\\models\\Page', '\\common\\rbac\\AuthorConstraint', 'author_id');
+(3, 1, 1, '465', 'Добро пожаловать', 'hgjghj арпа оа', 1, 1435416397, 1435416397);
 
 -- --------------------------------------------------------
 
@@ -1430,7 +1444,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
   PRIMARY KEY (`id`),
   KEY `idx_log_level` (`level`),
   KEY `idx_log_category` (`category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 -- --------------------------------------------------------
 
@@ -1450,7 +1464,8 @@ CREATE TABLE IF NOT EXISTS `mx_system_migration` (
 
 INSERT INTO `mx_system_migration` (`version`, `apply_time`) VALUES
 ('m000000_000000_base', 1435405914),
-('m150620_091027_init_dump', 1435406062);
+('m150620_091027_init_dump', 1435406062),
+('m150727_182017_create_constraint_table', 1435475636);
 
 -- --------------------------------------------------------
 

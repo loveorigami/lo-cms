@@ -66,11 +66,9 @@ return [
 
     ],
     'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
+        'class' => 'common\rbac\AccessControl',
+        'allowOwnActions' =>['update', 'delete', 'view'],
         'allowActions' => [
-            'page/item/update',
-            'page/item/delete',
-            'page/item/view',
             'site/error',
             'user/security/login',
             'user/security/logout'

@@ -24,6 +24,6 @@ class OwnModelRule extends Rule
     public function execute($user, $item, $params)
     {
         $attribute = isset($params['attribute']) ? $params['attribute'] : 'author_id';
-        return $user && isset($params['model']) &&  $user === $params['model']->getAttribute($attribute);
+        return $user && isset($params['model']) &&  $user == $params['model']->getAttribute($attribute);
     }
 }
