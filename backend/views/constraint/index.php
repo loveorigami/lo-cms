@@ -5,15 +5,15 @@ use yii\helpers\Html;
 /**
  * @var yii\web\View $this
  * @var yii\data\ActiveDataProvider $dataProvider
- * @var common\models\Permission $searchModel
+ * @var common\models\Constraint $searchModel
  */
 
-$this->title = \Yii::t('core', 'Permissions');
+$this->title = \Yii::t('common', 'Constraint');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<div class="permission-index">
+<div class="constraint-index">
 
     <?= $this->render('_filter', ['model' => $searchModel]); ?>
 

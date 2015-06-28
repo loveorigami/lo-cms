@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 
-use common\models\Permission;
+use common\models\Constraint;
 use common\actions\crud;
 use Yii;
 use yii\web\Controller;
@@ -10,7 +10,7 @@ use yii\web\Controller;
 /**
  * PermissionController implements the CRUD actions for Permission model.
  */
-class PermissionController extends Controller
+class ConstraintController extends Controller
 {
 
     /**
@@ -20,7 +20,7 @@ class PermissionController extends Controller
     public function actions()
     {
 
-        $class = Permission::className();
+        $class = Constraint::className();
 
         return [
 

@@ -11,7 +11,7 @@ use Yii;
  * @package app\modules\main\models
  * @author Churkin Anton <webadmin87@gmail.com>
  */
-class Permission extends ActiveRecord implements IPermission
+class Constraint extends ActiveRecord implements IPermission
 {
 
     /**
@@ -60,7 +60,7 @@ class Permission extends ActiveRecord implements IPermission
 
     public static function tableName()
     {
-        return "{{%permission}}";
+        return "{{%auth_constraint}}";
     }
 
     /**
@@ -68,7 +68,7 @@ class Permission extends ActiveRecord implements IPermission
      */
     public function metaClass()
     {
-        return meta\PermissionMeta::className();
+        return meta\ConstraintMeta::className();
     }
 
     /**

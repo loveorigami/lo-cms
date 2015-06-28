@@ -4,8 +4,6 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\SluggableBehavior;
-use yii\behaviors\TimestampBehavior;
-use yii\behaviors\BlameableBehavior;
 
 use common\models\meta\PageMeta;
 
@@ -24,7 +22,7 @@ use common\models\meta\PageMeta;
 class Page extends \common\db\ActiveRecord
 {
 
-    use \common\rbac\PermissionTrait;
+    use \common\rbac\ConstraintTrait;
 
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;

@@ -1,14 +1,14 @@
 <?php
 namespace common\rbac;
 
-use common\models\Permission;
+use common\models\Constraint;
 
 /**
  * Class PermissionTrait
  * Предоставляет функциональность по проверке прав доступа
  * @package common\rbac
  */
-trait PermissionTrait
+trait ConstraintTrait
 {
     /**
      * Возвращает модель правил доступа
@@ -17,7 +17,7 @@ trait PermissionTrait
 
     public function getPermission()
     {
-        return Permission::findPermission(get_class($this));
+        return Constraint::findPermission(get_class($this));
     }
 
 }

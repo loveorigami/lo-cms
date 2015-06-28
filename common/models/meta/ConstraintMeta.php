@@ -11,7 +11,7 @@ use Yii;
  * @package app\modules\main\models
  * @author Churkin Anton <webadmin87@gmail.com>
  */
-class PermissionMeta extends MetaFields
+class ConstraintMeta extends MetaFields
 {
 
     /**

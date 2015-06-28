@@ -17,6 +17,12 @@
     "irc": "irc://irc.freenode.net/yii",
     "source": "https://github.com/yiisoft/yii2"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
+    }
+  ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
@@ -26,10 +32,8 @@
     "yiisoft/yii2-authclient": "*",
     "yiisoft/yii2-jui": "~2.0.0",
     "yiisoft/yii2-imagine": "*",
-
     "mihaildev/yii2-ckeditor": "*",
     "mihaildev/yii2-elfinder": "*",
-
     "trntv/probe": "dev-master",
     "vlucas/phpdotenv": "~2.0",
     "dektrium/yii2-user": "0.9.*@dev",
@@ -38,6 +42,8 @@
     "marekpetras/yii2-calendarview-widget": "dev-master",
     "sjaakp/yii2-alphapager": "*",
     "marciocamello/yii2-x-editable": "dev-master",
+
+    "loveorigami/lo-module-page": "*",
 
     "bower-asset/admin-lte": "~2.0",
     "bower-asset/font-awesome": "~4.0",

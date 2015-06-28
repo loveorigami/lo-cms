@@ -2,10 +2,10 @@
 
 use yii\db\Schema;
 
-class m140527_182017_create_permission_table extends \yii\db\Migration
+class m150727_182017_create_constraint_table extends \yii\db\Migration
 {
 
-    public $tableName = "permission";
+    public $tableName = "auth_constraint";
 
     public function up()
     {
