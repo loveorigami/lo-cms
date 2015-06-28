@@ -32,7 +32,7 @@ class AccessControl extends \mdm\admin\components\AccessControl
     /**
      * @var array List of action that not need to check access.
      */
-    public $allowOwnActions = [];
+    public $allowOwnActions = ['update','delete', 'view'];
 
 
     /**
@@ -44,7 +44,7 @@ class AccessControl extends \mdm\admin\components\AccessControl
         $user = $this->getUser();
 
         // allow for update, view, delete actions with Own rule
-        if (in_array($action->id, $this->allowOwnActions)){
+        if (isset(Yii::$app->controller->module->rbac) && Yii::$app->controller->module->rbac && in_array($action->id, $this->allowOwnActions)){
             return true;
         }
 
