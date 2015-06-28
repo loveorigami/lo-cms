@@ -35,7 +35,7 @@ class XEditable extends \common\actions\Base
 
             $model = $this->findModel($request->post('pk'));
 
-            if (!Yii::$app->user->can($this->permRoute(), array("model" => $model)))
+            if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
                 throw new ForbiddenHttpException('Forbidden');
 
             $model->setScenario($this->modelScenario);

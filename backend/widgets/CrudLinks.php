@@ -13,7 +13,7 @@ use yii\helpers\Html;
  */
 class CrudLinks extends Widget
 {
-
+    use \common\rbac\AccessRouteTrait;
     /**
      * Константы CRUD действий
      */
@@ -44,21 +44,7 @@ class CrudLinks extends Widget
      * @inheritdoc
      */
 
-    /**
-     * @var string базовая часть маршрута к действиям
-     */
-    protected  $_baseRoute;
-    /**
-     * @return string
-     */
-    public function getBaseRoute()
-    {
 
-        if($this->_baseRoute === null)
-            $this->_baseRoute = "/" . $this->view->context->uniqueId;
-
-        return $this->_baseRoute;
-    }
 
     public function run()
     {

@@ -19,6 +19,8 @@ use yii\helpers\Url;
 class Grid extends Widget
 {
 
+    use \common\rbac\AccessRouteTrait;
+
     /**
      * Преффикс идентификатора грида
      */
@@ -67,11 +69,6 @@ class Grid extends Widget
     public $tpl = "grid";
 
     /**
-     * @var string базовая часть маршрута к действиям
-     */
-    protected  $_baseRoute;
-
-    /**
      * @var array кнопки групповых операций
      */
     protected $_groupButtons;
@@ -86,18 +83,6 @@ class Grid extends Widget
      */
 
     protected $pjaxId;
-
-    /**
-     * @return string
-     */
-    public function getBaseRoute()
-    {
-
-        if($this->_baseRoute === null)
-            $this->_baseRoute = "/" . $this->view->context->uniqueId;
-
-        return $this->_baseRoute;
-    }
 
     /**
      * @param string $baseRoute
@@ -359,7 +344,7 @@ class Grid extends Widget
             "delete" => [
                 "class" => \backend\widgets\ActionButton::className(),
                 "label" => Yii::t('core', 'Delete'),
-                "visible" => Yii::$app->user->can('deleteModels', ['model'=>$model]),
+                "visible" => Yii::$app->user->can($this->baseRoute . '/delete', ['model'=>$model]),
                 "options" => [
                     'id' => 'group-delete',
                     'class' => 'btn btn-danger',
@@ -374,7 +359,7 @@ class Grid extends Widget
             $arr["replace"] = [
 
                 "class" => \backend\widgets\ReplaceInTreeButton::className(),
-                "visible" =>  Yii::$app->user->can('updateModels', ['model'=>$model]),
+                "visible" =>  Yii::$app->user->can($this->baseRoute . '/update', ['model'=>$model]),
                 "label" => Yii::t('core', 'Replace'),
                 "options" => [
                     'id' => 'group-replace',

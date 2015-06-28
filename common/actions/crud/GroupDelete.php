@@ -43,7 +43,7 @@ class GroupDelete extends \common\actions\Base
 
             foreach ($query->all() as $model) {
 
-                if (!Yii::$app->user->can('deleteModel', array("model" => $model)))
+                if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
                     throw new ForbiddenHttpException('Forbidden');
 
                 $model->delete();

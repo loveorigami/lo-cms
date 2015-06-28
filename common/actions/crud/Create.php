@@ -60,7 +60,7 @@ class Create extends \common\actions\Base
 
         $model = Yii::createObject(["class" => $this->modelClass, 'scenario' => $this->modelScenario]);
 
-        if (!Yii::$app->user->can($this->permRoute(), array("model" => $model)))
+        if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
             throw new ForbiddenHttpException('Forbidden');
 
         $this->checkForbiddenAttrs($model);
@@ -75,7 +75,7 @@ class Create extends \common\actions\Base
             return $this->performAjaxValidation($model);
         }
 
-        if ($load && !Yii::$app->user->can($this->permRoute(), array("model" => $model)))
+        if ($load && !Yii::$app->user->can($this->permRoute, array("model" => $model)))
             throw new ForbiddenHttpException('Forbidden');
 
         if ($load && $model->save()) {

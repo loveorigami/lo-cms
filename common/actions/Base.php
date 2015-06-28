@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
  */
 class Base extends Action
 {
+    use \common\rbac\AccessRouteTrait;
+
     /**
      * @var string имя класса модели
      */
@@ -48,14 +50,6 @@ class Base extends Action
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
         return ActiveForm::validate($model);
-    }
-
-    /**
-     * Route for permission
-     */
-    protected function permRoute()
-    {
-       return '/'.Yii::$app->controller->route;
     }
 
     /**

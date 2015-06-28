@@ -775,7 +775,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
-                "reference": "13003a49a926dcf4c2ff2230ce1e49fe3c314c29"
+                "reference": "1703b61a7af2a53293de086f337e984930afe434"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -807,7 +807,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-page"
             },
-            "time": "2015-06-28 09:00:51"
+            "time": "2015-06-28 15:19:57"
         },
         {
             "name": "marciocamello/yii2-x-editable",
