@@ -5,7 +5,7 @@ return [
     'showScriptName'=>false,
     'rules'=> [
         // Pages
-        ['pattern'=>'page/<slug>', 'route'=>'page/view'],
+        //['pattern'=>'page/<slug>', 'route'=>'page/view'],
 
         // Articles
         ['pattern'=>'article/index', 'route'=>'article/index'],
@@ -14,6 +14,9 @@ return [
 
         // Api
         ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/article', 'only' => ['index', 'view', 'options']],
-        ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/user', 'only' => ['index', 'view', 'options']]
+        ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/user', 'only' => ['index', 'view', 'options']],
+
+        //Page
+        ['pattern'=>'<slug>', 'route'=>'page/page/view'],
     ]
 ];

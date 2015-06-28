@@ -775,12 +775,12 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
-                "reference": "54cee7d5915c0e0e010c6b14b385f3b233453eb2"
+                "reference": "13003a49a926dcf4c2ff2230ce1e49fe3c314c29"
             },
             "require": {
                 "yiisoft/yii2": "~2"
             },
-            "type": "yii2-module",
+            "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
                     "lo\\modules\\page\\": ""
@@ -807,7 +807,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-page"
             },
-            "time": "2015-06-28 06:46:05"
+            "time": "2015-06-28 09:00:51"
         },
         {
             "name": "marciocamello/yii2-x-editable",
@@ -1104,12 +1104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "ef7e0fd2b338cc8bfd47f97d3a72f3e21ddfad0c"
+                "reference": "b86333344fe5dc5b649bb0ea694820f5ebeeed5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/ef7e0fd2b338cc8bfd47f97d3a72f3e21ddfad0c",
-                "reference": "ef7e0fd2b338cc8bfd47f97d3a72f3e21ddfad0c",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/b86333344fe5dc5b649bb0ea694820f5ebeeed5c",
+                "reference": "b86333344fe5dc5b649bb0ea694820f5ebeeed5c",
                 "shasum": ""
             },
             "require": {
@@ -1149,7 +1149,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-06-27 14:24:35"
+            "time": "2015-06-28 07:39:43"
         },
         {
             "name": "trntv/probe",

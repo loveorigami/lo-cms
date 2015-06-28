@@ -31,6 +31,10 @@ return [
         ]
     ],
     'modules' => [
+        'page' => [
+            'class' => 'lo\modules\page\modules\admin\Module',
+            'defaultRoute' => 'item'
+        ],
         'user' => [
             'class' => 'dektrium\user\Module',
            // 'layout' => '@backend/views/layouts/common',
@@ -58,14 +62,15 @@ return [
         'i18n' => [
             'class' => 'backend\modules\i18n\Module',
             'defaultRoute' => 'i18n-message/index'
-        ]
+        ],
+
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'page/update',
-            'page/delete',
-            'page/view',
+            'page/item/update',
+            'page/item/delete',
+            'page/item/view',
             'site/error',
             'user/security/login',
             'user/security/logout'

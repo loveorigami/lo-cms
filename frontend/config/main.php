@@ -12,6 +12,10 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'page' => [
+            'class' => 'lo\modules\page\Module',
+            'defaultRoute' => 'page'
+        ],
         // Configuration Yii2-User Frontend //
         'user' => [
             'class' => 'dektrium\user\Module',
