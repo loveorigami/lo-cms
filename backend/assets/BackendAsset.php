@@ -27,6 +27,7 @@ class BackendAsset extends AssetBundle
         'common\assets\AdminLte',
         'common\assets\Bootbox',
         'common\assets\JqueryLoading',
-        'common\assets\Html5shiv'
+        'common\assets\Html5shiv',
+        'common\assets\Ajaxq'
     ];
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e30d87ef9491aa319795b1c1b22713d",
+    "hash": "57dd750dd6849793fc57eb0392040574",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -51,6 +51,47 @@
                 "template",
                 "theme"
             ]
+        },
+        {
+            "name": "bower-asset/ajaxq",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Foliotek/AjaxQ.git",
+                "reference": "87be4498118f875ae7b9c3c56b9a26c33e3d6cb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Foliotek/AjaxQ/zipball/87be4498118f875ae7b9c3c56b9a26c33e3d6cb6",
+                "reference": "87be4498118f875ae7b9c3c56b9a26c33e3d6cb6",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "ajaxq.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "bower_components",
+                    "demo",
+                    "index.html"
+                ],
+                "branch-alias": {
+                    "dev-master": "0.0.3-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A jQuery plugin to perform sequential ajax requests.",
+            "keywords": [
+                "ajax",
+                "ajaxq",
+                "queue"
+            ],
+            "time": "2015-05-01 20:37:51"
         },
         {
             "name": "bower-asset/bootbox",
@@ -1104,12 +1145,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "b86333344fe5dc5b649bb0ea694820f5ebeeed5c"
+                "reference": "0a6e9031371dcb384d395b1fa7bd5139a7847a60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/b86333344fe5dc5b649bb0ea694820f5ebeeed5c",
-                "reference": "b86333344fe5dc5b649bb0ea694820f5ebeeed5c",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0a6e9031371dcb384d395b1fa7bd5139a7847a60",
+                "reference": "0a6e9031371dcb384d395b1fa7bd5139a7847a60",
                 "shasum": ""
             },
             "require": {
@@ -1149,7 +1190,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-06-28 07:39:43"
+            "time": "2015-06-28 17:20:48"
         },
         {
             "name": "trntv/probe",
@@ -1244,12 +1285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "759adc030520f4c0fa855e17a92f845f0d5476aa"
+                "reference": "533b9a5983e1ea6dfd1604dd9cfb32d0a0eccc35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/759adc030520f4c0fa855e17a92f845f0d5476aa",
-                "reference": "759adc030520f4c0fa855e17a92f845f0d5476aa",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/533b9a5983e1ea6dfd1604dd9cfb32d0a0eccc35",
+                "reference": "533b9a5983e1ea6dfd1604dd9cfb32d0a0eccc35",
                 "shasum": ""
             },
             "require": {
@@ -1324,7 +1365,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-06-25 21:53:48"
+            "time": "2015-06-28 15:20:37"
         },
         {
             "name": "yiisoft/yii2-authclient",

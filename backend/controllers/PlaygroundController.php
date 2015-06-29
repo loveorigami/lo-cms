@@ -25,4 +25,27 @@ class PlaygroundController extends Controller
         return $this->render('index');
     }
 
+    /**
+     * Lists all SystemLog models.
+     * @return mixed
+     */
+    public function actionPjax()
+    {
+        return $this->render('pjax');
+    }
+
+    /**
+     * Lists all SystemLog models.
+     * @return mixed
+     */
+    public function actionGetTime()
+    {
+        //return $this->render('pjax', ['time' => date('H:i:s')]);
+        $req = array_merge($_GET, $_POST);
+        if (isset($req["delay"])) {
+            //sleep(1);
+        }
+        header('Content-type: application/json');
+        echo json_encode($req);
+    }
 }
