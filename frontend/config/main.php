@@ -27,6 +27,10 @@ return [
         ],
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['user'],
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

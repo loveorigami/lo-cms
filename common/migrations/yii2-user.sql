@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 28 2015 г., 12:22
+-- Время создания: Июн 28 2015 г., 18:42
 -- Версия сервера: 5.6.22-log
 -- Версия PHP: 5.5.19
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_assignment` (
 --
 
 INSERT INTO `mx_auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
-('admin', '2', 1433790664),
+('author', '2', 1435493835),
 ('root', '1', 1433589550);
 
 -- --------------------------------------------------------
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_constraint` (
 --
 
 INSERT INTO `mx_auth_constraint` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `role`, `model`, `constraint`, `forbidden_attrs`) VALUES
-(1, 1, 1, 1, 1435476532, 1435476568, 'author', '\\common\\models\\Page', '\\common\\rbac\\AuthorConstraint', '');
+(1, 1, 1, 1, 1435476532, 1435499555, 'author', '\\lo\\modules\\page\\models\\Page', '\\common\\rbac\\AuthorConstraint', 'author_id');
 
 -- --------------------------------------------------------
 
@@ -177,6 +177,8 @@ INSERT INTO `mx_auth_item_child` (`parent`, `child`) VALUES
 ('BCreate', '/page/item/create'),
 ('BDelete', '/page/item/delete'),
 ('BUpdate', '/page/item/editable'),
+('BDelete', '/page/item/groupdelete'),
+('BCreate', '/page/item/index'),
 ('BUpdate', '/page/item/update'),
 ('BView', '/page/item/view'),
 ('author', '/site/index'),
@@ -724,7 +726,11 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 (1157, 'ru', 'Вид'),
 (1158, 'ru', 'Роль'),
 (1159, 'ru', 'Ограничение'),
-(1160, 'ru', 'Создать ограничение');
+(1160, 'ru', 'Создать ограничение'),
+(1161, 'ru', NULL),
+(1162, 'ru', NULL),
+(1163, 'ru', NULL),
+(1164, 'ru', NULL);
 
 -- --------------------------------------------------------
 
@@ -737,7 +743,7 @@ CREATE TABLE IF NOT EXISTS `mx_i18n_source_message` (
   `category` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   `message` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1161 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1165 ;
 
 --
 -- Дамп данных таблицы `mx_i18n_source_message`
@@ -1234,7 +1240,11 @@ INSERT INTO `mx_i18n_source_message` (`id`, `category`, `message`) VALUES
 (1157, 'core', 'View'),
 (1158, 'common', 'Role'),
 (1159, 'common', 'Constraint'),
-(1160, 'common', 'Create Constraint');
+(1160, 'common', 'Create Constraint'),
+(1161, 'backend', 'View'),
+(1162, 'common', 'Update Constraint'),
+(1163, 'common', 'Update'),
+(1164, 'core', 'Are you shure?');
 
 -- --------------------------------------------------------
 
@@ -1318,25 +1328,23 @@ INSERT INTO `mx_menu` (`id`, `name`, `parent`, `route`, `order`, `data`) VALUES
 
 CREATE TABLE IF NOT EXISTS `mx_page` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `author_id` int(11) DEFAULT NULL,
-  `updater_id` int(11) DEFAULT NULL,
-  `slug` varchar(2048) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(512) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(512) COLLATE utf8_unicode_ci NOT NULL,
   `text` text COLLATE utf8_unicode_ci NOT NULL,
-  `status` smallint(6) NOT NULL,
+  `status` smallint(6) NOT NULL DEFAULT '0',
+  `author_id` int(11) DEFAULT NULL,
+  `updater_id` int(11) DEFAULT NULL,
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `mx_page`
 --
 
-INSERT INTO `mx_page` (`id`, `author_id`, `updater_id`, `slug`, `name`, `text`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'about', 'About', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. here good', 1, 1434309683, 1434383915),
-(2, 2, 1, 'dobro-pozalovat-na-sajt', 'Добро пожаловать на сайт', 'тут текст', 0, 1434310283, 1435407403),
-(3, 1, 1, '465', 'Добро пожаловать', 'hgjghj арпа оа', 1, 1435416397, 1435416397);
+INSERT INTO `mx_page` (`id`, `slug`, `name`, `text`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`) VALUES
+(1, 'about', 'About', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 1, 1, 1, 1435506064, 1435506064);
 
 -- --------------------------------------------------------
 
@@ -1444,7 +1452,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
   PRIMARY KEY (`id`),
   KEY `idx_log_level` (`level`),
   KEY `idx_log_category` (`category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
 
 -- --------------------------------------------------------
 
@@ -1465,6 +1473,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_migration` (
 INSERT INTO `mx_system_migration` (`version`, `apply_time`) VALUES
 ('m000000_000000_base', 1435405914),
 ('m150620_091027_init_dump', 1435406062),
+('m150703_123104_page', 1435506064),
 ('m150727_182017_create_constraint_table', 1435475636);
 
 -- --------------------------------------------------------
