@@ -29,9 +29,9 @@ class PlaygroundController extends Controller
      * Lists all SystemLog models.
      * @return mixed
      */
-    public function actionPjax()
+    public function actionAjaxq()
     {
-        return $this->render('pjax');
+        return $this->render('ajaxq');
     }
 
     /**
@@ -40,12 +40,14 @@ class PlaygroundController extends Controller
      */
     public function actionGetTime()
     {
-        //return $this->render('pjax', ['time' => date('H:i:s')]);
-        $req = array_merge($_GET, $_POST);
-        if (isset($req["delay"])) {
-            //sleep(1);
-        }
-        header('Content-type: application/json');
-        echo json_encode($req);
+        $request = Yii::$app->request;
+        $post = $request->post('dataq');
+
+       // header('Content-type: application/json');
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $res['id'] = $post['id'];
+        $res['mes'] = 'It is ok!';
+
+        echo json_encode($res);
     }
 }

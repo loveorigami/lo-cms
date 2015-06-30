@@ -44,6 +44,7 @@
     "marciocamello/yii2-x-editable": "dev-master",
 
     "loveorigami/lo-module-page": "*",
+    "loveorigami/yii2-ajaxq" : "*",
 
     "bower-asset/admin-lte": "~2.0",
     "bower-asset/font-awesome": "~4.0",
@@ -52,7 +53,6 @@
     "bower-asset/jquery-slimscroll": "~1.3",
     "bower-asset/jquery-loading": "~1.0.3",
     "bower-asset/bootbox": "~4.3.0",
-    "bower-asset/ajaxq": "~0.0.2",
     "bower-asset/flot": "^0.8"
   },
   "require-dev": {
