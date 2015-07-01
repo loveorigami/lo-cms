@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "13f7ebc6500905be836d6ac8c1bd7e61",
+    "hash": "e4e23e1f12d5486ada2772bb0812821f",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -815,7 +815,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
+                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
                 "reference": "f40e3d610a1fba341b65752221e4f3e57affa480"
             },
             "require": {
@@ -856,12 +856,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loveorigami/yii2-ajaxq.git",
-                "reference": "0e24ebd100f292a022ff0f9468356c1e0ff04ed7"
+                "reference": "8c43cbc0a9aac0899bcee13743c213b812e74e34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/0e24ebd100f292a022ff0f9468356c1e0ff04ed7",
-                "reference": "0e24ebd100f292a022ff0f9468356c1e0ff04ed7",
+                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/8c43cbc0a9aac0899bcee13743c213b812e74e34",
+                "reference": "8c43cbc0a9aac0899bcee13743c213b812e74e34",
                 "shasum": ""
             },
             "require": {
@@ -891,7 +891,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-06-30 08:14:24"
+            "time": "2015-07-01 06:11:22"
         },
         {
             "name": "marciocamello/yii2-x-editable",
@@ -1328,12 +1328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2254573ea1e09daf3a92c475d20f3a575ac4ad2c"
+                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2254573ea1e09daf3a92c475d20f3a575ac4ad2c",
-                "reference": "2254573ea1e09daf3a92c475d20f3a575ac4ad2c",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/743b623f03dd49672ceb50835ad70e70e5c1099f",
+                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f",
                 "shasum": ""
             },
             "require": {
@@ -1408,7 +1408,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-06-29 20:13:15"
+            "time": "2015-07-01 03:54:34"
         },
         {
             "name": "yiisoft/yii2-authclient",

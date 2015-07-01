@@ -20,7 +20,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
+      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
     }
   ],
   "minimum-stability": "dev",

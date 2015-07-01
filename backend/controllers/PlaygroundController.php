@@ -40,13 +40,12 @@ class PlaygroundController extends Controller
      */
     public function actionGetTime()
     {
-        $request = Yii::$app->request;
-        $post = $request->post('dataq');
+        $post = \Yii::$app->request->post('dataq');
 
        // header('Content-type: application/json');
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         $res['id'] = $post['id'];
-        $res['mes'] = 'It is ok!';
+        $res['mes'] = $post['id'].' - It is ok!';
 
         echo json_encode($res);
     }
