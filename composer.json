@@ -21,6 +21,10 @@
     {
       "type": "vcs",
       "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
+    },
+    {
+      "type": "vcs",
+      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git"
     }
   ],
   "minimum-stability": "dev",
@@ -44,6 +48,7 @@
     "marciocamello/yii2-x-editable": "dev-master",
 
     "loveorigami/lo-module-page": "*",
+    "loveorigami/lo-module-sight": "*",
     "loveorigami/yii2-ajaxq" : "*",
 
     "bower-asset/admin-lte": "~2.0",

@@ -35,6 +35,10 @@ return [
             'class' => 'lo\modules\page\modules\admin\Module',
             'defaultRoute' => 'item'
         ],
+        'sight' => [
+            'class' => 'lo\modules\sight\modules\admin\Module',
+            'defaultRoute' => 'town'
+        ],
         'user' => [
             'class' => 'dektrium\user\Module',
            // 'layout' => '@backend/views/layouts/common',

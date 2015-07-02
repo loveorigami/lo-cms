@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e4e23e1f12d5486ada2772bb0812821f",
+    "hash": "0b26728649c1b7a3ceab841295f23c4b",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -851,17 +851,56 @@
             "time": "2015-06-28 15:44:03"
         },
         {
+            "name": "loveorigami/lo-module-sight",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
+                "reference": "ebbab895e66fbcf0f28adc30b26b96a5394b4935"
+            },
+            "require": {
+                "yiisoft/yii2": "~2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\modules\\sight\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru",
+                    "homepage": "http://loveorigami.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "sight module for Lo-CMS",
+            "homepage": "https://bitbucket.org/loveorigami/lo-module-sight",
+            "keywords": [
+                "module",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/loveorigami/lo-module-sight"
+            },
+            "time": "2015-07-02 07:39:49"
+        },
+        {
             "name": "loveorigami/yii2-ajaxq",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loveorigami/yii2-ajaxq.git",
-                "reference": "8c43cbc0a9aac0899bcee13743c213b812e74e34"
+                "reference": "2628f5007795536c915aa90af2ddbea281883b5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/8c43cbc0a9aac0899bcee13743c213b812e74e34",
-                "reference": "8c43cbc0a9aac0899bcee13743c213b812e74e34",
+                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/2628f5007795536c915aa90af2ddbea281883b5a",
+                "reference": "2628f5007795536c915aa90af2ddbea281883b5a",
                 "shasum": ""
             },
             "require": {
@@ -871,7 +910,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "lo\\widgets\\ajaxq\\": ""
+                    "lo\\widgets\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -891,7 +930,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-07-01 06:11:22"
+            "time": "2015-07-02 05:58:10"
         },
         {
             "name": "marciocamello/yii2-x-editable",

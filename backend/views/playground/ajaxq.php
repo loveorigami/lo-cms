@@ -1,15 +1,13 @@
 <?php
-use yii\helpers\Html;
-use lo\widgets\ajaxq\Ajaxq;
+use lo\widgets\Ajaxq;
 
 /* @var $this yii\web\View */
 
-$this->title = 'Pjax';
+$this->title = 'AjaxQ';
 ?>
 
 <?php
 echo Ajaxq::widget([
-    'url' => '/playground/get-time',
-    'success' => '$(".res").html(res["mes"])'
+    'url' => '/playground/get-time'
 ]);
 
