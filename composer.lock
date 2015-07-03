@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b26728649c1b7a3ceab841295f23c4b",
+    "hash": "56164105fce982960949021a3d6c85c0",
     "packages": [
+        {
+            "name": "2amigos/yii2-transliterator-helper",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-transliterator-helper.git",
+                "reference": "b859f5205bcb14409a75687241a94331a0ff0f2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-transliterator-helper/zipball/b859f5205bcb14409a75687241a94331a0ff0f2b",
+                "reference": "b859f5205bcb14409a75687241a94331a0ff0f2b",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\transliterator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "ramirez.cobos@gmail.com",
+                    "homepage": "http://www.ramirezcobos.com"
+                }
+            ],
+            "description": "Transliterator Helper for Yii2.",
+            "keywords": [
+                "extension",
+                "helper",
+                "transliterator",
+                "yii"
+            ],
+            "time": "2014-01-17 15:55:42"
+        },
         {
             "name": "bower-asset/admin-lte",
             "version": "v2.1.2",
@@ -856,9 +899,10 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "ebbab895e66fbcf0f28adc30b26b96a5394b4935"
+                "reference": "6dc917b37e8adaa5d5b5a4dae2acbd0cf8925f4f"
             },
             "require": {
+                "sunra/php-simple-html-dom-parser": "v1.5.0",
                 "yiisoft/yii2": "~2"
             },
             "type": "yii2-extension",
@@ -887,7 +931,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-07-02 07:39:49"
+            "time": "2015-07-03 07:04:47"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -895,12 +939,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loveorigami/yii2-ajaxq.git",
-                "reference": "2628f5007795536c915aa90af2ddbea281883b5a"
+                "reference": "cfcc7eae1e5c2b40e5e4c644b4b678d1b0f9ff48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/2628f5007795536c915aa90af2ddbea281883b5a",
-                "reference": "2628f5007795536c915aa90af2ddbea281883b5a",
+                "url": "https://api.github.com/repos/loveorigami/yii2-ajaxq/zipball/cfcc7eae1e5c2b40e5e4c644b4b678d1b0f9ff48",
+                "reference": "cfcc7eae1e5c2b40e5e4c644b4b678d1b0f9ff48",
                 "shasum": ""
             },
             "require": {
@@ -930,7 +974,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-07-02 05:58:10"
+            "time": "2015-07-02 09:03:01"
         },
         {
             "name": "marciocamello/yii2-x-editable",
@@ -1130,12 +1174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MihailDev/yii2-elfinder.git",
-                "reference": "56c340290ba0656d777e63c68141d31a92780cb6"
+                "reference": "64b42572dec94e5c2d0d1630bce8292848a98f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/56c340290ba0656d777e63c68141d31a92780cb6",
-                "reference": "56c340290ba0656d777e63c68141d31a92780cb6",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/64b42572dec94e5c2d0d1630bce8292848a98f4b",
+                "reference": "64b42572dec94e5c2d0d1630bce8292848a98f4b",
                 "shasum": ""
             },
             "require": {
@@ -1172,7 +1216,7 @@
                 "filemanager",
                 "yii"
             ],
-            "time": "2015-05-21 12:28:42"
+            "time": "2015-07-03 07:08:52"
         },
         {
             "name": "sjaakp/yii2-alphapager",
@@ -1220,6 +1264,49 @@
                 "yii2"
             ],
             "time": "2015-06-23 09:40:35"
+        },
+        {
+            "name": "sunra/php-simple-html-dom-parser",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
+                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/a0b80ace086c7e09085669205e1b3c2c9c7a453c",
+                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "http://github.com/sunra"
+                }
+            ],
+            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
+            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2013-05-04 14:32:03"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1367,12 +1454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f"
+                "reference": "ed54d027fd14156b97bf73864501589171fe115b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/743b623f03dd49672ceb50835ad70e70e5c1099f",
-                "reference": "743b623f03dd49672ceb50835ad70e70e5c1099f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ed54d027fd14156b97bf73864501589171fe115b",
+                "reference": "ed54d027fd14156b97bf73864501589171fe115b",
                 "shasum": ""
             },
             "require": {
@@ -1447,7 +1534,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-07-01 03:54:34"
+            "time": "2015-07-02 13:20:32"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1741,6 +1828,52 @@
                 "yii2"
             ],
             "time": "2015-06-18 08:31:25"
+        },
+        {
+            "name": "zelenin/yii2-slug-behavior",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zelenin/yii2-slug-behavior.git",
+                "reference": "328f65de709999a2ec8812baeac846f02a9b5a02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zelenin/yii2-slug-behavior/zipball/328f65de709999a2ec8812baeac846f02a9b5a02",
+                "reference": "328f65de709999a2ec8812baeac846f02a9b5a02",
+                "shasum": ""
+            },
+            "require": {
+                "2amigos/yii2-transliterator-helper": "~0.1",
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "Zelenin\\yii\\behaviors\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aleksandr Zelenin",
+                    "email": "aleksandr@zelenin.me",
+                    "homepage": "http://zelenin.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 slug behavior",
+            "homepage": "https://github.com/zelenin/yii2-slug-behavior",
+            "keywords": [
+                "Behavior",
+                "slug",
+                "yii",
+                "yii2"
+            ],
+            "time": "2015-06-16 08:41:19"
         }
     ],
     "packages-dev": [

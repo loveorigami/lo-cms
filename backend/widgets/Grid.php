@@ -85,14 +85,6 @@ class Grid extends Widget
     protected $pjaxId;
 
     /**
-     * @param string $baseRoute
-     */
-    public function setBaseRoute($baseRoute)
-    {
-        $this->_baseRoute = $baseRoute;
-    }
-
-    /**
      * @return array
      */
     public function getRowButtons()
