@@ -36,7 +36,7 @@ class View extends \common\actions\Base
         if (!$model)
             throw new NotFoundHttpException('Not found');
 
-        if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
+        if (!Yii::$app->user->can($this->access(), array("model" => $model)))
             throw new ForbiddenHttpException('Forbidden model');
 
         return $this->render($this->tpl, ["model" => $model]);

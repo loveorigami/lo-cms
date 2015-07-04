@@ -1,6 +1,6 @@
 <?php
 namespace common\rbac;
-
+use Yii;
 /**
  * Class BaseRouteTrait
  * Получаем роуты для формирования access rules
@@ -42,6 +42,22 @@ trait AccessRouteTrait
         if($this->_permRoute === null)
             $this->_permRoute = '/'.\Yii::$app->controller->route;
         return $this->_permRoute;
+    }
+
+    /**
+     * Route for permission
+     */
+    protected function access($action='')
+    {
+        if(Yii::$app->user->can('root')){
+            return '/*';
+        }
+
+        if($action){
+            return $this->baseRoute . '/'. $action;
+        }
+
+        return $this->permRoute;
     }
 
 }

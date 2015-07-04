@@ -49,7 +49,7 @@ class Update extends \common\actions\Base
 
         $model = $this->findModel($id);
 
-        if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
+        if (!Yii::$app->user->can($this->access(), array("model" => $model)))
             throw new ForbiddenHttpException('Forbidden model');
 
         $model->setScenario($this->modelScenario);
@@ -64,7 +64,7 @@ class Update extends \common\actions\Base
             return $this->performAjaxValidation($model);
         }
 
-        if ($load && !Yii::$app->user->can($this->permRoute, array("model" => $model)))
+        if ($load && !Yii::$app->user->can($this->access(), array("model" => $model)))
             throw new ForbiddenHttpException('Forbidden load');
 
         if ($load && $model->save() && !$request->post($this->applyParam)) {

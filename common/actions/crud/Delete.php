@@ -27,7 +27,7 @@ class Delete extends \common\actions\Base
 
             $model = $this->findModel($id);
 
-            if (!Yii::$app->user->can($this->permRoute, array("model" => $model)))
+            if (!Yii::$app->user->can($this->access(), array("model" => $model)))
                 throw new ForbiddenHttpException('Forbidden');
 
             $model->delete();

@@ -157,8 +157,8 @@ class Grid extends Widget
                     $arr = [];
 
                     if (
-                        !Yii::$app->user->can($this->baseRoute . '/update', ['model'=>$model]) AND
-                        !Yii::$app->user->can($this->baseRoute . '/delete', ['model'=>$model])
+                        !Yii::$app->user->can($this->access('update'), ['model'=>$model]) AND
+                        !Yii::$app->user->can($this->access('delete'), ['model'=>$model])
                     ){
                         $arr = ["class" => "grid-checkbox-disabled"];
                     }
@@ -209,7 +209,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute([$this->baseRoute . '/up', 'id'=>$model->id]);
 
-                if (Yii::$app->user->can('updateModel', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('update'), ['model'=>$model]))
                     return Html::tag('a', Html::tag('span', '', ['class' => 'glyphicon glyphicon-arrow-up']), ['data-pjax' => 0, 'onClick' => $js($url), 'href' => '#', 'title' => Yii::t('core', 'Up')]);
 
             },
@@ -218,7 +218,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute([$this->baseRoute . '/down', 'id'=>$model->id]);
 
-                if (Yii::$app->user->can('updateModel', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('update'), ['model'=>$model]))
                     return Html::tag('a', Html::tag('span', '', ['class' => 'glyphicon glyphicon-arrow-down']), ['data-pjax' => 0, 'onClick' => $js($url), 'href' => '#', 'title' => Yii::t('core', 'Down')]);
 
             },
@@ -227,7 +227,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute(["/".Yii::$app->controller->route, "parent_id" => $model->id]);
 
-                if (Yii::$app->user->can('readModel', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('view'), ['model'=>$model]))
                     return Html::tag('a', Html::tag('span', '', ['class' => 'glyphicon glyphicon-open']), ['data-pjax' => 0, 'href' => $url, 'title' => Yii::t('core', 'Enter')]);
 
             },
@@ -239,7 +239,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute([$this->baseRoute . '/view', 'id'=>$model->id]);
 
-                if (Yii::$app->user->can($this->baseRoute . '/view', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('view'), ['model'=>$model]))
                     return Html::tag('a', Html::tag('span', '', ['class' => 'glyphicon glyphicon-eye-open']), ['data-pjax' => 0, 'href' => $url, 'title' => Yii::t('core', 'View')]);
 
             },
@@ -248,7 +248,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute([$this->baseRoute . '/update', 'id'=>$model->id]);
 
-                if (Yii::$app->user->can($this->baseRoute . '/update', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('update'), ['model'=>$model]))
                     return Html::tag('a', Html::tag('span', '', ['class' => 'glyphicon glyphicon-pencil']), ['data-pjax' => 0, 'href' => $url, 'title' => Yii::t('core', 'Update')]);
 
             },
@@ -257,7 +257,7 @@ class Grid extends Widget
 
                 $url = Url::toRoute([$this->baseRoute . '/delete', 'id'=>$model->id]);
 
-                if (Yii::$app->user->can($this->baseRoute .'/delete', ['model'=>$model]))
+                if (Yii::$app->user->can($this->access('delete'), ['model'=>$model]))
                     return Html::a(Html::tag('span', '', ['class' => 'glyphicon glyphicon-trash']), $url, ['data-pjax' => 0, 'data-method' => 'post', 'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'), 'title' => Yii::t('core', 'Delete')]);
 
             },
@@ -336,7 +336,7 @@ class Grid extends Widget
             "delete" => [
                 "class" => \backend\widgets\ActionButton::className(),
                 "label" => Yii::t('core', 'Delete'),
-                "visible" => Yii::$app->user->can($this->baseRoute . '/delete', ['model'=>$model]),
+                "visible" => Yii::$app->user->can($this->access('delete'), ['model'=>$model]),
                 "options" => [
                     'id' => 'group-delete',
                     'class' => 'btn btn-danger',
@@ -351,7 +351,7 @@ class Grid extends Widget
             $arr["replace"] = [
 
                 "class" => \backend\widgets\ReplaceInTreeButton::className(),
-                "visible" =>  Yii::$app->user->can($this->baseRoute . '/update', ['model'=>$model]),
+                "visible" =>  Yii::$app->user->can($this->access('update'), ['model'=>$model]),
                 "label" => Yii::t('core', 'Replace'),
                 "options" => [
                     'id' => 'group-replace',

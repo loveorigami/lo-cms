@@ -80,7 +80,7 @@ class CrudLinks extends Widget
                     'label' => Yii::t('core', 'Create'),
                     'url' => array_merge(['create'], $this->urlParams),
                     'options' => ['class' => 'btn btn-success'],
-                    'permission' => $this->baseRoute . '/create',
+                    'permission' => $this->access('create'),
                 ]
 
             ],
@@ -91,7 +91,7 @@ class CrudLinks extends Widget
                     'label' => Yii::t('core', 'Update'),
                     'url' => array_merge(['update', 'id' => $this->model->id], $this->urlParams),
                     'options' => ['class' => 'btn btn-primary'],
-                    'permission' => $this->baseRoute . '/update',
+                    'permission' => $this->access('update'),
                 ],
 
                 [
@@ -103,7 +103,7 @@ class CrudLinks extends Widget
                             'method' => 'post',
                         ],
                     ],
-                    'permission' => $this->baseRoute . '/delete',
+                    'permission' => $this->access('delete'),
                 ],
 
             ],

@@ -899,7 +899,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "6dc917b37e8adaa5d5b5a4dae2acbd0cf8925f4f"
+                "reference": "2360442fc7fb1df04b0c5376938b4ed2f894a616"
             },
             "require": {
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
@@ -931,7 +931,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-07-03 07:04:47"
+            "time": "2015-07-03 09:08:25"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -1174,12 +1174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MihailDev/yii2-elfinder.git",
-                "reference": "64b42572dec94e5c2d0d1630bce8292848a98f4b"
+                "reference": "7dc4d79cc6890162499a1db47e6cb742bf61a616"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/64b42572dec94e5c2d0d1630bce8292848a98f4b",
-                "reference": "64b42572dec94e5c2d0d1630bce8292848a98f4b",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/7dc4d79cc6890162499a1db47e6cb742bf61a616",
+                "reference": "7dc4d79cc6890162499a1db47e6cb742bf61a616",
                 "shasum": ""
             },
             "require": {
@@ -1216,7 +1216,7 @@
                 "filemanager",
                 "yii"
             ],
-            "time": "2015-07-03 07:08:52"
+            "time": "2015-07-03 08:14:34"
         },
         {
             "name": "sjaakp/yii2-alphapager",
