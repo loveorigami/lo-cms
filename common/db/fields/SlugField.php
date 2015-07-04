@@ -55,7 +55,7 @@ class SlugField extends TextField
                 'translit' => true,
                 'replacement' => '-',
                 'lowercase' => true,
-                'immutable' => false,
+                'immutable' => true,
                 'uniqueValidator' => $this->uniqueParams,
                 'transliterateOptions' => 'Russian-Latin/BGN;'
             ], $this->slugOptions);
