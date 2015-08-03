@@ -182,18 +182,15 @@ use mdm\admin\components\MenuHelper;
 
             <!-- Main content -->
             <section class="content" id="ajax-loader">
-                <?php if (Yii::$app->session->hasFlash('alert')):?>
-                    <?php echo \yii\bootstrap\Alert::widget([
-                        'body'=>ArrayHelper::getValue(Yii::$app->session->getFlash('alert'), 'body'),
-                        'options'=>ArrayHelper::getValue(Yii::$app->session->getFlash('alert'), 'options'),
-                    ])?>
-                <?php endif; ?>
+                <?php
+                    echo \common\widgets\Alert::widget();
+                ?>
                 <?php echo $content ?>
             </section><!-- /.content -->
         </aside><!-- /.right-side -->
     </div><!-- ./wrapper -->
 
 <? $this->registerJs("$(window).on('beforeunload', function(){
-        $('.content-wrapper').loading();
+       // $('.content-wrapper').loading();
     });") ?>
 <?php $this->endContent(); ?>

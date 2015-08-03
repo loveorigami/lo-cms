@@ -10,7 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'plugins'],
     'controllerMap'=>[
         'elfinder' => [
             'class' => '\mihaildev\elfinder\PathController',
@@ -38,6 +38,13 @@ return [
         'sight' => [
             'class' => 'lo\modules\sight\modules\admin\Module',
             'defaultRoute' => 'town'
+        ],
+        'plugins' => [
+            'class' => 'lo\plugins\Module',
+            'pluginsDir'=>[
+                '@common/plugins',
+                '@lo/plugins/plugins',
+            ]
         ],
         'user' => [
             'class' => 'dektrium\user\Module',
@@ -83,6 +90,10 @@ return [
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+        ],
+        'plugins' => [
+            'class' => 'lo\plugins\components\EventBootstrap',
+            'appId' => 'backend'
         ],
         'translate' => [
             'class' => 'common\components\Translation',

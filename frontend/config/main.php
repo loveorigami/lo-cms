@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'plugins'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'page' => [
@@ -31,6 +31,10 @@ return [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['user'],
         ],
+        'plugins' => [
+            'class' => 'lo\plugins\components\EventBootstrap',
+            'appId' => 'frontend'
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -40,7 +44,7 @@ return [
                 ],
             ],
         ],
-        'urlManager'=>require(__DIR__.'/_urlManager.php'),
+        'urlManager' => require(__DIR__ . '/_urlManager.php'),
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

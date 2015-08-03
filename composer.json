@@ -53,6 +53,7 @@
     "loveorigami/lo-module-page": "*",
     "loveorigami/lo-module-sight": "*",
     "loveorigami/yii2-ajaxq" : "*",
+    "loveorigami/yii2-plugins-system" : "*",
 
     "bower-asset/admin-lte": "~2.0",
     "bower-asset/font-awesome": "~4.0",
