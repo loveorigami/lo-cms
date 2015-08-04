@@ -11,6 +11,9 @@ use yii\helpers\ArrayHelper;
  * Класс содержащий описание полей модели
  * @package common\db
  * @author Churkin Anton <webadmin87@gmail.com>
+ *
+ * @property-read \common\db\fields\Field[] $fields массив обектов полей модели
+ * @property-read [] $fieldsConfig массив конфигураций объектов полей модели
  */
 abstract class MetaFields extends Object
 {
@@ -22,22 +25,51 @@ abstract class MetaFields extends Object
     /**
      * @var ActiveRecord модель - владелец
      */
-
     protected $owner;
+
     /**
      * @var array массив объектов полей модели
      */
-
     protected $_fields;
+
+    /**
+    * @var array массив конфигураций объектов полей модели
+    */
+    protected $_fieldsConfig;
 
     /**
      * Конструктор
      * @param ActiveRecord $owner
+     * @param array $params
      */
     public function __construct(ActiveRecord $owner, $params = array())
     {
         $this->owner = $owner;
         parent::__construct($params);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function __get($name)
+    {
+        $config = $this->getFieldsConfig();
+        if ( isset($config[$name]) and is_array($config[$name]) ) {
+            return $this->getField($name);
+        }
+        return parent::__get($name);
+    }
+
+    /**
+     * Возвращает массив конфигураций обектов полей модели
+     * @return array
+     */
+    public function getFieldsConfig()
+    {
+        if ( !is_array($this->_fieldsConfig) ) {
+            $this->_fieldsConfig = ArrayHelper::merge($this->defaultConfig(), $this->config());
+        }
+        return $this->_fieldsConfig;
     }
 
     /**
@@ -64,16 +96,31 @@ abstract class MetaFields extends Object
     {
         if ($this->_fields === null) {
             $this->_fields = [];
-            $config = ArrayHelper::merge($this->defaultConfig(), $this->config());
-            foreach ($config AS $config) {
-                if (!is_array($config))
+            foreach ($this->fieldsConfig AS $name => $config) {
+                if ( !empty($this->_fields[$name]) or !is_array($config) )
                     continue;
-                if (isset($config["definition"])){
-                    $this->_fields[] = Yii::createObject($config["definition"], $config["params"]);
-                }
+                $this->_fields[$name] = Yii::createObject($config["definition"], $config["params"]);
             }
         }
         return $this->_fields;
+    }
+
+    /**
+     * Возвращает объект поля модели по его названию
+     * @param $name
+     * @throws \yii\base\InvalidConfigException
+     * @return \common\db\fields\Field
+     */
+    public function getField($name)
+    {
+        if ( !isset($this->_fields[$name]) ) {
+            $config = $this->fieldsConfig;
+            if ( !is_array($config) or !is_array($config[$name]) ) {
+                return;
+            }
+            $this->_fields[$name] = Yii::createObject($config['definition'], $config['params']);
+        }
+        return $this->_fields[$name];
     }
 
     /**
