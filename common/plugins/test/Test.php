@@ -1,7 +1,7 @@
 <?php
 
 namespace common\plugins\test;
-
+use mihaildev\ckeditor\CKEditor;
 /**
  * Plugin Name: Test plugin
  * Plugin URI:
@@ -43,12 +43,17 @@ class Test
      */
     public function foo($event)
     {
-        $term = ($event->data['term']) ? $event->data['term'] : self::$config['term'];
+        $view = $event->sender;
 
-        if (isset($event->output)) {
-            $content = $event->output;
-            $event->output =  str_replace($term,"<h1>$term</h1>", $content);
-        }
+        $view->registerJs("
+            CKEDITOR.plugins.addExternal('abbr', 'file:///C:/Users/админ/Desktop/js/ckeditor/plugins/abbr/');
+            CKEDITOR.editorConfig = function( config ) {
+                config.extraPlugins = 'abbr';
+            };
+        ", $view::POS_END);
+
+
+//CKEDITOR.plugins.addExternal( 'footnotes', 'file:///C:/Users/админ/Desktop/js/ckeditor/plugins/footnotes/' );
 
         return true;
     }

@@ -36,7 +36,7 @@ class TextAreaField extends TextField
     /**
      * @inheritdoc
      */
-    public $formTemplate = '<div class="row"><div class="co-xs-12 col-lg-8">{input}</div></div>';
+    public $formTemplate = '<div class="row"><div class="co-xs-12 col-lg-12">{input}</div></div>';
 
     /**
      * @inheritdoc
