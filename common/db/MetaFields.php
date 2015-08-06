@@ -97,7 +97,7 @@ abstract class MetaFields extends Object
         if ($this->_fields === null) {
             $this->_fields = [];
             foreach ($this->fieldsConfig AS $name => $config) {
-                if ( !empty($this->_fields[$name]) or !is_array($config) )
+                if ( !is_array($config) )
                     continue;
                 $this->_fields[$name] = Yii::createObject($config["definition"], $config["params"]);
             }
@@ -113,14 +113,9 @@ abstract class MetaFields extends Object
      */
     public function getField($name)
     {
-        if ( !isset($this->_fields[$name]) ) {
-            $config = $this->fieldsConfig;
-            if ( !is_array($config) or !is_array($config[$name]) ) {
-                return;
-            }
-            $this->_fields[$name] = Yii::createObject($config['definition'], $config['params']);
+        if ( isset($this->fields[$name]) ) {
+            return $this->fields[$name];
         }
-        return $this->_fields[$name];
     }
 
     /**
