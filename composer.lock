@@ -979,7 +979,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git",
-                "reference": "7660e35e9ce28eac89e68188a727e116f3c3fce9"
+                "reference": "af5eac5f83c063691d1111fd6a6b15130886b2fd"
             },
             "require": {
                 "trntv/probe": "dev-master",
@@ -1012,7 +1012,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-core"
             },
-            "time": "2015-08-10 07:50:41"
+            "time": "2015-08-10 08:47:05"
         },
         {
             "name": "loveorigami/lo-module-page",

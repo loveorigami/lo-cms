@@ -43,17 +43,17 @@ use mdm\admin\components\MenuHelper;
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-warning"></i>
                             <span class="label label-danger">
-                                <?php echo \backend\models\SystemLog::find()->count() ?>
+                                <?php echo \lo\modules\core\models\SystemLog::find()->count() ?>
                             </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header"><?php echo Yii::t('backend', 'You have {num} log items', ['num'=>\backend\models\SystemLog::find()->count()]) ?></li>
+                                <li class="header"><?php echo Yii::t('backend', 'You have {num} log items', ['num'=>\lo\modules\core\models\SystemLog::find()->count()]) ?></li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
-                                        <?php foreach(\backend\models\SystemLog::find()->orderBy(['log_time'=>SORT_DESC])->limit(5)->all() as $logEntry): ?>
+                                        <?php foreach(\lo\modules\core\models\SystemLog::find()->orderBy(['log_time'=>SORT_DESC])->limit(5)->all() as $logEntry): ?>
                                             <li>
-                                                <a href="<?php echo Yii::$app->urlManager->createUrl(['/log/view', 'id'=>$logEntry->id]) ?>">
+                                                <a href="<?php echo Yii::$app->urlManager->createUrl(['/core/log/view', 'id'=>$logEntry->id]) ?>">
                                                     <i class="fa fa-warning <?php echo $logEntry->level == \yii\log\Logger::LEVEL_ERROR ? 'text-red' : 'text-yellow' ?>"></i>
                                                     <?php echo $logEntry->category ?>
                                                 </a>
@@ -62,7 +62,7 @@ use mdm\admin\components\MenuHelper;
                                     </ul>
                                 </li>
                                 <li class="footer">
-                                    <?php echo Html::a(Yii::t('backend', 'View all'), ['/log/index']) ?>
+                                    <?php echo Html::a(Yii::t('backend', 'View all'), ['/core/log/index']) ?>
                                 </li>
                             </ul>
                         </li>
@@ -135,7 +135,7 @@ use mdm\admin\components\MenuHelper;
                           $badgeBgClass='label-success';
                           break;
                       case '/log/index':
-                          $badge=\backend\models\SystemLog::find()->count();
+                          $badge=\lo\modules\core\models\SystemLog::find()->count();
                           $badgeBgClass='label-danger';
                           break;
                   }
