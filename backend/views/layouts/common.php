@@ -97,7 +97,7 @@ use mdm\admin\components\MenuHelper;
                             </ul>
                         </li>
                         <li>
-                            <?php echo Html::a('<i class="fa fa-cogs"></i>', ['/site/settings'])?>
+                            <?php echo Html::a('<i class="fa fa-cogs"></i>', ['/core/settings/index'])?>
                         </li>
                     </ul>
                 </div>

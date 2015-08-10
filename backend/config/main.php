@@ -100,7 +100,7 @@ return [
             'appId' => 'backend'
         ],
         'translate' => [
-            'class' => 'common\components\Translation',
+            'class' => 'lo\core\components\Translation',
             'key' => getenv('YANDEX_API_KEY'), // https://tech.yandex.ru/keys/
         ],
         'user' => [
