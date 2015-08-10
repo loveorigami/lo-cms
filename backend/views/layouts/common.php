@@ -2,7 +2,7 @@
 /**
  * @var $this yii\web\View
  */
-use backend\widgets\Menu;
+use lo\core\admin\widgets\Menu;
 use common\models\TimelineEvent;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -183,7 +183,7 @@ use mdm\admin\components\MenuHelper;
             <!-- Main content -->
             <section class="content" id="ajax-loader">
                 <?php
-                    echo \common\widgets\Alert::widget();
+                    echo \lo\core\widgets\Alert::widget();
                 ?>
                 <?php echo $content ?>
             </section><!-- /.content -->

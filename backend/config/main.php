@@ -31,6 +31,10 @@ return [
         ]
     ],
     'modules' => [
+        'core' => [
+            'class' => 'lo\modules\core\modules\admin\Module',
+            'defaultRoute' => 'constraint'
+        ],
         'page' => [
             'class' => 'lo\modules\page\modules\admin\Module',
             'defaultRoute' => 'item'

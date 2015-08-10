@@ -59,7 +59,7 @@ return [
             ],
         ],
         'keyStorage' => [
-            'class' => 'common\components\keyStorage\KeyStorage'
+            'class' => 'lo\core\components\keyStorage\KeyStorage'
         ],
     ],
 ];

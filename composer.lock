@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5dac0d72be375d9fd794a92c354f912c",
+    "hash": "35f1f1d9fd96265a57c7d83ec20847a4",
     "packages": [
         {
             "name": "2amigos/yii2-transliterator-helper",
@@ -690,12 +690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/highlightjs.git",
-                "reference": "c9b282b55834f9b9ae46aeb2ceb212bf53c8bdb6"
+                "reference": "3c0b4bc4a70ca3312437829c6d48ccd342467d74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/highlightjs/zipball/c9b282b55834f9b9ae46aeb2ceb212bf53c8bdb6",
-                "reference": "c9b282b55834f9b9ae46aeb2ceb212bf53c8bdb6",
+                "url": "https://api.github.com/repos/components/highlightjs/zipball/3c0b4bc4a70ca3312437829c6d48ccd342467d74",
+                "reference": "3c0b4bc4a70ca3312437829c6d48ccd342467d74",
                 "shasum": ""
             },
             "type": "component",
@@ -724,7 +724,7 @@
                 }
             ],
             "description": "Highlight.js highlights syntax in code examples on blogs, forums and in fact on any web pages.",
-            "time": "2015-07-09 12:23:36"
+            "time": "2015-08-05 04:32:44"
         },
         {
             "name": "dektrium/yii2-user",
@@ -934,12 +934,93 @@
             "time": "2015-05-02 08:35:27"
         },
         {
+            "name": "loveorigami/lo-core-cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
+                "reference": "c23195c6209db8c32f525dd519288d20ce527808"
+            },
+            "require": {
+                "yiisoft/yii2": "~2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\core\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru",
+                    "homepage": "http://loveorigami.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Core for Lo-CMS",
+            "homepage": "https://bitbucket.org/loveorigami/lo-core-cms",
+            "keywords": [
+                "cms",
+                "core",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/loveorigami/lo-core-cms"
+            },
+            "time": "2015-08-10 07:13:10"
+        },
+        {
+            "name": "loveorigami/lo-module-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git",
+                "reference": "a179e85265c230c90495c88a0b8f16e45f97cfdc"
+            },
+            "require": {
+                "trntv/probe": "dev-master",
+                "yiisoft/yii2": "~2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\modules\\core\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru",
+                    "homepage": "http://loveorigami.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Core module for Lo-CMS",
+            "homepage": "https://bitbucket.org/loveorigami/lo-module-core",
+            "keywords": [
+                "core",
+                "module",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/loveorigami/lo-module-core"
+            },
+            "time": "2015-08-10 07:24:24"
+        },
+        {
             "name": "loveorigami/lo-module-page",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
-                "reference": "cbc4b82c55959d0facc7db2a56fb7380d5921556"
+                "reference": "29fd8ca7f5cec63a11f0cd3ab75bf6627db22249"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -971,7 +1052,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-page"
             },
-            "time": "2015-07-04 08:29:51"
+            "time": "2015-08-07 08:54:34"
         },
         {
             "name": "loveorigami/lo-module-sight",
@@ -979,7 +1060,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "7568d1a3a7001dc3ac9eaf9051135f5f78d621d7"
+                "reference": "5f5a59fa957e8a54eda2056bcf9c7672ac47cea7"
             },
             "require": {
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
@@ -1011,7 +1092,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-07-06 09:54:26"
+            "time": "2015-08-07 09:36:31"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -1255,12 +1336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "8471e62de68d76d63767f24cfe0f02e493de869a"
+                "reference": "835875b0cc0bef1f12998c4c713494947b45cfcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/8471e62de68d76d63767f24cfe0f02e493de869a",
-                "reference": "8471e62de68d76d63767f24cfe0f02e493de869a",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/835875b0cc0bef1f12998c4c713494947b45cfcb",
+                "reference": "835875b0cc0bef1f12998c4c713494947b45cfcb",
                 "shasum": ""
             },
             "require": {
@@ -1298,7 +1379,7 @@
                 "rbac",
                 "yii"
             ],
-            "time": "2015-07-11 09:36:18"
+            "time": "2015-08-05 03:43:41"
         },
         {
             "name": "mihaildev/yii2-ckeditor",
@@ -1674,12 +1755,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ffb0027aee1b4bc418e57416e47eb953901858f0"
+                "reference": "a972fbac76133feb1020a372aece4a1f2685dcd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ffb0027aee1b4bc418e57416e47eb953901858f0",
-                "reference": "ffb0027aee1b4bc418e57416e47eb953901858f0",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a972fbac76133feb1020a372aece4a1f2685dcd7",
+                "reference": "a972fbac76133feb1020a372aece4a1f2685dcd7",
                 "shasum": ""
             },
             "require": {
@@ -1754,7 +1835,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-03 10:51:17"
+            "time": "2015-08-09 17:51:38"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1762,12 +1843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-authclient.git",
-                "reference": "35f3751f884e9f2a90de4f499baf603a86a8aeee"
+                "reference": "58aebac6e677657772917c558bff17fc9bb0de29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/35f3751f884e9f2a90de4f499baf603a86a8aeee",
-                "reference": "35f3751f884e9f2a90de4f499baf603a86a8aeee",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/58aebac6e677657772917c558bff17fc9bb0de29",
+                "reference": "58aebac6e677657772917c558bff17fc9bb0de29",
                 "shasum": ""
             },
             "require": {
@@ -1802,7 +1883,7 @@
                 "oauth",
                 "yii2"
             ],
-            "time": "2015-07-28 06:22:05"
+            "time": "2015-08-04 14:49:05"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1955,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-jui.git",
-                "reference": "9e47f6644f77a508243b60eea90d8b09a04b2eca"
+                "reference": "7b71a0389e5aa2bfa8a3ac605705a286908b14e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/9e47f6644f77a508243b60eea90d8b09a04b2eca",
-                "reference": "9e47f6644f77a508243b60eea90d8b09a04b2eca",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/7b71a0389e5aa2bfa8a3ac605705a286908b14e8",
+                "reference": "7b71a0389e5aa2bfa8a3ac605705a286908b14e8",
                 "shasum": ""
             },
             "require": {
@@ -1997,7 +2078,7 @@
                 "jQuery UI",
                 "yii2"
             ],
-            "time": "2015-07-28 06:24:00"
+            "time": "2015-08-06 19:32:06"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -2130,12 +2211,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d"
+                "reference": "5015592f93c764c48f440511f56a6c83ce744137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d",
-                "reference": "55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5015592f93c764c48f440511f56a6c83ce744137",
+                "reference": "5015592f93c764c48f440511f56a6c83ce744137",
                 "shasum": ""
             },
             "require": {
@@ -2174,7 +2255,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-07-24 15:39:15"
+            "time": "2015-08-06 15:02:52"
         },
         {
             "name": "phpspec/php-diff",
@@ -2261,12 +2342,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "10b89bf195c552cc11206fb4812815e552a092f3"
+                "reference": "3c538c518cb514ec907baf527f6f47dc3b7860a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/10b89bf195c552cc11206fb4812815e552a092f3",
-                "reference": "10b89bf195c552cc11206fb4812815e552a092f3",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/3c538c518cb514ec907baf527f6f47dc3b7860a1",
+                "reference": "3c538c518cb514ec907baf527f6f47dc3b7860a1",
                 "shasum": ""
             },
             "require": {
@@ -2300,7 +2381,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2015-07-30 07:07:01"
+            "time": "2015-08-06 16:14:59"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -2406,7 +2487,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "trntv/probe": 20,
         "dektrium/yii2-user": 20,
         "marekpetras/yii2-calendarview-widget": 20,
         "marciocamello/yii2-x-editable": 20

@@ -20,6 +20,14 @@
   "repositories": [
     {
       "type": "vcs",
+      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git"
+    },
+    {
+      "type": "vcs",
       "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
     },
     {
@@ -39,7 +47,7 @@
 
     "mihaildev/yii2-ckeditor": "*",
     "mihaildev/yii2-elfinder": "*",
-    "trntv/probe": "dev-master",
+
     "vlucas/phpdotenv": "~2.0",
     "dektrium/yii2-user": "0.9.*@dev",
     "mdmsoft/yii2-admin": "~2.0",
@@ -50,6 +58,8 @@
     "marciocamello/yii2-x-editable": "dev-master",
     "zelenin/yii2-slug-behavior": "0.5.*",
 
+    "loveorigami/lo-core-cms": "*",
+    "loveorigami/lo-module-core": "*",
     "loveorigami/lo-module-page": "*",
     "loveorigami/lo-module-sight": "*",
     "loveorigami/yii2-ajaxq" : "*",
