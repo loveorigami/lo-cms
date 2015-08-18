@@ -50,13 +50,10 @@
 
     "vlucas/phpdotenv": "~2.0",
     "dektrium/yii2-user": "0.9.*@dev",
-    "mdmsoft/yii2-admin": "~2.0",
 
     "insolita/yii2-adminlte-widgets": "*",
     "marekpetras/yii2-calendarview-widget": "dev-master",
     "sjaakp/yii2-alphapager": "*",
-    "marciocamello/yii2-x-editable": "dev-master",
-    "zelenin/yii2-slug-behavior": "0.5.*",
 
     "loveorigami/lo-core-cms": "*",
     "loveorigami/lo-module-core": "*",
@@ -64,6 +61,7 @@
     "loveorigami/lo-module-sight": "*",
     "loveorigami/yii2-ajaxq" : "*",
     "loveorigami/yii2-plugins-system" : "*",
+    "loveorigami/yii2-bootstrap-toggle": "*",
 
     "bower-asset/admin-lte": "~2.0",
     "bower-asset/font-awesome": "~4.0",

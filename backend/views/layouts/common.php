@@ -9,6 +9,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use mdm\admin\components\MenuHelper;
+
 ?>
 
 <?php $this->beginContent('@backend/views/layouts/base.php'); ?>
@@ -28,6 +29,7 @@ use mdm\admin\components\MenuHelper;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
+
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li id="timeline-notifications" class="notifications-menu">
@@ -47,13 +49,13 @@ use mdm\admin\components\MenuHelper;
                             </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header"><?php echo Yii::t('backend', 'You have {num} log items', ['num'=>\lo\modules\core\models\SystemLog::find()->count()]) ?></li>
+                                <li class="header"><?php echo Yii::t('backend', 'You have {num} log items', ['num' => \lo\modules\core\models\SystemLog::find()->count()]) ?></li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
-                                        <?php foreach(\lo\modules\core\models\SystemLog::find()->orderBy(['log_time'=>SORT_DESC])->limit(5)->all() as $logEntry): ?>
+                                        <?php foreach (\lo\modules\core\models\SystemLog::find()->orderBy(['log_time' => SORT_DESC])->limit(5)->all() as $logEntry): ?>
                                             <li>
-                                                <a href="<?php echo Yii::$app->urlManager->createUrl(['/core/log/view', 'id'=>$logEntry->id]) ?>">
+                                                <a href="<?php echo Yii::$app->urlManager->createUrl(['/core/log/view', 'id' => $logEntry->id]) ?>">
                                                     <i class="fa fa-warning <?php echo $logEntry->level == \yii\log\Logger::LEVEL_ERROR ? 'text-red' : 'text-yellow' ?>"></i>
                                                     <?php echo $logEntry->category ?>
                                                 </a>
@@ -69,13 +71,18 @@ use mdm\admin\components\MenuHelper;
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230" class="user-image">
+                                <img
+                                    src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230"
+                                    class="user-image">
                                 <span><?php echo Yii::$app->user->identity->username ?> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header light-blue">
-                                    <img src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230" class="img-circle" alt="User Image" />
+                                    <img
+                                        src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230"
+                                        class="img-circle" alt="User Image"/>
+
                                     <p>
                                         <?php Yii::$app->user->identity->username ?>
                                         <small>
@@ -85,19 +92,19 @@ use mdm\admin\components\MenuHelper;
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <?php echo Html::a(Yii::t('backend', 'Profile'), ['/user/admin/update-profile?id='.Yii::$app->user->identity->id], ['class'=>'btn btn-default btn-flat']) ?>
+                                        <?php echo Html::a(Yii::t('backend', 'Profile'), ['/user/admin/update-profile?id=' . Yii::$app->user->identity->id], ['class' => 'btn btn-default btn-flat']) ?>
                                     </div>
                                     <div class="pull-left">
-                                        <?php echo Html::a(Yii::t('backend', 'Account'), ['/user/admin/update?id='.Yii::$app->user->identity->id], ['class'=>'btn btn-default btn-flat']) ?>
+                                        <?php echo Html::a(Yii::t('backend', 'Account'), ['/user/admin/update?id=' . Yii::$app->user->identity->id], ['class' => 'btn btn-default btn-flat']) ?>
                                     </div>
                                     <div class="pull-right">
-                                        <?php echo Html::a(Yii::t('backend', 'Logout'), ['/user/logout'], ['class'=>'btn btn-default btn-flat', 'data-method' => 'post']) ?>
+                                        <?php echo Html::a(Yii::t('backend', 'Logout'), ['/user/logout'], ['class' => 'btn btn-default btn-flat', 'data-method' => 'post']) ?>
                                     </div>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <?php echo Html::a('<i class="fa fa-cogs"></i>', ['/core/settings/index'])?>
+                            <?php echo Html::a('<i class="fa fa-cogs"></i>', ['/core/settings/index']) ?>
                         </li>
                     </ul>
                 </div>
@@ -110,55 +117,57 @@ use mdm\admin\components\MenuHelper;
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230" class="img-circle" />
+                        <img
+                            src="http://gravatar.com/avatar/<?= Yii::$app->user->identity->profile->gravatar_id ?>?s=230"
+                            class="img-circle"/>
                     </div>
                     <div class="pull-left info">
-                        <p><?php echo Yii::t('backend', 'Hello, {username}', ['username'=>Yii::$app->user->identity->username]) ?></p>
-                        <a href="<?php echo Url::to(['/user/admin/update-profile?id='.Yii::$app->user->identity->id]) ?>">
+                        <p><?php echo Yii::t('backend', 'Hello, {username}', ['username' => Yii::$app->user->identity->username]) ?></p>
+                        <a href="<?php echo Url::to(['/user/admin/update-profile?id=' . Yii::$app->user->identity->id]) ?>">
                             <i class="fa fa-circle text-success"></i>
                             <?php echo Yii::$app->formatter->asDatetime(time()) ?>
                         </a>
                     </div>
                 </div>
 
-              <?php
+                <?php
 
-              $callback = function($menu){
-                  $data = eval($menu['data']);
-                  $data['icon'] = isset($data['icon']) ? '<i class="fa fa-'.$data['icon'].'"></i>' : '<i class="fa fa-angle-double-right"></i>';
-                  $badge='';
-                  $badgeBgClass='';
+                $callback = function ($menu) {
+                    $data = eval($menu['data']);
+                    $data['icon'] = isset($data['icon']) ? '<i class="fa fa-' . $data['icon'] . '"></i>' : '<i class="fa fa-angle-double-right"></i>';
+                    $badge = '';
+                    $badgeBgClass = '';
 
-                  switch($menu['route']){
-                      case '/timeline-event/index':
-                          $badge=TimelineEvent::find()->today()->count();
-                          $badgeBgClass='label-success';
-                          break;
-                      case '/log/index':
-                          $badge=\lo\modules\core\models\SystemLog::find()->count();
-                          $badgeBgClass='label-danger';
-                          break;
-                  }
+                    switch ($menu['route']) {
+                        case '/timeline-event/index':
+                            $badge = TimelineEvent::find()->today()->count();
+                            $badgeBgClass = 'label-success';
+                            break;
+                        case '/log/index':
+                            $badge = \lo\modules\core\models\SystemLog::find()->count();
+                            $badgeBgClass = 'label-danger';
+                            break;
+                    }
 
-                  return [
-                      'label' => Yii::t('backend', $menu['name']),
-                      'url' => [$menu['route']],
-                      'icon' => $data['icon'],
-                      'badge' => $badge,
-                      'badgeBgClass'=>$badgeBgClass,
-                      'items' => $menu['children']
-                  ];
-              };
+                    return [
+                        'label' => Yii::t('backend', $menu['name']),
+                        'url' => [$menu['route']],
+                        'icon' => $data['icon'],
+                        'badge' => $badge,
+                        'badgeBgClass' => $badgeBgClass,
+                        'items' => $menu['children']
+                    ];
+                };
 
-              echo Menu::widget([
-                    'options'=>['class'=>'sidebar-menu'],
-                    'labelTemplate' => '<a href="#">{icon}<span>{label}</span>{right-icon}{badge}</a>',
-                    'linkTemplate' => '<a href="{url}">{icon}<span>{label}</span>{right-icon}{badge}</a>',
-                    'submenuTemplate'=>"\n<ul class=\"treeview-menu\">\n{items}\n</ul>\n",
-                    'activateParents'=>true,
+                echo Menu::widget([
+                    'options' => ['class' => 'sidebar-menu'],
+                    'labelTemplate' => '<a href="#">{icon}<span>{label}</span>{right-icon}</a>',
+                    'linkTemplate' => '<a href="{url}">{icon}<span>{label}</span>{right-icon}</a>',
+                    'submenuTemplate' => "\n<ul class=\"treeview-menu\">\n{items}\n</ul>\n",
+                    'activateParents' => true,
                     'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback)
                 ]);
-          ?>
+                ?>
             </section>
             <!-- /.sidebar -->
         </aside>
@@ -175,7 +184,7 @@ use mdm\admin\components\MenuHelper;
                 </h1>
 
                 <?php echo Breadcrumbs::widget([
-                    'tag'=>'ol',
+                    'tag' => 'ol',
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ]) ?>
             </section>
@@ -183,11 +192,13 @@ use mdm\admin\components\MenuHelper;
             <!-- Main content -->
             <section class="content" id="ajax-loader">
                 <?php
-                    echo \lo\core\widgets\Alert::widget();
+                echo \lo\core\widgets\Alert::widget();
                 ?>
                 <?php echo $content ?>
-            </section><!-- /.content -->
-        </aside><!-- /.right-side -->
+            </section>
+            <!-- /.content -->
+        </aside>
+        <!-- /.right-side -->
     </div><!-- ./wrapper -->
 
 <? $this->registerJs("$(window).on('beforeunload', function(){

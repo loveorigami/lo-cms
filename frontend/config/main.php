@@ -20,7 +20,7 @@ return [
         'user' => [
             'class' => 'dektrium\user\Module',
             'enableFlashMessages' => false,
-            'enableRegistration' => false,
+            'enableRegistration' => true,
             'enableUnconfirmedLogin' => false,
             'confirmWithin' => 21600,
             'cost' => 12,

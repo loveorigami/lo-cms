@@ -4,63 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "35f1f1d9fd96265a57c7d83ec20847a4",
+    "hash": "45cf649febe16d465e7e19f34d0d37ff",
     "packages": [
         {
-            "name": "2amigos/yii2-transliterator-helper",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-transliterator-helper.git",
-                "reference": "b859f5205bcb14409a75687241a94331a0ff0f2b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-transliterator-helper/zipball/b859f5205bcb14409a75687241a94331a0ff0f2b",
-                "reference": "b859f5205bcb14409a75687241a94331a0ff0f2b",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "dosamigos\\transliterator\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Antonio Ramirez",
-                    "email": "ramirez.cobos@gmail.com",
-                    "homepage": "http://www.ramirezcobos.com"
-                }
-            ],
-            "description": "Transliterator Helper for Yii2.",
-            "keywords": [
-                "extension",
-                "helper",
-                "transliterator",
-                "yii"
-            ],
-            "time": "2014-01-17 15:55:42"
-        },
-        {
             "name": "bower-asset/admin-lte",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/almasaeed2010/AdminLTE.git",
-                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba"
+                "reference": "81aa879d3a4489213888e24975b073c7478f0447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
-                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/81aa879d3a4489213888e24975b073c7478f0447",
+                "reference": "81aa879d3a4489213888e24975b073c7478f0447",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -215,6 +172,50 @@
                 "responsive",
                 "web"
             ]
+        },
+        {
+            "name": "bower-asset/bootstrap-toggle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/minhur/bootstrap-toggle.git",
+                "reference": "8c21c6653b92afc505c646e370a0fae41c446b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/minhur/bootstrap-toggle/zipball/8c21c6653b92afc505c646e370a0fae41c446b6e",
+                "reference": "8c21c6653b92afc505c646e370a0fae41c446b6e",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./js/bootstrap-toggle.min.js",
+                    "./css/bootstrap-toggle.min.css"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "tests"
+                ],
+                "branch-alias": {
+                    "dev-master": "2.2.1-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Bootstrap Toggle is a highly flexible Bootstrap plugin that converts checkboxes into toggles",
+            "keywords": [
+                "bootstrap",
+                "bootstrap-switch",
+                "bootstrap-toggle",
+                "switch",
+                "toggle"
+            ],
+            "time": "2015-08-06 20:25:45"
         },
         {
             "name": "bower-asset/flot",
@@ -690,12 +691,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/highlightjs.git",
-                "reference": "3c0b4bc4a70ca3312437829c6d48ccd342467d74"
+                "reference": "71636b69413d8deb32766091b969bc0a21085d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/highlightjs/zipball/3c0b4bc4a70ca3312437829c6d48ccd342467d74",
-                "reference": "3c0b4bc4a70ca3312437829c6d48ccd342467d74",
+                "url": "https://api.github.com/repos/components/highlightjs/zipball/71636b69413d8deb32766091b969bc0a21085d8a",
+                "reference": "71636b69413d8deb32766091b969bc0a21085d8a",
                 "shasum": ""
             },
             "type": "component",
@@ -724,7 +725,47 @@
                 }
             ],
             "description": "Highlight.js highlights syntax in code examples on blogs, forums and in fact on any web pages.",
-            "time": "2015-08-05 04:32:44"
+            "time": "2015-08-17 10:33:22"
+        },
+        {
+            "name": "creocoder/yii2-nested-sets",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creocoder/yii2-nested-sets.git",
+                "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
+                "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "creocoder\\nestedsets\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Kochetov",
+                    "email": "creocoder@gmail.com"
+                }
+            ],
+            "description": "The nested sets behavior for the Yii framework",
+            "keywords": [
+                "nested sets",
+                "yii2"
+            ],
+            "time": "2015-01-27 10:53:51"
         },
         {
             "name": "dektrium/yii2-user",
@@ -939,10 +980,14 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
-                "reference": "c23195c6209db8c32f525dd519288d20ce527808"
+                "reference": "d3c68961168cd880180560c1838b498b3cf14735"
             },
             "require": {
-                "yiisoft/yii2": "~2"
+                "creocoder/yii2-nested-sets": "0.9.*",
+                "marciocamello/yii2-x-editable": "*",
+                "mdmsoft/yii2-admin": "*",
+                "yiisoft/yii2": "~2",
+                "zelenin/yii2-slug-behavior": "*"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -971,7 +1016,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-core-cms"
             },
-            "time": "2015-08-10 07:13:10"
+            "time": "2015-08-17 19:32:55"
         },
         {
             "name": "loveorigami/lo-module-core",
@@ -979,7 +1024,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git",
-                "reference": "af5eac5f83c063691d1111fd6a6b15130886b2fd"
+                "reference": "2cd7d48c06b76b9e45e11062393e34d0055028e0"
             },
             "require": {
                 "trntv/probe": "dev-master",
@@ -1012,7 +1057,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-core"
             },
-            "time": "2015-08-10 08:47:05"
+            "time": "2015-08-17 19:33:28"
         },
         {
             "name": "loveorigami/lo-module-page",
@@ -1020,7 +1065,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
-                "reference": "29fd8ca7f5cec63a11f0cd3ab75bf6627db22249"
+                "reference": "8c6a901b049a1b460501738a12055b100941595d"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -1052,7 +1097,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-page"
             },
-            "time": "2015-08-07 08:54:34"
+            "time": "2015-08-14 09:55:11"
         },
         {
             "name": "loveorigami/lo-module-sight",
@@ -1060,7 +1105,7 @@
             "source": {
                 "type": "git",
                 "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "5f5a59fa957e8a54eda2056bcf9c7672ac47cea7"
+                "reference": "22406d9068973ac1ff87bf81228fc7e0612ac4ac"
             },
             "require": {
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
@@ -1092,7 +1137,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-08-07 09:36:31"
+            "time": "2015-08-15 09:51:00"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -1136,6 +1181,52 @@
                 "yii2"
             ],
             "time": "2015-07-02 09:03:01"
+        },
+        {
+            "name": "loveorigami/yii2-bootstrap-toggle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loveorigami/yii2-bootstrap-toggle.git",
+                "reference": "c6077281d592d2c4a5c868b4f723ed610669e6c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loveorigami/yii2-bootstrap-toggle/zipball/c6077281d592d2c4a5c868b4f723ed610669e6c4",
+                "reference": "c6077281d592d2c4a5c868b4f723ed610669e6c4",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap-toggle": "*",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "require-dev": {
+                "yiisoft/yii2-debug": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\widgets\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru"
+                }
+            ],
+            "description": "Yii2 bootstrap-toggle widget",
+            "keywords": [
+                "bootstrap",
+                "toggle",
+                "widget",
+                "yii2"
+            ],
+            "time": "2015-08-13 15:23:55"
         },
         {
             "name": "loveorigami/yii2-jsoneditor",
@@ -1438,12 +1529,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MihailDev/yii2-elfinder.git",
-                "reference": "9260f172c3766863bd2f7d44dff0184c32cfde9f"
+                "reference": "a9c7373b9b32953985a84cb73724e5b7b89fbe3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/9260f172c3766863bd2f7d44dff0184c32cfde9f",
-                "reference": "9260f172c3766863bd2f7d44dff0184c32cfde9f",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/a9c7373b9b32953985a84cb73724e5b7b89fbe3b",
+                "reference": "a9c7373b9b32953985a84cb73724e5b7b89fbe3b",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1571,7 @@
                 "filemanager",
                 "yii"
             ],
-            "time": "2015-07-14 18:14:54"
+            "time": "2015-08-16 15:46:06"
         },
         {
             "name": "sjaakp/yii2-alphapager",
@@ -1755,12 +1846,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "a972fbac76133feb1020a372aece4a1f2685dcd7"
+                "reference": "1edb13cb7b86dceb1c26fac5ea3150338248d334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a972fbac76133feb1020a372aece4a1f2685dcd7",
-                "reference": "a972fbac76133feb1020a372aece4a1f2685dcd7",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/1edb13cb7b86dceb1c26fac5ea3150338248d334",
+                "reference": "1edb13cb7b86dceb1c26fac5ea3150338248d334",
                 "shasum": ""
             },
             "require": {
@@ -1835,7 +1926,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-09 17:51:38"
+            "time": "2015-08-17 09:42:06"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1891,17 +1982,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "ad28c10c431e8a56b599a282fa417523961cb5b1"
+                "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/ad28c10c431e8a56b599a282fa417523961cb5b1",
-                "reference": "ad28c10c431e8a56b599a282fa417523961cb5b1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/51ed559fe2ef9d33217e47a0ac77ffaa15f57c30",
+                "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
-                "yiisoft/yii2": ">=2.0.x-dev"
+                "yiisoft/yii2": ">=2.0.6"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1933,7 +2024,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2015-07-28 06:21:46"
+            "time": "2015-08-13 08:37:56"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -2131,22 +2222,65 @@
             "time": "2015-06-18 08:31:25"
         },
         {
-            "name": "zelenin/yii2-slug-behavior",
-            "version": "0.5.0",
+            "name": "zelenin/slugifier",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zelenin/yii2-slug-behavior.git",
-                "reference": "328f65de709999a2ec8812baeac846f02a9b5a02"
+                "url": "https://github.com/zelenin/slugifier.git",
+                "reference": "c893d33536f7c2c9f445cac84a7ea428168dc1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zelenin/yii2-slug-behavior/zipball/328f65de709999a2ec8812baeac846f02a9b5a02",
-                "reference": "328f65de709999a2ec8812baeac846f02a9b5a02",
+                "url": "https://api.github.com/repos/zelenin/slugifier/zipball/c893d33536f7c2c9f445cac84a7ea428168dc1f0",
+                "reference": "c893d33536f7c2c9f445cac84a7ea428168dc1f0",
                 "shasum": ""
             },
             "require": {
-                "2amigos/yii2-transliterator-helper": "~0.1",
-                "yiisoft/yii2": "~2.0"
+                "ext-intl": "*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zelenin\\Slugifier\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aleksandr Zelenin",
+                    "email": "aleksandr@zelenin.me",
+                    "homepage": "http://zelenin.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Slug generation library",
+            "homepage": "https://github.com/zelenin/slugifier",
+            "keywords": [
+                "slug"
+            ],
+            "time": "2015-07-31 16:00:22"
+        },
+        {
+            "name": "zelenin/yii2-slug-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zelenin/yii2-slug-behavior.git",
+                "reference": "e391b5e15f744fde17555b810888c9593899e76e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zelenin/yii2-slug-behavior/zipball/e391b5e15f744fde17555b810888c9593899e76e",
+                "reference": "e391b5e15f744fde17555b810888c9593899e76e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0",
+                "zelenin/slugifier": "~0.0"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -2174,7 +2308,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2015-06-16 08:41:19"
+            "time": "2015-07-28 22:12:20"
         }
     ],
     "packages-dev": [
@@ -2342,12 +2476,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "3c538c518cb514ec907baf527f6f47dc3b7860a1"
+                "reference": "edf9a4152c795d90e8b02fc6aa88e50d53a54d02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/3c538c518cb514ec907baf527f6f47dc3b7860a1",
-                "reference": "3c538c518cb514ec907baf527f6f47dc3b7860a1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/edf9a4152c795d90e8b02fc6aa88e50d53a54d02",
+                "reference": "edf9a4152c795d90e8b02fc6aa88e50d53a54d02",
                 "shasum": ""
             },
             "require": {
@@ -2381,7 +2515,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2015-08-06 16:14:59"
+            "time": "2015-08-16 11:29:25"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -2436,12 +2570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "552f9cb837b1ae0ab5e904aef7366ff191233a5a"
+                "reference": "aeec43df7b85e0f100220f4ab5eb179d827f6aa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/552f9cb837b1ae0ab5e904aef7366ff191233a5a",
-                "reference": "552f9cb837b1ae0ab5e904aef7366ff191233a5a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/aeec43df7b85e0f100220f4ab5eb179d827f6aa1",
+                "reference": "aeec43df7b85e0f100220f4ab5eb179d827f6aa1",
                 "shasum": ""
             },
             "require": {
@@ -2481,15 +2615,14 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-08-02 17:00:44"
+            "time": "2015-08-13 18:07:16"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "dektrium/yii2-user": 20,
-        "marekpetras/yii2-calendarview-widget": 20,
-        "marciocamello/yii2-x-editable": 20
+        "marekpetras/yii2-calendarview-widget": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

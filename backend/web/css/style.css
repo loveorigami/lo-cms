@@ -58,3 +58,41 @@ a.desc:after {
     padding: 2px 5px;
 }
 
+.pull-right{
+    margin-left: 5px;
+}
+
+.clear {
+    clear: both;
+    overflow: hidden;
+}
+.clear2 {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+}
+.clear_small {
+    clear: both;
+    font-size: 1px;
+    height: 5px;
+    overflow: hidden;
+}
+.clear_small2 {
+    clear: both;
+    font-size: 1px;
+    height: 2px;
+    overflow: hidden;
+}
+.clear_medium {
+    clear: both;
+    font-size: 1px;
+    height: 10px;
+    overflow: hidden;
+}
+.clear_big {
+    clear: both;
+    font-size: 1px;
+    height: 15px;
+    overflow: hidden;
+}

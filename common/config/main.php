@@ -2,8 +2,8 @@
 return [
     'name' => 'LoveOrigami',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'sourceLanguage' => 'en-US',
-    'language' => 'en-US',
+    'sourceLanguage' => 'en',
+    'language' => 'ru',
     'modules' => [],
     'components' => [
         'cache' => [
@@ -43,7 +43,7 @@ return [
         ],
         'i18n' => [
             'translations' => [
-			    'app'=>[
+                'app'=>[
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath'=>'@common/messages',
                 ],
@@ -54,8 +54,8 @@ return [
                     'messageTable'=>'{{%i18n_message}}',
                     'enableCaching' => YII_ENV_DEV,
                     'cachingDuration' => 3600,
-                    'on missingTranslation' => ['\backend\modules\i18n\Module', 'missingTranslation']
-                 ],
+                    'on missingTranslation' => ['\lo\modules\core\modules\i18n\Module', 'missingTranslation']
+                ],
             ],
         ],
         'keyStorage' => [
