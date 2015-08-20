@@ -20,19 +20,23 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
     },
     {
       "type": "vcs",
-      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git"
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-core.git"
     },
     {
       "type": "vcs",
-      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
     },
     {
       "type": "vcs",
-      "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git"
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git"
     }
   ],
   "minimum-stability": "dev",
@@ -58,6 +62,7 @@
     "loveorigami/lo-core-cms": "*",
     "loveorigami/lo-module-core": "*",
     "loveorigami/lo-module-page": "*",
+    "loveorigami/lo-module-playground": "*",
     "loveorigami/lo-module-sight": "*",
     "loveorigami/yii2-ajaxq" : "*",
     "loveorigami/yii2-plugins-system" : "*",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "45cf649febe16d465e7e19f34d0d37ff",
+    "hash": "e5e1492ff571a5adf83541eb7f1ed5ba",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -979,8 +979,8 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
-                "reference": "d3c68961168cd880180560c1838b498b3cf14735"
+                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
+                "reference": "39467b16a94130a4c5198e19f839ec65f9a7913f"
             },
             "require": {
                 "creocoder/yii2-nested-sets": "0.9.*",
@@ -1016,14 +1016,14 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-core-cms"
             },
-            "time": "2015-08-17 19:32:55"
+            "time": "2015-08-20 07:37:33"
         },
         {
             "name": "loveorigami/lo-module-core",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-core.git",
+                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-core.git",
                 "reference": "2cd7d48c06b76b9e45e11062393e34d0055028e0"
             },
             "require": {
@@ -1064,7 +1064,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
+                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
                 "reference": "8c6a901b049a1b460501738a12055b100941595d"
             },
             "require": {
@@ -1100,11 +1100,51 @@
             "time": "2015-08-14 09:55:11"
         },
         {
+            "name": "loveorigami/lo-module-playground",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git",
+                "reference": "464adead2141efded6ac101db1626fc0879bf6e1"
+            },
+            "require": {
+                "yiisoft/yii2": "~2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\modules\\playground\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru",
+                    "homepage": "http://loveorigami.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Playground module for Lo-CMS",
+            "homepage": "https://bitbucket.org/loveorigami/lo-module-playground",
+            "keywords": [
+                "module",
+                "playground",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/loveorigami/lo-module-playground"
+            },
+            "time": "2015-08-20 07:45:51"
+        },
+        {
             "name": "loveorigami/lo-module-sight",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
+                "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
                 "reference": "22406d9068973ac1ff87bf81228fc7e0612ac4ac"
             },
             "require": {
@@ -1529,12 +1569,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MihailDev/yii2-elfinder.git",
-                "reference": "a9c7373b9b32953985a84cb73724e5b7b89fbe3b"
+                "reference": "ab3307bdb59718380a93348bcde6cb77c4dae061"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/a9c7373b9b32953985a84cb73724e5b7b89fbe3b",
-                "reference": "a9c7373b9b32953985a84cb73724e5b7b89fbe3b",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/ab3307bdb59718380a93348bcde6cb77c4dae061",
+                "reference": "ab3307bdb59718380a93348bcde6cb77c4dae061",
                 "shasum": ""
             },
             "require": {
@@ -1571,7 +1611,7 @@
                 "filemanager",
                 "yii"
             ],
-            "time": "2015-08-16 15:46:06"
+            "time": "2015-08-19 12:44:59"
         },
         {
             "name": "sjaakp/yii2-alphapager",
@@ -1795,12 +1835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "88eca3838807107c3b1c358a8e94f4f7c2d91fa0"
+                "reference": "4c619d36c7158138ef22b1066f836043629297d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/88eca3838807107c3b1c358a8e94f4f7c2d91fa0",
-                "reference": "88eca3838807107c3b1c358a8e94f4f7c2d91fa0",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/4c619d36c7158138ef22b1066f836043629297d7",
+                "reference": "4c619d36c7158138ef22b1066f836043629297d7",
                 "shasum": ""
             },
             "require": {
@@ -1838,7 +1878,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2015-07-14 10:17:41"
+            "time": "2015-08-18 21:06:42"
         },
         {
             "name": "yiisoft/yii2",
@@ -1846,12 +1886,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "1edb13cb7b86dceb1c26fac5ea3150338248d334"
+                "reference": "baed9ab2ef1ef61c5ff50ab4dd504d24796d7c2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/1edb13cb7b86dceb1c26fac5ea3150338248d334",
-                "reference": "1edb13cb7b86dceb1c26fac5ea3150338248d334",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/baed9ab2ef1ef61c5ff50ab4dd504d24796d7c2e",
+                "reference": "baed9ab2ef1ef61c5ff50ab4dd504d24796d7c2e",
                 "shasum": ""
             },
             "require": {
@@ -1926,7 +1966,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-17 09:42:06"
+            "time": "2015-08-18 08:52:48"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -2570,12 +2610,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "aeec43df7b85e0f100220f4ab5eb179d827f6aa1"
+                "reference": "071113c6a2d514dec2f5df5de066dc7cd5f966b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/aeec43df7b85e0f100220f4ab5eb179d827f6aa1",
-                "reference": "aeec43df7b85e0f100220f4ab5eb179d827f6aa1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/071113c6a2d514dec2f5df5de066dc7cd5f966b8",
+                "reference": "071113c6a2d514dec2f5df5de066dc7cd5f966b8",
                 "shasum": ""
             },
             "require": {
@@ -2615,7 +2655,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-08-13 18:07:16"
+            "time": "2015-08-19 15:07:28"
         }
     ],
     "aliases": [],

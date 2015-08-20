@@ -2,8 +2,8 @@
 return [
     'name' => 'LoveOrigami',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'sourceLanguage' => 'en',
-    'language' => 'ru',
+    'sourceLanguage' => 'en-US',
+    'language' => 'ru-RU',
     'modules' => [],
     'components' => [
         'cache' => [
