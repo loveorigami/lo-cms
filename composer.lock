@@ -980,7 +980,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
-                "reference": "39467b16a94130a4c5198e19f839ec65f9a7913f"
+                "reference": "708718b87b1cdaf9ede368f0967514cfb6a4159d"
             },
             "require": {
                 "creocoder/yii2-nested-sets": "0.9.*",
@@ -1016,7 +1016,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-core-cms"
             },
-            "time": "2015-08-20 07:37:33"
+            "time": "2015-08-21 09:59:34"
         },
         {
             "name": "loveorigami/lo-module-core",
@@ -1065,7 +1065,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git",
-                "reference": "8c6a901b049a1b460501738a12055b100941595d"
+                "reference": "f4df7d12c6e440621241b30df56d1fb59aeb53c5"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -1097,7 +1097,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-page"
             },
-            "time": "2015-08-14 09:55:11"
+            "time": "2015-08-20 10:12:55"
         },
         {
             "name": "loveorigami/lo-module-playground",
@@ -1105,7 +1105,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git",
-                "reference": "2e5ae9d4b6d4d8179f87fab6fb08d098eae708ad"
+                "reference": "286990d89d39f8190568b49cc99cb672f36e6b9c"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -1137,7 +1137,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-playground"
             },
-            "time": "2015-08-20 08:18:02"
+            "time": "2015-08-21 10:00:25"
         },
         {
             "name": "loveorigami/lo-module-sight",
@@ -1145,7 +1145,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "22406d9068973ac1ff87bf81228fc7e0612ac4ac"
+                "reference": "24cdc349d525de14fc5c6ba4990f63eaea1ddd61"
             },
             "require": {
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
@@ -1177,7 +1177,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-08-15 09:51:00"
+            "time": "2015-08-21 10:00:50"
         },
         {
             "name": "loveorigami/yii2-ajaxq",

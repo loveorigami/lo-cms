@@ -77,6 +77,7 @@ return [
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+            'cache' => 'cache', // класс компонента
         ],
         'plugins' => [
             'class' => 'lo\plugins\components\EventBootstrap',
