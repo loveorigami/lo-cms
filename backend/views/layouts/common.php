@@ -8,7 +8,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
-use mdm\admin\components\MenuHelper;
+use mdm\admin\classes\MenuHelper;
 
 ?>
 

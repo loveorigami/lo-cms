@@ -54,8 +54,8 @@
 
     "vlucas/phpdotenv": "~2.0",
     "dektrium/yii2-user": "0.9.*@dev",
+    "mdmsoft/yii2-admin": "~3.0",
 
-    "insolita/yii2-adminlte-widgets": "*",
     "marekpetras/yii2-calendarview-widget": "dev-master",
     "sjaakp/yii2-alphapager": "*",
 

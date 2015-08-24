@@ -10,7 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log', 'plugins'],
+    'bootstrap' => ['log', 'plugins', 'admin'],
     'controllerMap'=>[
         'elfinder' => [
             'class' => '\mihaildev\elfinder\PathController',
@@ -53,18 +53,11 @@ return [
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
-            //'layout' => 'left-menu', // default null. other avaliable value 'right-menu' and 'top-menu'
-            'controllerMap' => [
-                'assignment' => [
-                    'class' => 'mdm\admin\controllers\AssignmentController',
-                    'userClassName' => 'dektrium\user\models\User',
-                    'idField' => 'id', // id field of model User
-                ],
-            ]
+            'layout' => '@backend/views/layouts/main', // default null. other avaliable value 'right-menu' and 'top-menu'
         ],
     ],
     'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
+        'class' => 'mdm\admin\classes\AccessControl',
         'allowActions' => [
             'page/item/update',
             'page/item/delete',

@@ -26,6 +26,7 @@ $this->params['body-class'] = array_key_exists('body-class', $this->params) ?
 
 </head>
 <?php echo Html::beginTag('body', [
+    'ng-app'=>'dAdmin',
     'class' => implode(' ', [
         ArrayHelper::getValue($this->params, 'body-class'),
         Yii::$app->keyStorage->get('backend.theme-skin', 'skin-blue'),
