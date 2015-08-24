@@ -1220,7 +1220,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
-                "reference": "46b14416fd93aad27e6c54889e76390cbbe3317e"
+                "reference": "bdaf11e07292822b25b62bc6058b76d5aea0308d"
             },
             "require": {
                 "creocoder/yii2-nested-sets": "0.9.*",
@@ -1255,7 +1255,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-core-cms"
             },
-            "time": "2015-08-24 06:29:27"
+            "time": "2015-08-24 09:43:06"
         },
         {
             "name": "loveorigami/lo-module-core",
@@ -1384,7 +1384,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "a408e6f83e6956b95a1cd0093a9016f9ae889901"
+                "reference": "793a77d0d6a9d20e76ab785abcf0d0ac3b0df7ed"
             },
             "require": {
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
@@ -1416,7 +1416,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-08-21 14:49:04"
+            "time": "2015-08-24 09:43:28"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -1706,12 +1706,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "ce1fa6ff088f4cb9db204830ed030e3ef46c26eb"
+                "reference": "c11c8797cb9dd8b3485cf661f47dcada0662f80e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/ce1fa6ff088f4cb9db204830ed030e3ef46c26eb",
-                "reference": "ce1fa6ff088f4cb9db204830ed030e3ef46c26eb",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/c11c8797cb9dd8b3485cf661f47dcada0662f80e",
+                "reference": "c11c8797cb9dd8b3485cf661f47dcada0662f80e",
                 "shasum": ""
             },
             "require": {
@@ -1749,7 +1749,7 @@
                 "rbac",
                 "yii"
             ],
-            "time": "2015-08-23 10:15:44"
+            "time": "2015-08-24 09:24:05"
         },
         {
             "name": "mihaildev/yii2-ckeditor",
