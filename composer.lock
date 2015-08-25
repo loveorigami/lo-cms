@@ -1005,12 +1005,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/deesoft/yii2-angular.git",
-                "reference": "d764136dfb3047fae3e82ba61053c2c3a699bd1f"
+                "reference": "6618ce34d093ea57b559006713ba5a3a70ea461f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deesoft/yii2-angular/zipball/d764136dfb3047fae3e82ba61053c2c3a699bd1f",
-                "reference": "d764136dfb3047fae3e82ba61053c2c3a699bd1f",
+                "url": "https://api.github.com/repos/deesoft/yii2-angular/zipball/6618ce34d093ea57b559006713ba5a3a70ea461f",
+                "reference": "6618ce34d093ea57b559006713ba5a3a70ea461f",
                 "shasum": ""
             },
             "require": {
@@ -1047,7 +1047,7 @@
                 "angularjs",
                 "yii2"
             ],
-            "time": "2015-08-23 12:22:27"
+            "time": "2015-08-25 14:06:14"
         },
         {
             "name": "dektrium/yii2-user",
@@ -1706,24 +1706,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "1f4064fed9c335b7d165219b406a309f0f3055ce"
+                "reference": "6ecefec7bf03a47c7de5df505cbc75dcc14a37a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/1f4064fed9c335b7d165219b406a309f0f3055ce",
-                "reference": "1f4064fed9c335b7d165219b406a309f0f3055ce",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/6ecefec7bf03a47c7de5df505cbc75dcc14a37a1",
+                "reference": "6ecefec7bf03a47c7de5df505cbc75dcc14a37a1",
                 "shasum": ""
             },
             "require": {
                 "deesoft/yii2-adminlte": "~1.0",
-                "deesoft/yii2-angular": "~1.1",
+                "deesoft/yii2-angular": "~1.2",
                 "yiisoft/yii2": ">=2.0.4"
             },
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0.master": "1.0.x-dev",
-                    "dev-master": "2.x-dev",
                     "dev-3.master": "3.x-dev"
                 }
             },
@@ -1745,11 +1743,13 @@
             "description": "RBAC Auth manager for Yii2 ",
             "keywords": [
                 "admin",
+                "angularjs",
                 "auth",
                 "rbac",
+                "rest",
                 "yii"
             ],
-            "time": "2015-08-25 09:26:32"
+            "time": "2015-08-25 14:28:20"
         },
         {
             "name": "mihaildev/yii2-ckeditor",
@@ -2899,12 +2899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "64120b6a640c60cc6fe0f759dfb014d71a1b6fce"
+                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/64120b6a640c60cc6fe0f759dfb014d71a1b6fce",
-                "reference": "64120b6a640c60cc6fe0f759dfb014d71a1b6fce",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/0a3940119a7552418bbd7c842de12953390e4ab2",
+                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2",
                 "shasum": ""
             },
             "require": {
@@ -2944,7 +2944,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-08-24 10:50:00"
+            "time": "2015-08-25 17:16:25"
         }
     ],
     "aliases": [],

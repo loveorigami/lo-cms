@@ -1,5 +1,5 @@
-<ul class="nav nav-tabs" ng-controller="HeaderMenuCtrl">
-    <li ng-repeat="menu in headerMenu" ng-class="{active:location.path().indexOf(menu.id)===0}">
+<ul class="nav nav-tabs">
+    <li ng-repeat="menu in headerMenu" ng-class="{active:isRouteActive(menu.id)}">
         <a ng-href="{{menu.url}}" ng-bind="menu.label"></a>
     </li>
 </ul>
