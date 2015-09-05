@@ -11,12 +11,6 @@
 <?php $this->beginContent('@backend/views/layouts/common.php'); ?>
     <div class="box">
         <div class="box-body">
-            <?php
-            if(Yii::$app->controller->module->id == 'admin'){
-                $this->title='RBAC';
-                echo $this->render('//layouts/_admin_menu');
-            }
-            ?>
             <?php echo $content ?>
         </div>
     </div>

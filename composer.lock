@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c79fe0db70c06a1704e39ada26ddda3",
+    "hash": "605c836430e5a5e06fb6870ef38817f0",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -141,16 +141,16 @@
         },
         {
             "name": "bower-asset/angular",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular.git",
-                "reference": "f00cff5525db7c853f42854079a31936d400f99b"
+                "reference": "3809d44e5279e94a0596d5bc216d921f34f8ab2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular/zipball/f00cff5525db7c853f42854079a31936d400f99b",
-                "reference": "f00cff5525db7c853f42854079a31936d400f99b",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/3809d44e5279e94a0596d5bc216d921f34f8ab2a",
+                "reference": "3809d44e5279e94a0596d5bc216d921f34f8ab2a",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -195,20 +195,20 @@
         },
         {
             "name": "bower-asset/angular-resource",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular-resource.git",
-                "reference": "1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf"
+                "reference": "1b00ddb9576b35da312fc044f114e4ec31bc7377"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf",
-                "reference": "1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf",
+                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/1b00ddb9576b35da312fc044f114e4ec31bc7377",
+                "reference": "1b00ddb9576b35da312fc044f114e4ec31bc7377",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/angular": "1.4.4"
+                "bower-asset/angular": "1.4.5"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -218,20 +218,20 @@
         },
         {
             "name": "bower-asset/angular-route",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular-route.git",
-                "reference": "253b707a425ede44798caca0031293f33b291808"
+                "reference": "73164ac5aa58a3b433463977825d738bdccc1202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/253b707a425ede44798caca0031293f33b291808",
-                "reference": "253b707a425ede44798caca0031293f33b291808",
+                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/73164ac5aa58a3b433463977825d738bdccc1202",
+                "reference": "73164ac5aa58a3b433463977825d738bdccc1202",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/angular": "1.4.4"
+                "bower-asset/angular": "1.4.5"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -1220,7 +1220,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git",
-                "reference": "bdaf11e07292822b25b62bc6058b76d5aea0308d"
+                "reference": "afa7abe15709594979954516269fa79967250473"
             },
             "require": {
                 "creocoder/yii2-nested-sets": "0.9.*",
@@ -1255,7 +1255,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-core-cms"
             },
-            "time": "2015-08-24 09:43:06"
+            "time": "2015-08-28 09:15:33"
         },
         {
             "name": "loveorigami/lo-module-core",
@@ -1344,7 +1344,7 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git",
-                "reference": "b290bb5263e8fa0a87b23b946b2904b6d246cf9d"
+                "reference": "56383eb8ad05716b9ff35dd6490d5dc1815138f1"
             },
             "require": {
                 "yiisoft/yii2": "~2"
@@ -1376,7 +1376,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-playground"
             },
-            "time": "2015-08-21 14:49:35"
+            "time": "2015-08-27 10:35:45"
         },
         {
             "name": "loveorigami/lo-module-sight",
@@ -1384,9 +1384,10 @@
             "source": {
                 "type": "git",
                 "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-sight.git",
-                "reference": "793a77d0d6a9d20e76ab785abcf0d0ac3b0df7ed"
+                "reference": "3b0c17baa72bd2111943e437b92405d502282e5b"
             },
             "require": {
+                "perspectivain/yii2-geo": "*",
                 "sunra/php-simple-html-dom-parser": "v1.5.0",
                 "yiisoft/yii2": "~2"
             },
@@ -1416,7 +1417,7 @@
             "support": {
                 "source": "https://bitbucket.org/loveorigami/lo-module-sight"
             },
-            "time": "2015-08-24 09:43:28"
+            "time": "2015-08-28 10:46:18"
         },
         {
             "name": "loveorigami/yii2-ajaxq",
@@ -1611,6 +1612,51 @@
             "time": "2015-08-02 16:17:01"
         },
         {
+            "name": "loveorigami/yii2-slimscroll-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loveorigami/yii2-slimscroll-widget.git",
+                "reference": "76c9599376be496e0a671658962dcedd74aacb8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loveorigami/yii2-slimscroll-widget/zipball/76c9599376be496e0a671658962dcedd74aacb8a",
+                "reference": "76c9599376be496e0a671658962dcedd74aacb8a",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery-slimscroll": "^1.3",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "require-dev": {
+                "yiisoft/yii2-debug": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lo\\widgets\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Lukyanov",
+                    "email": "loveorigami@mail.ru"
+                }
+            ],
+            "description": "Yii2 slimscroll widget",
+            "keywords": [
+                "slimscroll",
+                "widget",
+                "yii2"
+            ],
+            "time": "2015-08-26 17:09:42"
+        },
+        {
             "name": "marciocamello/yii2-x-editable",
             "version": "dev-master",
             "source": {
@@ -1706,12 +1752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "6ecefec7bf03a47c7de5df505cbc75dcc14a37a1"
+                "reference": "887dc3ed3d06ff07e3df9237bc643eff0efdfffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/6ecefec7bf03a47c7de5df505cbc75dcc14a37a1",
-                "reference": "6ecefec7bf03a47c7de5df505cbc75dcc14a37a1",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/887dc3ed3d06ff07e3df9237bc643eff0efdfffd",
+                "reference": "887dc3ed3d06ff07e3df9237bc643eff0efdfffd",
                 "shasum": ""
             },
             "require": {
@@ -1749,7 +1795,7 @@
                 "rest",
                 "yii"
             ],
-            "time": "2015-08-25 14:28:20"
+            "time": "2015-08-30 13:05:30"
         },
         {
             "name": "mihaildev/yii2-ckeditor",
@@ -1851,6 +1897,48 @@
                 "yii"
             ],
             "time": "2015-08-19 12:44:59"
+        },
+        {
+            "name": "perspectivain/yii2-geo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/perspectivain/yii2-geo.git",
+                "reference": "03469fa537e88911532635155c2d9789213ba31f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/perspectivain/yii2-geo/zipball/03469fa537e88911532635155c2d9789213ba31f",
+                "reference": "03469fa537e88911532635155c2d9789213ba31f",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "perspectivain\\geo\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juliano Baggio di Sopra",
+                    "email": "juliano@perspectiva.in"
+                }
+            ],
+            "description": "An interface to generate geographic annotations in different formats",
+            "homepage": "https://github.com/perspectivain/yii2-geo",
+            "keywords": [
+                "geojson",
+                "kml",
+                "yii2"
+            ],
+            "time": "2015-02-16 14:09:15"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -2000,12 +2088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903"
+                "reference": "a16e5a75aa8c3b97f224f42dbbad5b379ce14659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/caf94ee2473ba6503e411ce3bcbd33b080f1d903",
-                "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a16e5a75aa8c3b97f224f42dbbad5b379ce14659",
+                "reference": "a16e5a75aa8c3b97f224f42dbbad5b379ce14659",
                 "shasum": ""
             },
             "require": {
@@ -2045,7 +2133,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-07-15 23:24:06"
+            "time": "2015-08-30 17:08:54"
         },
         {
             "name": "tpoxa/shortcodes",
@@ -2177,12 +2265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "38a7f24c04df98aaf250bd9e6a44a087fde41881"
+                "reference": "140505acd532961ba94c67ccde583454103a943d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/38a7f24c04df98aaf250bd9e6a44a087fde41881",
-                "reference": "38a7f24c04df98aaf250bd9e6a44a087fde41881",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/140505acd532961ba94c67ccde583454103a943d",
+                "reference": "140505acd532961ba94c67ccde583454103a943d",
                 "shasum": ""
             },
             "require": {
@@ -2257,7 +2345,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-25 03:54:18"
+            "time": "2015-08-28 13:36:29"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -2265,12 +2353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-authclient.git",
-                "reference": "58aebac6e677657772917c558bff17fc9bb0de29"
+                "reference": "e8c639af26be6ce38b0bbf5113882345fe25de3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/58aebac6e677657772917c558bff17fc9bb0de29",
-                "reference": "58aebac6e677657772917c558bff17fc9bb0de29",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/e8c639af26be6ce38b0bbf5113882345fe25de3d",
+                "reference": "e8c639af26be6ce38b0bbf5113882345fe25de3d",
                 "shasum": ""
             },
             "require": {
@@ -2305,7 +2393,7 @@
                 "oauth",
                 "yii2"
             ],
-            "time": "2015-08-04 14:49:05"
+            "time": "2015-08-31 07:56:21"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -2313,12 +2401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30"
+                "reference": "5ae12770c69b1b42f1be742ca16d97dc63371eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/51ed559fe2ef9d33217e47a0ac77ffaa15f57c30",
-                "reference": "51ed559fe2ef9d33217e47a0ac77ffaa15f57c30",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/5ae12770c69b1b42f1be742ca16d97dc63371eb8",
+                "reference": "5ae12770c69b1b42f1be742ca16d97dc63371eb8",
                 "shasum": ""
             },
             "require": {
@@ -2355,7 +2443,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2015-08-13 08:37:56"
+            "time": "2015-08-27 12:55:38"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -2676,12 +2764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "f8fd1fca295b3ee5c5c3a0bae1ec21367ac2314c"
+                "reference": "deff435558e374e97319b1f083de90d93dd5af2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f8fd1fca295b3ee5c5c3a0bae1ec21367ac2314c",
-                "reference": "f8fd1fca295b3ee5c5c3a0bae1ec21367ac2314c",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/deff435558e374e97319b1f083de90d93dd5af2e",
+                "reference": "deff435558e374e97319b1f083de90d93dd5af2e",
                 "shasum": ""
             },
             "require": {
@@ -2718,7 +2806,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-08-24 12:15:31"
+            "time": "2015-09-01 10:01:44"
         },
         {
             "name": "phpspec/php-diff",
@@ -2899,12 +2987,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2"
+                "reference": "6519954dc8dd16050d886d1266d6248cbae2d14f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/0a3940119a7552418bbd7c842de12953390e4ab2",
-                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6519954dc8dd16050d886d1266d6248cbae2d14f",
+                "reference": "6519954dc8dd16050d886d1266d6248cbae2d14f",
                 "shasum": ""
             },
             "require": {
@@ -2944,7 +3032,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-08-25 17:16:25"
+            "time": "2015-08-31 23:04:33"
         }
     ],
     "aliases": [],

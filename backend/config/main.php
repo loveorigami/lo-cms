@@ -49,7 +49,7 @@ return [
             'enablePasswordRecovery' => false,
             'confirmWithin' => 21600,
             'cost' => 12,
-            'admins' => ['webmaster'],
+            'admins' => ['root'],
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',

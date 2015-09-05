@@ -1,6 +1,8 @@
 # Env
 /.env
 /nginx.conf
+/composer.json
+/composer.lock
 
 # yii console command
 /yii

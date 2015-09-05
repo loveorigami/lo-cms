@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 28 2015 г., 18:42
+-- Время создания: Сен 05 2015 г., 17:28
 -- Версия сервера: 5.6.22-log
--- Версия PHP: 5.5.19
+-- Версия PHP: 5.4.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,14 +59,14 @@ CREATE TABLE IF NOT EXISTS `mx_auth_constraint` (
   `constraint` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `forbidden_attrs` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `mx_auth_constraint`
 --
 
 INSERT INTO `mx_auth_constraint` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `role`, `model`, `constraint`, `forbidden_attrs`) VALUES
-(1, 1, 1, 1, 1435476532, 1435499555, 'author', '\\lo\\modules\\page\\models\\Page', '\\common\\rbac\\AuthorConstraint', 'author_id');
+(1, 1, 1, 1, 1435476532, 1439543865, 'author', '\\lo\\modules\\page\\models\\Page', '\\lo\\core\\rbac\\AuthorConstraint', 'author_id');
 
 -- --------------------------------------------------------
 
@@ -93,32 +93,22 @@ CREATE TABLE IF NOT EXISTS `mx_auth_item` (
 
 INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES
 ('/*', 2, NULL, NULL, NULL, 1433660637, 1433660637),
-('/admin/assignment/index', 2, NULL, NULL, NULL, 1433777877, 1433777877),
-('/admin/menu/index', 2, NULL, NULL, NULL, 1433777892, 1433777892),
-('/admin/permission/*', 2, NULL, NULL, NULL, 1435405755, 1435405755),
-('/admin/permission/index', 2, NULL, NULL, NULL, 1433777915, 1433777915),
-('/admin/role/index', 2, NULL, NULL, NULL, 1433777922, 1433777922),
-('/admin/route/index', 2, NULL, NULL, NULL, 1433777933, 1433777933),
-('/admin/rule/index', 2, NULL, NULL, NULL, 1433777940, 1433777940),
+('/admin/default/index', 2, NULL, NULL, NULL, 1440409936, 1440409936),
 ('/backuprestore/default/index', 2, NULL, NULL, NULL, 1434299727, 1434299727),
-('/cache/index', 2, NULL, NULL, NULL, 1433778712, 1433778712),
-('/constraint/*', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/create', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/delete', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/editable', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/index', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/update', 2, NULL, NULL, NULL, 1435475984, 1435475984),
-('/constraint/view', 2, NULL, NULL, NULL, 1435475984, 1435475984),
+('/core/cache/index', 2, NULL, NULL, NULL, 1439195993, 1439195993),
+('/core/constraint/index', 2, NULL, NULL, NULL, 1438940434, 1438940434),
+('/core/file-manager/index', 2, NULL, NULL, NULL, 1439189533, 1439189533),
+('/core/key-storage/index', 2, NULL, NULL, NULL, 1439191257, 1439191257),
+('/core/log/index', 2, NULL, NULL, NULL, 1439195982, 1439195982),
+('/core/menu/index', 2, NULL, NULL, NULL, 1440053620, 1440053620),
+('/core/system-information/index', 2, NULL, NULL, NULL, 1439189537, 1439189537),
 ('/debug/default/index', 2, NULL, NULL, NULL, 1433779978, 1433779978),
 ('/elfinder/*', 2, NULL, NULL, NULL, 1433859876, 1433859876),
 ('/elfinder/connect', 2, NULL, NULL, NULL, 1433936006, 1433936006),
 ('/elfinder/manager', 2, NULL, NULL, NULL, 1433936010, 1433936010),
-('/file-manager/index', 2, NULL, NULL, NULL, 1433859853, 1433859853),
 ('/gii/default/index', 2, NULL, NULL, NULL, 1433779961, 1433779961),
 ('/i18n/i18n-message/index', 2, NULL, NULL, NULL, 1433778748, 1433778748),
 ('/i18n/i18n-source-message/index', 2, NULL, NULL, NULL, 1433778752, 1433778752),
-('/key-storage/index', 2, NULL, NULL, NULL, 1433779324, 1433779324),
-('/log/index', 2, NULL, NULL, NULL, 1433778675, 1433778675),
 ('/page/*', 2, NULL, NULL, NULL, 1435480880, 1435480880),
 ('/page/item/*', 2, NULL, NULL, NULL, 1435480873, 1435480873),
 ('/page/item/create', 2, NULL, NULL, NULL, 1435480873, 1435480873),
@@ -128,6 +118,21 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('/page/item/index', 2, NULL, NULL, NULL, 1435480873, 1435480873),
 ('/page/item/update', 2, NULL, NULL, NULL, 1435480873, 1435480873),
 ('/page/item/view', 2, NULL, NULL, NULL, 1435480873, 1435480873),
+('/playground/default/ajaxq', 2, NULL, NULL, NULL, 1440062712, 1440062712),
+('/playground/default/index', 2, NULL, NULL, NULL, 1440062715, 1440062715),
+('/playground/formplay/index', 2, NULL, NULL, NULL, 1440062705, 1440062705),
+('/plugins/item/index', 2, NULL, NULL, NULL, 1438513070, 1438513070),
+('/sight/*', 2, NULL, NULL, NULL, 1435910465, 1435910465),
+('/sight/town/*', 2, NULL, NULL, NULL, 1435911401, 1435911401),
+('/sight/town/create', 2, NULL, NULL, NULL, 1435911401, 1435911401),
+('/sight/town/delete', 2, NULL, NULL, NULL, 1435911401, 1435911401),
+('/sight/town/editable', 2, NULL, NULL, NULL, 1435911401, 1435911401),
+('/sight/town/grab', 2, NULL, NULL, NULL, 1435911408, 1435911408),
+('/sight/town/groupdelete', 2, NULL, NULL, NULL, 1435911408, 1435911408),
+('/sight/town/index', 2, NULL, NULL, NULL, 1435823928, 1435823928),
+('/sight/town/parser', 2, NULL, NULL, NULL, 1435911408, 1435911408),
+('/sight/town/update', 2, NULL, NULL, NULL, 1435911401, 1435911401),
+('/sight/town/view', 2, NULL, NULL, NULL, 1435911401, 1435911401),
 ('/site/index', 2, NULL, NULL, NULL, 1433660961, 1433660961),
 ('/system-information/index', 2, NULL, NULL, NULL, 1433779454, 1433779454),
 ('/timeline-event/index', 2, NULL, NULL, NULL, 1433742183, 1433742183),
@@ -135,12 +140,12 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('author', 1, 'автор', NULL, NULL, 1433660746, 1433660746),
 ('BCreate', 2, 'Create items in backend', NULL, NULL, 1434384366, 1434384366),
 ('BDelete', 2, 'Can delete item', NULL, NULL, 1433923033, 1433923033),
-('BDeleteOwn', 2, 'Can delete own item', 'OwnModelRule', NULL, 1433921768, 1433921768),
+('BDeleteOwn', 2, 'Can delete own item', 'OwnModelRule', NULL, 1433921768, 1440408547),
 ('BRoot', 2, 'Only for root', NULL, NULL, 1435405792, 1435405792),
 ('BUpdate', 2, 'Can update item', NULL, NULL, 1433922980, 1433922980),
-('BUpdateOwn', 2, 'Can update own item', 'OwnModelRule', NULL, 1433921045, 1433921045),
+('BUpdateOwn', 2, 'Can update own item', 'OwnModelRule', NULL, 1433921045, 1440408513),
 ('BView', 2, 'Can view item', NULL, NULL, 1435481086, 1435481125),
-('BViewOwn', 2, 'Can view own item', 'OwnModelRule', NULL, 1435481173, 1435481173),
+('BViewOwn', 2, 'Can view own item', NULL, NULL, 1435481173, 1435481173),
 ('editor', 1, 'редактор', NULL, NULL, 1433660710, 1433660799),
 ('root', 1, 'владелец', NULL, NULL, 1433583350, 1433660882),
 ('user', 1, 'пользователь', NULL, NULL, 1433660785, 1433685296);
@@ -164,16 +169,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_item_child` (
 
 INSERT INTO `mx_auth_item_child` (`parent`, `child`) VALUES
 ('root', '/*'),
-('BRoot', '/constraint/*'),
-('BRoot', '/constraint/create'),
-('BRoot', '/constraint/delete'),
-('BRoot', '/constraint/editable'),
-('BRoot', '/constraint/index'),
-('BRoot', '/constraint/update'),
-('BRoot', '/constraint/view'),
 ('author', '/elfinder/*'),
-('admin', '/file-manager/index'),
-('admin', '/log/index'),
 ('BCreate', '/page/item/create'),
 ('BDelete', '/page/item/delete'),
 ('BUpdate', '/page/item/editable'),
@@ -217,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_rule` (
 --
 
 INSERT INTO `mx_auth_rule` (`name`, `data`, `created_at`, `updated_at`) VALUES
-('OwnModelRule', 'O:24:"common\\rbac\\OwnModelRule":3:{s:4:"name";s:12:"OwnModelRule";s:9:"createdAt";i:1433920979;s:9:"updatedAt";i:1433920979;}', 1433920979, 1433920979);
+('OwnModelRule', 'O:24:"common\\rbac\\OwnModelRule":3:{s:4:"name";s:12:"OwnModelRule";s:9:"createdAt";i:1440408380;s:9:"updatedAt";i:1440408446;}', 1440408380, 1440408446);
 
 -- --------------------------------------------------------
 
@@ -537,7 +533,6 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 (967, 'ru', 'ВКонтакте'),
 (968, 'ru', 'Яндекс'),
 (969, 'ru', 'Вы можете подключить несколько аккаунтов, чтобы использовать их для входа'),
-(970, 'ru', '(не задано)'),
 (971, 'ru', 'Ссылка для подтверждения была отправлена вам на почту'),
 (972, 'ru', 'Вам было отправлено письмо. Оно содержит ссылку, по которой вы должны перейти, чтобы завершить регистрацию.'),
 (973, 'ru', 'Вам было отправлено письмо. Оно содержит сгенерированный нами пароль.'),
@@ -682,6 +677,7 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 (1112, 'ru', '{0, date, MMMM dd, YYYY HH:mm}'),
 (1113, 'ru', 'Контент'),
 (1114, 'ru', 'Главная'),
+(1115, 'ru', 'Назначение'),
 (1116, 'ru', 'Пользователи'),
 (1117, 'ru', 'Назначение'),
 (1118, 'ru', 'Роли'),
@@ -727,10 +723,70 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 (1158, 'ru', 'Роль'),
 (1159, 'ru', 'Ограничение'),
 (1160, 'ru', 'Создать ограничение'),
-(1161, 'ru', NULL),
-(1162, 'ru', NULL),
-(1163, 'ru', NULL),
-(1164, 'ru', NULL);
+(1161, 'ru', 'Просмотр'),
+(1162, 'ru', 'Обновить ограничения'),
+(1163, 'ru', 'Обновить'),
+(1164, 'ru', 'Вы уверены?'),
+(1165, 'ru', 'Перевод'),
+(1166, 'ru', 'Песочница'),
+(1167, 'ru', 'Pjax'),
+(1168, 'ru', 'Ajaxq'),
+(1169, 'ru', 'Intro'),
+(1170, 'ru', 'Города'),
+(1171, 'ru', 'Город'),
+(1172, 'ru', 'Парсер'),
+(1173, 'ru', 'Достопримечательности'),
+(1174, 'ru', 'Список городов'),
+(1175, 'ru', 'Парсер городов'),
+(1176, 'ru', 'Города'),
+(1177, 'ru', 'Список'),
+(1178, 'ru', 'Тип'),
+(1196, 'ru', 'Плагины'),
+(1197, 'ru', 'Создать плагин'),
+(1198, 'ru', 'Id'),
+(1199, 'ru', 'Название'),
+(1200, 'ru', 'Url'),
+(1201, 'ru', 'Версия'),
+(1202, 'ru', 'Описание'),
+(1203, 'ru', 'Автор'),
+(1204, 'ru', 'Автор Url'),
+(1205, 'ru', 'Хеш'),
+(1206, 'ru', 'Статус'),
+(1207, 'ru', 'Уверены, что хотите удалить эту запись?'),
+(1208, 'ru', 'Плагины'),
+(1209, 'ru', 'Да'),
+(1210, 'ru', 'Нет'),
+(1211, 'ru', 'Изображение'),
+(1212, 'ru', 'На  главной'),
+(1213, 'ru', 'Меню'),
+(1214, 'ru', 'Главная'),
+(1215, 'ru', 'Потомок'),
+(1216, 'ru', 'Переместить'),
+(1217, 'ru', 'Вверх'),
+(1218, 'ru', 'Вниз'),
+(1219, 'ru', 'Войти'),
+(1220, 'ru', 'Иконка'),
+(1221, 'ru', 'Родитель'),
+(1254, 'ru', 'Сброс'),
+(1255, 'ru', 'Родитель'),
+(1256, 'ru', 'Форма'),
+(1257, 'ru', 'Заголовок'),
+(1258, 'ru', 'SEO'),
+(1259, 'ru', 'Текст'),
+(1260, 'ru', 'Текст'),
+(1261, 'ru', 'Настройки'),
+(1262, 'ru', 'Категория'),
+(1263, 'ru', 'Обновить {modelClass}: '),
+(1264, 'ru', 'Категория'),
+(1265, 'ru', 'Назначение'),
+(1266, 'ru', 'Назначение'),
+(1267, 'ru', 'RBAC'),
+(1268, 'ru', 'Координаты'),
+(1269, 'ru', 'Создать {modelClass}'),
+(1270, 'ru', 'Запись'),
+(1271, 'ru', 'Галерея'),
+(1272, 'ru', 'Выбор координат'),
+(1273, 'ru', 'Введите адрес и нажмите Enter');
 
 -- --------------------------------------------------------
 
@@ -743,7 +799,7 @@ CREATE TABLE IF NOT EXISTS `mx_i18n_source_message` (
   `category` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   `message` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1165 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1274 ;
 
 --
 -- Дамп данных таблицы `mx_i18n_source_message`
@@ -1244,7 +1300,67 @@ INSERT INTO `mx_i18n_source_message` (`id`, `category`, `message`) VALUES
 (1161, 'backend', 'View'),
 (1162, 'common', 'Update Constraint'),
 (1163, 'common', 'Update'),
-(1164, 'core', 'Are you shure?');
+(1164, 'core', 'Are you shure?'),
+(1165, 'backend', 'Translate'),
+(1166, 'backend', 'Playgraund'),
+(1167, 'backend', 'Pjax'),
+(1168, 'backend', 'Ajaxq'),
+(1169, 'common', 'Intro'),
+(1170, 'backend', 'Towns'),
+(1171, 'common', 'Town'),
+(1172, 'common', 'Parser'),
+(1173, 'backend', 'Sight'),
+(1174, 'common', 'Town list'),
+(1175, 'backend', 'Parser towns'),
+(1176, 'common', 'Towns'),
+(1177, 'common', 'List'),
+(1178, 'backend', 'Type'),
+(1196, 'plugin', 'Items'),
+(1197, 'plugin', 'Create Item'),
+(1198, 'plugin', 'ID'),
+(1199, 'plugin', 'Name'),
+(1200, 'plugin', 'Url'),
+(1201, 'plugin', 'Version'),
+(1202, 'plugin', 'Text'),
+(1203, 'plugin', 'Author'),
+(1204, 'plugin', 'Author Url'),
+(1205, 'plugin', 'Hash'),
+(1206, 'plugin', 'Status'),
+(1207, 'plugins', 'Are you sure to delete this item?'),
+(1208, 'backend', 'Plugins'),
+(1209, 'common', 'Yes'),
+(1210, 'common', 'No'),
+(1211, 'common', 'Img'),
+(1212, 'common', 'Onmain'),
+(1213, 'common', 'Menu'),
+(1214, 'common', 'Root'),
+(1215, 'common', 'Child'),
+(1216, 'core', 'Replace'),
+(1217, 'core', 'Up'),
+(1218, 'core', 'Down'),
+(1219, 'core', 'Enter'),
+(1220, 'common', 'Icon'),
+(1221, 'main/app', 'Parent'),
+(1254, 'core', 'Reset'),
+(1255, 'core', 'Parent'),
+(1256, 'backend', 'Form'),
+(1257, 'common', 'title'),
+(1258, 'core', 'SEO'),
+(1259, 'common', 'text'),
+(1260, 'core', 'Text'),
+(1261, 'core', 'Config'),
+(1262, 'common', 'Cat'),
+(1263, 'common', 'Update {modelClass}: '),
+(1264, 'backend', 'Cat'),
+(1265, 'common', 'Assignment'),
+(1266, 'core', 'Assignment'),
+(1267, 'backend', 'RBAC'),
+(1268, 'common', 'Coords'),
+(1269, 'common', 'Create {modelClass}'),
+(1270, 'common', 'Item'),
+(1271, 'common', 'Gallery'),
+(1272, 'core', 'Coordinates select'),
+(1273, 'core', 'Input address and press Enter');
 
 -- --------------------------------------------------------
 
@@ -1267,11 +1383,11 @@ CREATE TABLE IF NOT EXISTS `mx_key_storage_item` (
 --
 
 INSERT INTO `mx_key_storage_item` (`key`, `value`, `comment`, `updated_at`, `created_at`) VALUES
-('backend.layout-boxed', '1', NULL, 1433742413, NULL),
-('backend.layout-collapsed-sidebar', '0', NULL, 1433742413, NULL),
-('backend.layout-fixed', '0', NULL, 1433742413, NULL),
-('backend.theme-skin', 'skin-purple', 'skin-blue, skin-black, skin-purple, skin-green, skin-red, skin-yellow', 1433742413, NULL),
-('frontend.maintenance', 'disabled', 'Set it to "true" to turn on maintenance mode', NULL, NULL);
+('backend.layout-boxed', '1', NULL, 1439193889, NULL),
+('backend.layout-collapsed-sidebar', '0', NULL, 1439193889, NULL),
+('backend.layout-fixed', '0', NULL, 1439193889, NULL),
+('backend.theme-skin', 'skin-purple', 'skin-blue, skin-black, skin-purple, skin-green, skin-red, skin-yellow', 1439193889, NULL),
+('frontend.maintenance', 'disabled', 'Set it to "true" to turn on maintenance mode', 1439193889, NULL);
 
 -- --------------------------------------------------------
 
@@ -1288,7 +1404,7 @@ CREATE TABLE IF NOT EXISTS `mx_menu` (
   `data` text,
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Дамп данных таблицы `mx_menu`
@@ -1301,24 +1417,24 @@ INSERT INTO `mx_menu` (`id`, `name`, `parent`, `route`, `order`, `data`) VALUES
 (4, 'Pages', 3, '/page/item/index', 1, NULL),
 (5, 'Users (main)', NULL, NULL, 4, 'return [''icon''=>''users''];'),
 (6, 'Users', 5, '/user/admin/index', 1, NULL),
-(7, 'Assignment', 5, '/admin/assignment/index', 2, NULL),
-(8, 'Role', 5, '/admin/role/index', 3, NULL),
-(9, 'Permission', 5, '/admin/permission/index', 4, NULL),
-(10, 'Route', 5, '/admin/route/index', 5, NULL),
-(11, 'Rule', 5, '/admin/rule/index', 6, NULL),
-(12, 'Menu', 5, '/admin/menu/index', 7, NULL),
+(7, 'RBAC', 5, '/admin/default/index', 2, NULL),
 (13, 'System', NULL, NULL, 10, 'return [''icon''=>''cogs''];'),
 (14, 'i18n', 13, NULL, 1, 'return [''icon''=>''flag''];'),
 (15, 'i18n Source Message', 14, '/i18n/i18n-source-message/index', 1, NULL),
 (16, 'i18n Message', 14, '/i18n/i18n-message/index', 2, NULL),
-(17, 'Key-Value Storage', 13, '/key-storage/index', 2, NULL),
-(18, 'Cache', 13, '/cache/index', 3, NULL),
-(19, 'System Information', 13, '/system-information/index', 4, NULL),
-(20, 'Logs', 13, '/log/index', 8, NULL),
+(17, 'Key-Value Storage', 13, '/core/key-storage/index', 2, NULL),
+(18, 'Cache', 13, '/core/cache/index', 3, NULL),
+(19, 'System Information', 13, '/core/system-information/index', 4, NULL),
+(20, 'Logs', 13, '/core/log/index', 8, NULL),
 (21, 'Gii', 13, '/gii/default/index', 31, NULL),
 (22, 'Debug', 13, '/debug/default/index', 30, NULL),
-(23, 'File Manager', 13, '/file-manager/index', 6, NULL),
-(25, 'Constraint', 5, '/constraint/index', 20, NULL);
+(23, 'File Manager', 13, '/core/file-manager/index', 6, NULL),
+(25, 'Constraint', 5, '/core/constraint/index', 20, NULL),
+(26, 'Playgraund', NULL, NULL, 35, NULL),
+(27, 'Translate', 26, '/playground/default/index', 1, NULL),
+(28, 'Ajaxq', 26, '/playground/default/ajaxq', 2, NULL),
+(30, 'Plugins', 13, '/plugins/item/index', 5, NULL),
+(31, 'Form', 26, '/playground/formplay/index', 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -1337,14 +1453,163 @@ CREATE TABLE IF NOT EXISTS `mx_page` (
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `mx_page`
 --
 
 INSERT INTO `mx_page` (`id`, `slug`, `name`, `text`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`) VALUES
-(1, 'about', 'About', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 1, 1, 1, 1435506064, 1435506064);
+(1, 'about', 'About', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 1, 1, 1, 1435506064, 1435506064),
+(2, 'test', 'test', '<p>Demo for plugin Code Highlighting Hello, world!</p>\r\n\r\n<p>[code]</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; /**<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; * @var string шаблон<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; */</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; public $tpl = &quot;form&quot;;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; /**<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; * @var array параметры \\yii\\widgets\\ActiveForm по умолчанию<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; */</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; protected $defaultFormOptions = [&#39;enableAjaxValidation&#39; =&gt; true, &#39;enableClientValidation&#39; =&gt; false];</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; /**<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; * @var string идентификатор виджета<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; */</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; protected $id;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; protected $_tplDir;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; public function init()<br />\r\n&nbsp;&nbsp;&nbsp; {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $model = $this-&gt;model;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;id = strtolower(self::FORM_ID_PREF . str_replace(&quot;\\\\&quot;, &quot;-&quot;, $model::className()));</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BootstrapPluginAsset::register($this-&gt;view);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; public function run()<br />\r\n&nbsp;&nbsp;&nbsp; {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $formOptions = array_merge($this-&gt;defaultFormOptions, $this-&gt;formOptions);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return $this-&gt;render($this-&gt;tpl, [<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;model&quot; =&gt; $this-&gt;model,<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;formOptions&quot; =&gt; $formOptions,<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot; =&gt; $this-&gt;id<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br />\r\n&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; /**<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; * @var array дирректории, где хранятся шаблоны<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp; */<br />\r\n&nbsp;&nbsp;&nbsp; public function getTplDir()<br />\r\n&nbsp;&nbsp;&nbsp; {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($this-&gt;_tplDir === null) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $widgetTpl = [$this-&gt;viewPath . DIRECTORY_SEPARATOR . &#39;tpl&#39; . DIRECTORY_SEPARATOR];</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (is_array($this-&gt;model-&gt;tplDir)) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach ($this-&gt;model-&gt;tplDir as $dir) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $modelTpl[] = Yii::getAlias($dir);<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $modelTpl = [Yii::getAlias($this-&gt;model-&gt;tplDir)];<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>/* $modelTpl = [Yii::$app-&gt;controller-&gt;module-&gt;basePath.DIRECTORY_SEPARATOR.&#39;views&#39;.DIRECTORY_SEPARATOR.Yii::$app-&gt;controller-&gt;id.DIRECTORY_SEPARATOR.&#39;tpl&#39;.DIRECTORY_SEPARATOR];<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;_tplDir = ArrayHelper::merge($modelTpl, $widgetTpl);<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return $this-&gt;_tplDir;<br />\r\n&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>[/code]</p>', 1, 2, 2, 1435571412, 1441463164);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `mx_pg__form`
+--
+
+CREATE TABLE IF NOT EXISTS `mx_pg__form` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` smallint(6) NOT NULL DEFAULT '0',
+  `author_id` int(11) DEFAULT NULL,
+  `updater_id` int(11) DEFAULT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
+  `root` int(11) NOT NULL DEFAULT '0',
+  `lft` int(11) NOT NULL DEFAULT '0',
+  `rgt` int(11) NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL DEFAULT '0',
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `onmain` smallint(6) NOT NULL DEFAULT '0',
+  `text1` text COLLATE utf8_unicode_ci,
+  `text2` text COLLATE utf8_unicode_ci,
+  `text3` text COLLATE utf8_unicode_ci,
+  `text4` text COLLATE utf8_unicode_ci,
+  `text5` text COLLATE utf8_unicode_ci,
+  `text6` text COLLATE utf8_unicode_ci,
+  `text7` text COLLATE utf8_unicode_ci,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `keywords` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+
+--
+-- Дамп данных таблицы `mx_pg__form`
+--
+
+INSERT INTO `mx_pg__form` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `root`, `lft`, `rgt`, `level`, `name`, `slug`, `icon`, `onmain`, `text1`, `text2`, `text3`, `text4`, `text5`, `text6`, `text7`, `title`, `keywords`, `description`) VALUES
+(1, 1, 1, NULL, NULL, NULL, 1, 1, 56, 1, '', '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 1, 1, 1, 1439741885, 1440745436, 0, 2, 3, 2, 'Главная', '/site/index', 'dashboard', 1, '', '', '', NULL, NULL, '45.49789247792821,33.79692903007548', '<pre style="background-color:#ffffff;color:#000000;font-family:''Courier New'';font-size:9,0pt;">\r\n<span style="color:#000080;background-color:#f7faff;font-weight:bold;">&lt;?php\r\n</span>\r\n<span style="color:#000080;background-color:#f7faff;font-weight:bold;">namespace </span><span style="background-color:#f7faff;">lo\\modules\\playground\\models;\r\n</span>\r\n<span style="color:#000080;background-color:#f7faff;font-weight:bold;">use </span><span style="background-color:#f7faff;">lo\\core\\db\\</span><span style="background-color:#e4e4ff;">MetaFields</span><span style="background-color:#f7faff;">;\r\n</span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">use </span><span style="background-color:#f7faff;">Yii;\r\n</span>\r\n<span style="color:#808080;background-color:#f7faff;font-style:italic;">/**\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;"> * Class MenuMeta\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;"> * Мета описание модели меню\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;"> * </span><span style="color:#808080;background-color:#f7faff;font-weight:bold;font-style:italic;">@package </span><span style="color:#808080;background-color:#f7faff;font-style:italic;">lo\\modules\\core\\models\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;"> */\r\n</span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">class </span><span style="background-color:#f7faff;">FormplayMeta </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">extends </span><span style="background-color:#e4e4ff;">MetaFields</span>\r\n<span style="background-color:#f7faff;">{\r\n</span>\r\n<span style="background-color:#f7faff;">    </span><span style="color:#808080;background-color:#f7faff;font-style:italic;">/**\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;">     * </span><span style="color:#808080;background-color:#f7faff;font-weight:bold;font-style:italic;">@inheritdoc\r\n</span><span style="color:#808080;background-color:#f7faff;font-weight:bold;font-style:italic;">     </span><span style="color:#808080;background-color:#f7faff;font-style:italic;">*/\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;">    </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">const </span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">SEO_TAB </span><span style="background-color:#f7faff;">= </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;seo&quot;</span><span style="background-color:#f7faff;">;\r\n</span><span style="background-color:#f7faff;">    </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">const </span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB </span><span style="background-color:#f7faff;">= </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text&quot;</span><span style="background-color:#f7faff;">;\r\n</span><span style="background-color:#f7faff;">    </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">const </span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">CONFIG_TAB </span><span style="background-color:#f7faff;">= </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;config&quot;</span><span style="background-color:#f7faff;">;\r\n</span>\r\n<span style="background-color:#f7faff;">    </span><span style="color:#808080;background-color:#f7faff;font-style:italic;">/**\r\n</span><span style="color:#808080;background-color:#f7faff;font-style:italic;">     * </span><span style="color:#808080;background-color:#f7faff;font-weight:bold;font-style:italic;">@inheritdoc\r\n</span><span style="color:#808080;background-color:#f7faff;font-weight:bold;font-style:italic;">     </span><span style="color:#808080;background-color:#f7faff;font-style:italic;">*/\r\n</span>\r\n<span style="color:#808080;background-color:#f7faff;font-style:italic;">    </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">public function </span><span style="background-color:#f7faff;">tabs()\r\n</span><span style="background-color:#f7faff;">    {\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#660000;background-color:#f7faff;">$tabs </span><span style="background-color:#f7faff;">= </span><span style="background-color:#e4e4ff;">parent</span><span style="background-color:#f7faff;">::</span><span style="background-color:#f7faff;font-style:italic;">tabs</span><span style="background-color:#f7faff;">();\r\n</span>\r\n<span style="background-color:#f7faff;">        </span><span style="color:#660000;background-color:#f7faff;">$tabs</span><span style="background-color:#f7faff;">[</span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">SEO_TAB</span><span style="background-color:#f7faff;">] = Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;core&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;SEO&quot;</span><span style="background-color:#f7faff;">);\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#660000;background-color:#f7faff;">$tabs</span><span style="background-color:#f7faff;">[</span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB</span><span style="background-color:#f7faff;">] = Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;core&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;Text&quot;</span><span style="background-color:#f7faff;">);\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#660000;background-color:#f7faff;">$tabs</span><span style="background-color:#f7faff;">[</span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">CONFIG_TAB</span><span style="background-color:#f7faff;">] = Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;core&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;Config&quot;</span><span style="background-color:#f7faff;">);\r\n</span>\r\n<span style="background-color:#f7faff;">        </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">return </span><span style="color:#660000;background-color:#f7faff;">$tabs</span><span style="background-color:#f7faff;">;\r\n</span><span style="background-color:#f7faff;">    }\r\n</span>\r\n<span style="background-color:#f7faff;">    </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">protected function </span><span style="background-color:#f7faff;">config()\r\n</span><span style="background-color:#f7faff;">    {\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">return </span><span style="background-color:#f7faff;">[\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;parent_id&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\ParentListField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;main/app&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;Parent&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;data&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;getListTreeData&#39;</span><span style="background-color:#f7faff;">],\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;parent_id&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;author_id&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;definition&#39; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInForm&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;created_at&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;definition&#39; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInForm&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                 ]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;name&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;common&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;Name&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInFilter&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;editInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;name&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;slug&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;common&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;Slug&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;slug&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;icon&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;common&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;Icon&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInFilter&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;editInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;icon&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;onmain&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\CheckBoxField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;common&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;Onmain&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInFilter&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;editInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">true</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;onmain&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; Yii::</span><span style="background-color:#f7faff;font-style:italic;">t</span><span style="background-color:#f7faff;">(</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;common&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;title&#39;</span><span style="background-color:#f7faff;">),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">SEO_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text1&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;TextField&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text1&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text2&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\TextAreaField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;TextAreaField&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text2&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text3&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\HtmlField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;inputClass&quot; </span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;class&#39;</span><span style="background-color:#f7faff;">=&gt;</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;lo\\core\\inputs\\HtmlInput&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;fileManagerController&quot;</span><span style="background-color:#f7faff;">=&gt;[</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;elfinder&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;path&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;page&#39;</span><span style="background-color:#f7faff;">],\r\n</span><span style="background-color:#f7faff;">                    ],\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;HtmlField&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;widgetOptions&quot;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;editorOptions&#39;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;preset&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;basic&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                        ]\r\n</span><span style="background-color:#f7faff;">                    ],\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text3&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n\r\n\r\n\r\n<span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text7&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\HtmlField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;inputClass&quot; </span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;class&#39;</span><span style="background-color:#f7faff;">=&gt;</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;lo\\core\\inputs\\HtmlInput&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;fileManagerController&quot;</span><span style="background-color:#f7faff;">=&gt;[</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;elfinder&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;path&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;page&#39;</span><span style="background-color:#f7faff;">],\r\n</span><span style="background-color:#f7faff;">                    ],\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;HtmlField&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;widgetOptions&quot;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;editorOptions&#39;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;preset&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;standard&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                        ]\r\n</span><span style="background-color:#f7faff;">                    ],\r\n</span><span style="background-color:#f7faff;">                    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">CONFIG_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">                ],\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text7&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">            ],\r\n</span>\r\n<span style="background-color:#f7faff;">        ];\r\n</span><span style="background-color:#f7faff;">    }\r\n</span>\r\n<span style="background-color:#f7faff;">}</span></pre>', '', NULL, NULL),
+(3, 1, 1, 1, 1439741928, 1439796545, 0, 6, 9, 2, 'Контент', '#', 'edit', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `mx_pg__form` (`id`, `status`, `author_id`, `updater_id`, `created_at`, `updated_at`, `root`, `lft`, `rgt`, `level`, `name`, `slug`, `icon`, `onmain`, `text1`, `text2`, `text3`, `text4`, `text5`, `text6`, `text7`, `title`, `keywords`, `description`) VALUES
+(4, 1, 1, 1, 1439747244, 1440065310, 0, 4, 5, 2, 'Хроника', '/timeline-event/index', 'bar-chart-o', 0, '', '', '<pre style="background-color:#ffffff;color:#000000;font-family:''Courier New'';font-size:9,0pt;">\r\n<span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text3&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;definition&quot; </span><span style="background-color:#f7faff;">=&gt; [\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;class&quot; </span><span style="background-color:#f7faff;">=&gt; \\lo\\core\\db\\fields\\HtmlField::</span><span style="background-color:#f7faff;font-style:italic;">className</span><span style="background-color:#f7faff;">(),\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;inputClass&quot; </span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;class&#39;</span><span style="background-color:#f7faff;">=&gt;</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;lo\\core\\inputs\\HtmlInput&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;fileManagerController&quot;</span><span style="background-color:#f7faff;">=&gt;[</span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;elfinder&#39;</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;path&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;page&#39;</span><span style="background-color:#f7faff;">],\r\n</span><span style="background-color:#f7faff;">        ],\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;title&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;HtmlField&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;showInGrid&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;isRequired&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">false</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;widgetOptions&quot;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">            </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;editorOptions&#39;</span><span style="background-color:#f7faff;">=&gt;[\r\n</span><span style="background-color:#f7faff;">                </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;preset&#39; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&#39;basic&#39;</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">            ]\r\n</span><span style="background-color:#f7faff;">        ],\r\n</span><span style="background-color:#f7faff;">        </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;tab&quot; </span><span style="background-color:#f7faff;">=&gt; </span><span style="color:#000080;background-color:#f7faff;font-weight:bold;">self</span><span style="background-color:#f7faff;">::</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;font-style:italic;">TEXT_TAB</span><span style="background-color:#f7faff;">,\r\n</span><span style="background-color:#f7faff;">    ],\r\n</span><span style="background-color:#f7faff;">    </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;params&quot; </span><span style="background-color:#f7faff;">=&gt; [</span><span style="color:#660000;background-color:#f7faff;">$this</span><span style="background-color:#f7faff;">-&gt;</span><span style="color:#660e7a;background-color:#f7faff;font-weight:bold;">owner</span><span style="background-color:#f7faff;">, </span><span style="color:#008000;background-color:#f7faff;font-weight:bold;">&quot;text3&quot;</span><span style="background-color:#f7faff;">]\r\n</span><span style="background-color:#f7faff;">],</span></pre>', NULL, NULL, NULL, '', '', NULL, NULL),
+(5, 1, 1, 1, 1439796044, 1439796044, 0, 7, 8, 3, 'Страницы', '/page/item/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 1, 1, 1, 1439796228, 1439796517, 0, 10, 25, 2, 'Пользователи', '#', 'users', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 1, 1, 1, 1439796269, 1439796269, 0, 11, 12, 3, 'Пользователи', '/user/admin/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 1, 1, 1, 1439796311, 1439796311, 0, 13, 14, 3, 'Назначение', '/admin/assignment/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 1, 1, 1, 1439796330, 1439796330, 0, 15, 16, 3, 'Роли', '/admin/role/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 1, 1, 1, 1439796355, 1439796355, 0, 17, 18, 3, 'Разрешения', '/admin/permission/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 1, 1, 1, 1439796386, 1439796386, 0, 19, 20, 3, 'Маршруты', '/admin/route/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 1, 1, 1, 1439796405, 1439796405, 0, 21, 22, 3, 'Правила', '/admin/rule/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 1, 1, 1, 1439796438, 1439796438, 0, 23, 24, 3, 'Ограничения', '/core/constraint/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 1, 1, 1, 1439796591, 1439796608, 0, 26, 47, 2, 'Система', '#', 'cogs', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 1, 1, 1, 1439796646, 1439796646, 0, 27, 32, 3, 'i18n', '#', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 1, 1, 1, 1439796693, 1439796693, 0, 28, 29, 4, 'Текст', '/i18n/i18n-source-message/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 1, 1, 1, 1439796725, 1439796725, 0, 30, 31, 4, 'Перевод', '/i18n/i18n-message/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 1, 1, 1, 1439798184, 1439798184, 0, 35, 36, 3, 'Ключ - Значение', '/core/key-storage/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, 1, 1, 1, 1439798201, 1439798412, 0, 41, 42, 3, 'Кеш', '/core/cache/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(20, 1, 1, 1, 1439798236, 1439798400, 0, 43, 44, 3, 'Информация о системе', '/core/system-information/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(21, 1, 1, 1, 1439798274, 1439798274, 0, 39, 40, 3, 'Журнал', '/core/log/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, 1, 1, 1, 1439798320, 1439798328, 0, 37, 38, 3, 'Менеджер файлов', '/core/file-manager/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, 1, 1, 1, 1439798363, 1439798386, 0, 33, 34, 3, 'Плагины', '/plugins/item/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(24, 1, 1, 1, 1439798452, 1439798452, 0, 48, 55, 2, 'Песочница', '#', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(25, 1, 1, 1, 1439798486, 1439798486, 0, 49, 50, 3, 'Перевод', '/playground/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(26, 1, 1, 1, 1439798514, 1439798514, 0, 51, 52, 3, 'AjaxQ', '/playground/ajaxq', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(27, 1, 1, 1, 1439798547, 1439798547, 0, 53, 54, 3, 'Достопримечательности', '/sight/town/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(28, 1, 1, 1, 1439798601, 1439798601, 0, 45, 46, 3, 'Меню', '/core/menu/index', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `mx_plugins__app`
+--
+
+CREATE TABLE IF NOT EXISTS `mx_plugins__app` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Дамп данных таблицы `mx_plugins__app`
+--
+
+INSERT INTO `mx_plugins__app` (`id`, `name`) VALUES
+(1, 'frontend'),
+(2, 'common'),
+(3, 'backend');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `mx_plugins__event`
+--
+
+CREATE TABLE IF NOT EXISTS `mx_plugins__event` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_id` int(11) NOT NULL DEFAULT '1',
+  `plugin_id` int(11) NOT NULL,
+  `trigger_class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `trigger_event` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `handler_method` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data` text COLLATE utf8_unicode_ci,
+  `pos` int(11) NOT NULL DEFAULT '0',
+  `status` smallint(6) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `fk_plugins_event_plugins_item` (`plugin_id`),
+  KEY `fk_plugins_event_plugins_app` (`app_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=25 ;
+
+--
+-- Дамп данных таблицы `mx_plugins__event`
+--
+
+INSERT INTO `mx_plugins__event` (`id`, `app_id`, `plugin_id`, `trigger_class`, `trigger_event`, `handler_method`, `data`, `pos`, `status`) VALUES
+(20, 1, 10, 'yii\\base\\View', 'afterRender', 'shortCode', '{"style":"monokai","lang":"php"}', 0, 1),
+(21, 3, 11, 'yii\\web\\View', 'beginBody', 'foo', '{"term":"Hello, world!"}', 0, 0),
+(24, 3, 13, 'yii\\base\\Application', 'beforeRequest', 'login', '{"allowedIps":["127.0.0.1","127.0.0.2"],"users":{"admin":"123456"}}', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `mx_plugins__item`
+--
+
+CREATE TABLE IF NOT EXISTS `mx_plugins__item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `handler_class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `version` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `text` text COLLATE utf8_unicode_ci,
+  `author` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `author_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` smallint(6) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
+
+--
+-- Дамп данных таблицы `mx_plugins__item`
+--
+
+INSERT INTO `mx_plugins__item` (`id`, `handler_class`, `name`, `url`, `version`, `text`, `author`, `author_url`, `status`) VALUES
+(10, 'lo\\plugins\\plugins\\code\\Code', 'Code Highlighting', 'https://github.com/loveorigami/yii2-plugins-system', '1.2', 'A shortcode for code highlighting in view. Use as [code lang="php"]...content...[/code]', 'Andrey Lukyanov', 'https://github.com/loveorigami', 1),
+(11, 'common\\plugins\\test\\Test', 'Test plugin', '', '1.0', 'Small test plugin', 'Andrey Lukyanov', 'https://github.com/loveorigami', 1),
+(13, 'lo\\plugins\\plugins\\httpauth\\Httpauth', 'Http Authentication', 'https://github.com/loveorigami/yii2-plugins-system/tree/master/plugins/httpauth', '1.0', 'Authentication for backend', 'Andrey Lukyanov', 'https://github.com/loveorigami', 1);
 
 -- --------------------------------------------------------
 
@@ -1452,7 +1717,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
   PRIMARY KEY (`id`),
   KEY `idx_log_level` (`level`),
   KEY `idx_log_category` (`category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -1472,9 +1737,14 @@ CREATE TABLE IF NOT EXISTS `mx_system_migration` (
 
 INSERT INTO `mx_system_migration` (`version`, `apply_time`) VALUES
 ('m000000_000000_base', 1435405914),
+('m140925_113152_create_pg_form_table', 1439732360),
 ('m150620_091027_init_dump', 1435406062),
 ('m150703_123104_page', 1435506064),
-('m150727_182017_create_constraint_table', 1435475636);
+('m150720_090901_plugin_table', 1438513601),
+('m150720_090905_app_table', 1438513601),
+('m150720_091726_event_table', 1438513602),
+('m150727_182017_create_constraint_table', 1435475636),
+('m150820_085500_pg_form_add_text', 1440061879);
 
 -- --------------------------------------------------------
 
@@ -1545,8 +1815,8 @@ CREATE TABLE IF NOT EXISTS `mx_user` (
 --
 
 INSERT INTO `mx_user` (`id`, `username`, `email`, `password_hash`, `auth_key`, `confirmed_at`, `unconfirmed_email`, `blocked_at`, `registration_ip`, `created_at`, `updated_at`, `flags`) VALUES
-(1, 'webmaster', 'lo@mail.ru', '$2y$12$rM.H/QOxuvQJf7gybAG8d.7gPk4LIzc1dVXfanali7UhdOd3fTtm2', 'Qn1cqR_Dkks07_v5z1Cl2PyxYu0VGB-C', 1433094350, NULL, NULL, '127.0.0.1', 1433094159, 1433582716, 0),
-(2, 'loveorigami', 'loveorigami@mail.ru', '$2y$12$xB6iMG8yM/ZddX2SWOPVfepCblyhm547FDbjijzczQZXqjBoPbVpa', 'E0ZYDHiw6aAc5Z2q4uKqhgxUbYAsDUAc', 1433154777, NULL, NULL, '127.0.0.1', 1433154778, 1433661229, 0);
+(1, 'root', 'lo@mail.ru', '$2y$12$XtDReYvhTKtQMbeWBj6jE.I1jrDop.FeJ7zsLDkThPexujwQFL3E2', 'Qn1cqR_Dkks07_v5z1Cl2PyxYu0VGB-C', 1433094350, NULL, NULL, '127.0.0.1', 1433094159, 1441461637, 0),
+(2, 'author', 'love@mail.ru', '$2y$12$ddMPyBl1vjx5UA13iXyQwOzJEKYHGDdyNW4CgaKkeM/Kle9SlUsDa', 'E0ZYDHiw6aAc5Z2q4uKqhgxUbYAsDUAc', 1433154777, NULL, NULL, '127.0.0.1', 1433154778, 1441462952, 0);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -1576,6 +1846,13 @@ ALTER TABLE `mx_auth_item_child`
 --
 ALTER TABLE `mx_menu`
   ADD CONSTRAINT `mx_menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `mx_menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `mx_plugins__event`
+--
+ALTER TABLE `mx_plugins__event`
+  ADD CONSTRAINT `fk_plugins_event_plugins_app` FOREIGN KEY (`app_id`) REFERENCES `mx_plugins__app` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_plugins_event_plugins_item` FOREIGN KEY (`plugin_id`) REFERENCES `mx_plugins__item` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `mx_profile`
