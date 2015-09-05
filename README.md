@@ -46,7 +46,7 @@ BACKEND_COOKIE_VALIDATION_KEY = you cookie
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": ">=2.0.4",
+    "yiisoft/yii2": ">=2.0.6",
 
 
     "loveorigami/lo-core-cms": "*",
