@@ -11,7 +11,8 @@ composer up
 ```
 
 ## Настройка приложения
-* Скопировать и переименовать файл `.env.dist` в .`.env` и выполнить необходимую настройку. Обязятельно сгенерировать cookie keys
+* Скопировать и переименовать файл `.env.dist` в .`.env` и выполнить необходимую настройку. Префикс таблиц оставить `mx_`
+Обязятельно сгенерировать cookie keys
 ```
 FRONTEND_COOKIE_VALIDATION_KEY = you cookie
 BACKEND_COOKIE_VALIDATION_KEY = you cookie
