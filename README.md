@@ -36,14 +36,13 @@ STORAGE_URL     = http://site.lo/${STORAGE_DIR}
 
 ## Настройка приложения
 * В `@backend\config\params-local.php` содержится массив подключаемых модулей.
-
 ```
-    'enabledModules' => [
-        [
-            'path' =>'@vendor/loveorigami/lo-module-{module}/modules/admin/config/main.php',
-            'modules'=>['playground', 'core', 'page']
-        ]
-    ],
+'enabledModules' => [
+    [
+        'path' =>'@vendor/loveorigami/lo-module-{module}/modules/admin/config/main.php',
+        'modules'=>['playground', 'core', 'page']
+    ]
+],
 ```
 
 оставить в перечне те, которые содержатся в composer.json
@@ -64,17 +63,15 @@ STORAGE_URL     = http://site.lo/${STORAGE_DIR}
     "php": ">=5.4.0",
     "yiisoft/yii2": ">=2.0.6",
 
-
     "loveorigami/lo-core-cms": "*",
     "loveorigami/lo-module-core": "*",
 ......
   },
 ```  
 
-* по адресу, настроеному в `.env`, заходим в админку.
-
 ## Вход в админку
-### Пользователи
+* По адресу, настроеному в `.env`, заходим в админку.
+* Пользователи
 ```
 login: root
 password: root
@@ -82,7 +79,8 @@ password: root
 login: author
 password: author
 ```
-К каждому пользователю привязаны соответствующие роли
+
+* К каждому пользователю привязаны соответствующие роли
 
     Роль `root` - без ограничений
     Роль `author` - доступ к своим записям в модуле page.
