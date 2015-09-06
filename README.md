@@ -5,7 +5,8 @@
 ```
 git clone https://loveorigami@bitbucket.org/loveorigami/lo.yii.git example.com
 ```
-* переименовать `composer.dist.php` в `composer.php` и обновить зависимости
+* скопировать содержимое папки  `environments` в корень приложения.
+* обновить зависимости
 ```
 composer up
 ```
@@ -18,8 +19,7 @@ FRONTEND_COOKIE_VALIDATION_KEY = you cookie
 BACKEND_COOKIE_VALIDATION_KEY = you cookie
 ```
 
-* аналогично файла `@backend\config\main-local.dist.php` переименовать в `main-local.php`
-* переименовать `@backend\config\params-local.dist.php` в `params-local.php`. В этом файле содержится массив подключаемых модулей. 
+* в `@backend\config\params-local.php` содержится массив подключаемых модулей.
 
 ```
     'enabledModules' => [
@@ -30,7 +30,7 @@ BACKEND_COOKIE_VALIDATION_KEY = you cookie
     ],
 ```
 
-оставить в перечне те, которые содержатся в composer.php
+оставить в перечне те, которые содержатся в composer.json
 ```
  "repositories": [
     {
@@ -55,10 +55,9 @@ BACKEND_COOKIE_VALIDATION_KEY = you cookie
   },
 ```  
 
-* попереименовывать `main-local.dist.php` и `params-local.dist.php` в common, frontend, console
-
 * выполнить миграцию `yii migrate up`, с которой загрузится дамп БД.
 * по адресу, настроеному в `.env`, заходим в админку.
+
 ```
 login: root
 password: root
