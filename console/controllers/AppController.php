@@ -16,8 +16,6 @@ class AppController extends Controller
         '@frontend/web/assets',
         '@backend/runtime',
         '@backend/web/assets',
-        '@storage/cache',
-        '@storage/web/source'
     ];
 
     public $executablePaths = [
@@ -36,7 +34,6 @@ class AppController extends Controller
         $this->setExecutable($this->executablePaths);
         $this->setGeneratedKey($this->generateKeysPaths);
         \Yii::$app->runAction('migrate/up');
-        \Yii::$app->runAction('rbac/init');
     }
 
     public function setWritable($paths)

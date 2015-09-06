@@ -10,16 +10,33 @@ git clone https://loveorigami@bitbucket.org/loveorigami/lo.yii.git example.com
 ```
 composer up
 ```
+* Скопировать и переименовать файл `.env.dist` в .`.env` и выполнить необходимую настройку.
+* Внести необходимые изменения в `.env` файл
+	- Установить текущее окружение
+	```
+	YII_DEBUG   = true
+	YII_ENV     = dev
+	```
+	- Подключение к базе данных
+	```
+	DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-lo
+	DB_USERNAME      = root
+	DB_PASSWORD      =
+	DB_TABLE_PREFIX  = mx_
+	```
+
+	- Сконфигурировать URL приложения
+	```
+    FRONTEND_URL    = http://site.lo
+    BACKEND_URL     = http://admin.lo
+    STORAGE_DIR     = uploads
+    STORAGE_URL     = http://site.lo/${STORAGE_DIR}
+	```
+
+* Выполнить в консоли команду `yii app/setup`
 
 ## Настройка приложения
-* Скопировать и переименовать файл `.env.dist` в .`.env` и выполнить необходимую настройку. Префикс таблиц оставить `mx_`
-Обязятельно сгенерировать cookie keys
-```
-FRONTEND_COOKIE_VALIDATION_KEY = you cookie
-BACKEND_COOKIE_VALIDATION_KEY = you cookie
-```
-
-* в `@backend\config\params-local.php` содержится массив подключаемых модулей.
+* В `@backend\config\params-local.php` содержится массив подключаемых модулей.
 
 ```
     'enabledModules' => [
@@ -55,17 +72,18 @@ BACKEND_COOKIE_VALIDATION_KEY = you cookie
   },
 ```  
 
-* выполнить миграцию `yii migrate up`, с которой загрузится дамп БД.
 * по адресу, настроеному в `.env`, заходим в админку.
 
+## Вход в админку
+### Пользователи
 ```
 login: root
 password: root
 
-или
-
 login: author
 password: author
 ```
-* Роль `root` - без ограничений
-* Роль `author` - доступ к своим записям в модуле page.
+К каждому пользователю привязаны соответствующие роли
+
+    Роль `root` - без ограничений
+    Роль `author` - доступ к своим записям в модуле page.
