@@ -19,6 +19,7 @@ YII_ENV     = dev
 ```
 
 	- Подключение к базе данных
+
 ```
 DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-lo
 DB_USERNAME      = root
@@ -27,6 +28,7 @@ DB_TABLE_PREFIX  = mx_
 ```
 
 	- Сконфигурировать URL приложения
+
 ```
 FRONTEND_URL    = http://site.lo
 BACKEND_URL     = http://admin.lo
