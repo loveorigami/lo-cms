@@ -10,7 +10,7 @@ git clone https://loveorigami@bitbucket.org/loveorigami/lo.yii.git example.com
 ```
 composer up
 ```
-* Скопировать и переименовать файл `.env.dist` в .`.env` и выполнить необходимую настройку.
+* Скопировать и переименовать файл `.env.dist` в .`.env`.
 * Внести необходимые изменения в `.env` файл
 	- Установить текущее окружение
 	```
