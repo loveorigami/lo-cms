@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 05 2015 г., 17:28
+-- Время создания: Сен 06 2015 г., 16:15
 -- Версия сервера: 5.6.22-log
--- Версия PHP: 5.4.35
+-- Версия PHP: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `yii2-user`
+-- База данных: `yii2-lo`
 --
 
 -- --------------------------------------------------------
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_constraint` (
   `constraint` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `forbidden_attrs` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `mx_auth_constraint`
@@ -140,12 +140,12 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 ('author', 1, 'автор', NULL, NULL, 1433660746, 1433660746),
 ('BCreate', 2, 'Create items in backend', NULL, NULL, 1434384366, 1434384366),
 ('BDelete', 2, 'Can delete item', NULL, NULL, 1433923033, 1433923033),
-('BDeleteOwn', 2, 'Can delete own item', 'OwnModelRule', NULL, 1433921768, 1440408547),
+('BDeleteOwn', 2, 'Can delete own item', 'OwnModelRule', NULL, 1433921768, 1441545263),
 ('BRoot', 2, 'Only for root', NULL, NULL, 1435405792, 1435405792),
 ('BUpdate', 2, 'Can update item', NULL, NULL, 1433922980, 1433922980),
-('BUpdateOwn', 2, 'Can update own item', 'OwnModelRule', NULL, 1433921045, 1440408513),
+('BUpdateOwn', 2, 'Can update own item', 'OwnModelRule', NULL, 1433921045, 1441545278),
 ('BView', 2, 'Can view item', NULL, NULL, 1435481086, 1435481125),
-('BViewOwn', 2, 'Can view own item', NULL, NULL, 1435481173, 1435481173),
+('BViewOwn', 2, 'Can view own item', 'OwnModelRule', NULL, 1435481173, 1441545296),
 ('editor', 1, 'редактор', NULL, NULL, 1433660710, 1433660799),
 ('root', 1, 'владелец', NULL, NULL, 1433583350, 1433660882),
 ('user', 1, 'пользователь', NULL, NULL, 1433660785, 1433685296);
@@ -213,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `mx_auth_rule` (
 --
 
 INSERT INTO `mx_auth_rule` (`name`, `data`, `created_at`, `updated_at`) VALUES
-('OwnModelRule', 'O:24:"common\\rbac\\OwnModelRule":3:{s:4:"name";s:12:"OwnModelRule";s:9:"createdAt";i:1440408380;s:9:"updatedAt";i:1440408446;}', 1440408380, 1440408446);
+('OwnModelRule', 'O:25:"lo\\core\\rbac\\OwnModelRule":3:{s:4:"name";s:12:"OwnModelRule";s:9:"createdAt";i:1441545064;s:9:"updatedAt";i:1441545064;}', 1441545064, 1441545064);
 
 -- --------------------------------------------------------
 
@@ -1717,7 +1717,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
   PRIMARY KEY (`id`),
   KEY `idx_log_level` (`level`),
   KEY `idx_log_category` (`category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
