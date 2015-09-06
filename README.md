@@ -12,25 +12,25 @@ composer up
 ```
 * Скопировать и переименовать файл `.env.dist` в `.env`.
 * Внести необходимые изменения в `.env` файл
-	- Установить текущее окружение
-    ```
-    YII_DEBUG   = true
-    YII_ENV     = dev
-    ```
-	- Подключение к базе данных
-    ```
-    DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-lo
-    DB_USERNAME      = root
-    DB_PASSWORD      =
-    DB_TABLE_PREFIX  = mx_
-    ```
-	- Сконфигурировать URL приложения
-    ```
-    FRONTEND_URL    = http://site.lo
-    BACKEND_URL     = http://admin.lo
-    STORAGE_DIR     = uploads
-    STORAGE_URL     = http://site.lo/${STORAGE_DIR}
-    ```
+- Установить текущее окружение
+```
+YII_DEBUG   = true
+YII_ENV     = dev
+```
+- Подключение к базе данных
+```
+DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-lo
+DB_USERNAME      = root
+DB_PASSWORD      =
+DB_TABLE_PREFIX  = mx_
+```
+- Сконфигурировать URL приложения
+```
+FRONTEND_URL    = http://site.lo
+BACKEND_URL     = http://admin.lo
+STORAGE_DIR     = uploads
+STORAGE_URL     = http://site.lo/${STORAGE_DIR}
+```
 
 * Выполнить в консоли команду `yii app/setup`
 
