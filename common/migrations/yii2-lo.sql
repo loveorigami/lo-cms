@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 06 2015 г., 16:15
+-- Время создания: Сен 07 2015 г., 10:16
 -- Версия сервера: 5.6.22-log
 -- Версия PHP: 5.5.19
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Структура таблицы `mx_auth_assignment`
 --
 
+DROP TABLE IF EXISTS `mx_auth_assignment`;
 CREATE TABLE IF NOT EXISTS `mx_auth_assignment` (
   `item_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -47,6 +48,7 @@ INSERT INTO `mx_auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 -- Структура таблицы `mx_auth_constraint`
 --
 
+DROP TABLE IF EXISTS `mx_auth_constraint`;
 CREATE TABLE IF NOT EXISTS `mx_auth_constraint` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `status` smallint(6) NOT NULL DEFAULT '0',
@@ -74,6 +76,7 @@ INSERT INTO `mx_auth_constraint` (`id`, `status`, `author_id`, `updater_id`, `cr
 -- Структура таблицы `mx_auth_item`
 --
 
+DROP TABLE IF EXISTS `mx_auth_item`;
 CREATE TABLE IF NOT EXISTS `mx_auth_item` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `type` int(11) NOT NULL,
@@ -156,6 +159,7 @@ INSERT INTO `mx_auth_item` (`name`, `type`, `description`, `rule_name`, `data`, 
 -- Структура таблицы `mx_auth_item_child`
 --
 
+DROP TABLE IF EXISTS `mx_auth_item_child`;
 CREATE TABLE IF NOT EXISTS `mx_auth_item_child` (
   `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -200,6 +204,7 @@ INSERT INTO `mx_auth_item_child` (`parent`, `child`) VALUES
 -- Структура таблицы `mx_auth_rule`
 --
 
+DROP TABLE IF EXISTS `mx_auth_rule`;
 CREATE TABLE IF NOT EXISTS `mx_auth_rule` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `data` text COLLATE utf8_unicode_ci,
@@ -221,6 +226,7 @@ INSERT INTO `mx_auth_rule` (`name`, `data`, `created_at`, `updated_at`) VALUES
 -- Структура таблицы `mx_i18n_message`
 --
 
+DROP TABLE IF EXISTS `mx_i18n_message`;
 CREATE TABLE IF NOT EXISTS `mx_i18n_message` (
   `id` int(11) NOT NULL DEFAULT '0',
   `language` varchar(16) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
@@ -794,6 +800,7 @@ INSERT INTO `mx_i18n_message` (`id`, `language`, `translation`) VALUES
 -- Структура таблицы `mx_i18n_source_message`
 --
 
+DROP TABLE IF EXISTS `mx_i18n_source_message`;
 CREATE TABLE IF NOT EXISTS `mx_i18n_source_message` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -1368,6 +1375,7 @@ INSERT INTO `mx_i18n_source_message` (`id`, `category`, `message`) VALUES
 -- Структура таблицы `mx_key_storage_item`
 --
 
+DROP TABLE IF EXISTS `mx_key_storage_item`;
 CREATE TABLE IF NOT EXISTS `mx_key_storage_item` (
   `key` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `value` text COLLATE utf8_unicode_ci NOT NULL,
@@ -1395,6 +1403,7 @@ INSERT INTO `mx_key_storage_item` (`key`, `value`, `comment`, `updated_at`, `cre
 -- Структура таблицы `mx_menu`
 --
 
+DROP TABLE IF EXISTS `mx_menu`;
 CREATE TABLE IF NOT EXISTS `mx_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
@@ -1442,6 +1451,7 @@ INSERT INTO `mx_menu` (`id`, `name`, `parent`, `route`, `order`, `data`) VALUES
 -- Структура таблицы `mx_page`
 --
 
+DROP TABLE IF EXISTS `mx_page`;
 CREATE TABLE IF NOT EXISTS `mx_page` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `slug` varchar(512) COLLATE utf8_unicode_ci NOT NULL,
@@ -1469,6 +1479,7 @@ INSERT INTO `mx_page` (`id`, `slug`, `name`, `text`, `status`, `author_id`, `upd
 -- Структура таблицы `mx_pg__form`
 --
 
+DROP TABLE IF EXISTS `mx_pg__form`;
 CREATE TABLE IF NOT EXISTS `mx_pg__form` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `status` smallint(6) NOT NULL DEFAULT '0',
@@ -1538,6 +1549,7 @@ INSERT INTO `mx_pg__form` (`id`, `status`, `author_id`, `updater_id`, `created_a
 -- Структура таблицы `mx_plugins__app`
 --
 
+DROP TABLE IF EXISTS `mx_plugins__app`;
 CREATE TABLE IF NOT EXISTS `mx_plugins__app` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -1559,6 +1571,7 @@ INSERT INTO `mx_plugins__app` (`id`, `name`) VALUES
 -- Структура таблицы `mx_plugins__event`
 --
 
+DROP TABLE IF EXISTS `mx_plugins__event`;
 CREATE TABLE IF NOT EXISTS `mx_plugins__event` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `app_id` int(11) NOT NULL DEFAULT '1',
@@ -1589,6 +1602,7 @@ INSERT INTO `mx_plugins__event` (`id`, `app_id`, `plugin_id`, `trigger_class`, `
 -- Структура таблицы `mx_plugins__item`
 --
 
+DROP TABLE IF EXISTS `mx_plugins__item`;
 CREATE TABLE IF NOT EXISTS `mx_plugins__item` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `handler_class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -1617,6 +1631,7 @@ INSERT INTO `mx_plugins__item` (`id`, `handler_class`, `name`, `url`, `version`,
 -- Структура таблицы `mx_profile`
 --
 
+DROP TABLE IF EXISTS `mx_profile`;
 CREATE TABLE IF NOT EXISTS `mx_profile` (
   `user_id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -1643,6 +1658,7 @@ INSERT INTO `mx_profile` (`user_id`, `name`, `public_email`, `gravatar_email`, `
 -- Структура таблицы `mx_setting`
 --
 
+DROP TABLE IF EXISTS `mx_setting`;
 CREATE TABLE IF NOT EXISTS `mx_setting` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0',
@@ -1683,6 +1699,7 @@ INSERT INTO `mx_setting` (`id`, `parent_id`, `code`, `type`, `store_range`, `sto
 -- Структура таблицы `mx_social_account`
 --
 
+DROP TABLE IF EXISTS `mx_social_account`;
 CREATE TABLE IF NOT EXISTS `mx_social_account` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
@@ -1707,6 +1724,7 @@ INSERT INTO `mx_social_account` (`id`, `user_id`, `provider`, `client_id`, `data
 -- Структура таблицы `mx_system_log`
 --
 
+DROP TABLE IF EXISTS `mx_system_log`;
 CREATE TABLE IF NOT EXISTS `mx_system_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `level` int(11) DEFAULT NULL,
@@ -1717,7 +1735,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
   PRIMARY KEY (`id`),
   KEY `idx_log_level` (`level`),
   KEY `idx_log_category` (`category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1725,6 +1743,7 @@ CREATE TABLE IF NOT EXISTS `mx_system_log` (
 -- Структура таблицы `mx_system_migration`
 --
 
+DROP TABLE IF EXISTS `mx_system_migration`;
 CREATE TABLE IF NOT EXISTS `mx_system_migration` (
   `version` varchar(180) NOT NULL,
   `apply_time` int(11) DEFAULT NULL,
@@ -1752,6 +1771,7 @@ INSERT INTO `mx_system_migration` (`version`, `apply_time`) VALUES
 -- Структура таблицы `mx_timeline_event`
 --
 
+DROP TABLE IF EXISTS `mx_timeline_event`;
 CREATE TABLE IF NOT EXISTS `mx_timeline_event` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `application` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -1778,6 +1798,7 @@ INSERT INTO `mx_timeline_event` (`id`, `application`, `category`, `event`, `data
 -- Структура таблицы `mx_token`
 --
 
+DROP TABLE IF EXISTS `mx_token`;
 CREATE TABLE IF NOT EXISTS `mx_token` (
   `user_id` int(11) NOT NULL,
   `code` varchar(32) NOT NULL,
@@ -1792,6 +1813,7 @@ CREATE TABLE IF NOT EXISTS `mx_token` (
 -- Структура таблицы `mx_user`
 --
 
+DROP TABLE IF EXISTS `mx_user`;
 CREATE TABLE IF NOT EXISTS `mx_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(25) NOT NULL,
