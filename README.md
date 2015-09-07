@@ -60,7 +60,7 @@ STORAGE_URL     = http://site.lo/${STORAGE_DIR}
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=5.4.0",
+    "php": ">=5.5.0",
     "yiisoft/yii2": ">=2.0.6",
 
     "loveorigami/lo-core-cms": "*",
