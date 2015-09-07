@@ -1,7 +1,7 @@
 # Yii 2 LoveOrigami
 
 ## Установка
-* Клонируем репозиторий карскаса
+* Клонируем репозиторий каркаса
 ```
 git clone https://loveorigami@bitbucket.org/loveorigami/lo.yii.git example.com
 ```
