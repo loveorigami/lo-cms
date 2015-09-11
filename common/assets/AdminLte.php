@@ -12,7 +12,7 @@ use yii\web\AssetBundle;
 
 class AdminLte extends AssetBundle
 {
-    public $sourcePath = '@bower/admin-lte/dist';
+    public $sourcePath = '@bower/adminlte/dist';
     public $js = [
         'js/app.min.js'
     ];
