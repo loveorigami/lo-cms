@@ -16,12 +16,29 @@ class Bootbox extends AssetBundle
 
     public static function overrideSystemConfirm()
     {
-        \Yii::$app->view->registerJs('
+        \Yii::$app->view->registerJs("
+			
             yii.confirm = function(message, ok, cancel) {
-                bootbox.confirm(message, function(result) {
-                    if (result) { !ok || ok(); } else { !cancel || cancel(); }
-                });
+				bootbox.confirm({ 
+					className: 'modal-danger',
+					message: message,
+					animate: false,
+					buttons: {
+						cancel: {
+							label: 'Отмена',
+							className: 'btn-default'
+						},
+						confirm: {
+							label: 'Да',
+							className: 'btn-info'
+						}
+					},					
+					callback: function(result){ 
+						if (result) { !ok || ok(); } 
+						else { !cancel || cancel(); } 
+					}
+				});
             }
-        ');
+        ");
     }
 }
