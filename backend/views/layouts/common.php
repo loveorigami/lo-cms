@@ -2,7 +2,7 @@
 /**
  * @var $this yii\web\View
  */
-use lo\core\admin\widgets\Menu;
+use lo\core\widgets\admin\Menu;
 use common\models\TimelineEvent;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
