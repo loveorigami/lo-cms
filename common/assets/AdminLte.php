@@ -22,9 +22,9 @@ class AdminLte extends AssetBundle
     ];
     public $depends = [
         'yii\web\JqueryAsset',
-        'yii\jui\JuiAsset',
+       // 'yii\jui\JuiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
         'common\assets\FontAwesome',
-        'common\assets\JquerySlimScroll'
+        //'common\assets\JquerySlimScroll'
     ];
 }
