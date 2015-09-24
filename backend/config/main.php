@@ -17,7 +17,7 @@ return [
             'access' => ['admin'], //глобальный доступ к фаил менеджеру @ - для авторизорованных , ? - для гостей , чтоб открыть всем ['@', '?']
             'disabledCommands' => ['netmount'], //отключение ненужных команд https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#commands
             'root' => [
-                'baseUrl' => '@storageUrl',
+                //'baseUrl' => '@storageUrl',
                 'basePath' => '@storage',
                 'access' => ['read' => '*', 'write' => 'root'],
                 'name' => ['category' => 'backend', 'message' => 'Category'], // Yii::t($category, $message)
