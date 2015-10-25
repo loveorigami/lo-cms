@@ -8,6 +8,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
+use lo\widgets\ScrollUp;
 use mdm\admin\classes\MenuHelper;
 
 ?>
@@ -201,7 +202,23 @@ use mdm\admin\classes\MenuHelper;
         <!-- /.right-side -->
     </div><!-- ./wrapper -->
 
-<? $this->registerJs("$(window).on('beforeunload', function(){
+<?php $this->registerJs("$(window).on('beforeunload', function(){
        // $('.content-wrapper').loading();
     });") ?>
+
+ <?= ScrollUp::widget([
+    'theme' => ScrollUp::THEME_IMAGE,
+    'themeDir' => '@lo/widgets/themes/default', // dir with theme file css.
+        'options' => [
+            'scrollText' => "To top", // Text for element
+            'scrollName'=> 'scrollUp', // Element ID
+            //'topDistance'=> 400, // Distance from top before showing element (px)
+            //'topSpeed'=> 3000, // Speed back to top (ms)
+            //'animation' => ScrollUp::ANIMATION_SLIDE, // Fade, slide, none
+            //'animationInSpeed' => 200, // Animation in speed (ms)
+            //'animationOutSpeed'=> 200, // Animation out speed (ms)
+            'activeOverlay' => false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+        ]
+    ]);
+?>
 <?php $this->endContent(); ?>

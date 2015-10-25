@@ -65,7 +65,7 @@
     "loveorigami/yii2-slimscroll-widget": "*",
 
     "bower-asset/adminlte": "~2.0",
-    "bower-asset/font-awesome": "~4.0",
+    "bower-asset/fontawesome": "~4.0",
     "bower-asset/jquery-cookie": "*",
     "bower-asset/html5shiv": "~3.0",
     "bower-asset/jquery-slimscroll": "~1.3",
