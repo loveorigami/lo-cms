@@ -18,23 +18,31 @@
     "source": "https://github.com/yiisoft/yii2"
   },
   "repositories": [
-  {
-    "type": "vcs",
-    "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
-  },
-  {
-    "type": "vcs",
-    "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-core.git"
-  },
-  {
-    "type": "vcs",
-    "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
-  },
-  {
-    "type": "vcs",
-    "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git"
-  }
-],
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-page.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-import.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-eav.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-module-playground.git"
+    }
+  ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
@@ -58,11 +66,14 @@
     "loveorigami/lo-core-cms": "*",
     "loveorigami/lo-module-core": "*",
     "loveorigami/lo-module-page": "*",
+    "loveorigami/lo-module-eav": "*",
     "loveorigami/lo-module-playground": "*",
+    "loveorigami/lo-module-import": "*",
     "loveorigami/yii2-ajaxq" : "*",
     "loveorigami/yii2-plugins-system" : "*",
     "loveorigami/yii2-bootstrap-toggle": "*",
     "loveorigami/yii2-slimscroll-widget": "*",
+    "loveorigami/yii2-scrollup-widget": "*",
 
     "bower-asset/adminlte": "~2.0",
     "bower-asset/fontawesome": "~4.0",
@@ -70,6 +81,7 @@
     "bower-asset/html5shiv": "~3.0",
     "bower-asset/jquery-slimscroll": "~1.3",
     "bower-asset/jquery-loading": "~1.0.3",
+    "bower-asset/jquery-number": "*",
     "bower-asset/bootbox": "~4.3.0",
     "bower-asset/flot": "^0.8"
   },
