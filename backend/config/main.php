@@ -38,9 +38,6 @@ return [
                 '@lo/plugins/plugins',
             ]
         ],
-        'eav' => [
-            'class' => 'mirocow\eav\Module',
-        ],
         'user' => [
             'class' => 'dektrium\user\Module',
            // 'layout' => '@backend/views/layouts/common',
