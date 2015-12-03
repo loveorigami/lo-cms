@@ -1,5 +1,5 @@
 <?php
-namespace frontend\themes\demo\assets;
+namespace frontend\themes\basic\assets;
 
 use yii\web\AssetBundle;
 
@@ -11,8 +11,8 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot/themes/demo';
-    public $baseUrl = '@web/themes/demo';
+    public $basePath = '@webroot/themes/basic';
+    public $baseUrl = '@web/themes/basic';
     public $css = ['css/styles.css'];
     public $js = [];
     public $depends = [

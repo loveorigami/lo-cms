@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use frontend\themes\demo\assets\AppAsset;
+use frontend\themes\basic\assets\AppAsset;
 use frontend\widgets\Alert;
 
 /* @var $this \yii\web\View */

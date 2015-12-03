@@ -11,6 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'plugins'],
     'controllerNamespace' => 'frontend\controllers',
+    'as beforeAction' => [
+        'class' => 'frontend\events\AppLayout'
+    ],
     'modules' => [
         'page' => [
             'class' => 'lo\modules\page\Module',
@@ -26,6 +29,7 @@ return [
             'cost' => 12,
         ],
     ],
+
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
@@ -51,17 +55,11 @@ return [
         'view' => [
             'class' => \lo\core\components\View::className(),
             'theme' => [
-                'class' => \lo\core\components\Theme::className(),
-                'active'=>'demo',
                 'pathMap' => [
-                    'demo'=>[
-                        '@frontend/views' => '@frontend/themes/demo',
-                        '@frontend/modules' => '@frontend/themes/demo/modules',
-                    ],
-                    'loveori'=>[
-                        '@frontend/views' => '@frontend/themes/loveori',
-                        '@frontend/modules' => '@frontend/themes/loveori/modules',
-                    ]
+                    '@frontend/views' => '@frontend/themes/loveori',
+
+                    '@frontend/views' => '@frontend/themes/basic',
+                    '@frontend/modules' => '@frontend/themes/basic/modules',
                 ]
             ],
         ],
