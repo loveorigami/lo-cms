@@ -48,6 +48,23 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'view' => [
+            'class' => \lo\core\components\View::className(),
+            'theme' => [
+                'class' => \lo\core\components\Theme::className(),
+                'active'=>'demo',
+                'pathMap' => [
+                    'demo'=>[
+                        '@frontend/views' => '@frontend/themes/demo',
+                        '@frontend/modules' => '@frontend/themes/demo/modules',
+                    ],
+                    'loveori'=>[
+                        '@frontend/views' => '@frontend/themes/loveori',
+                        '@frontend/modules' => '@frontend/themes/loveori/modules',
+                    ]
+                ]
+            ],
+        ],
     ],
     'params' => $params,
 ];

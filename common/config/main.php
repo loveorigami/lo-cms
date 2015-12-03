@@ -61,8 +61,5 @@ return [
         'keyStorage' => [
             'class' => 'lo\core\components\keyStorage\KeyStorage'
         ],
-		'view' => [
-            'class' => \lo\core\components\View::className(),
-        ],
     ],
 ];

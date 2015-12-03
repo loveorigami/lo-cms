@@ -25,13 +25,9 @@ class App extends Controller
 
     public function init()
     {
-
         if (!Yii::$app->request->isAjax) {
-
             $this->initLayout();
-
         }
-
     }
 
     /**
@@ -42,17 +38,15 @@ class App extends Controller
     {
 
         $class = $this->templateClass;
-
-        $models = $class::find()->published()->orderBy(['sort' => SORT_ASC])->all();
+        $models = $class::find()->published()->orderBy(['pos' => SORT_ASC])->all();
 
         foreach ($models As $model) {
-
             if ($model->isSuitable()) {
                 $this->layout = $model->code;
+                Yii::$app->view->theme->active = $model->name;
                 return;
             }
         }
-
     }
 
     /**
@@ -76,12 +70,9 @@ class App extends Controller
      * @param string $id базовый идентификатор кеша
      * @return array
      */
-
     public function getActionCacheId($id)
     {
-
         return [$id, Yii::$app->request->url];
-
     }
 
 }
