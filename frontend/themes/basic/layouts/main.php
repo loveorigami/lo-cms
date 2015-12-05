@@ -69,8 +69,15 @@ AppAsset::register($this);
         <div class="row">
             <div class="col-xs-3">
                 <div class="well">
-                    <?=\lo\core\widgets\user\User::widget();?>
+                    <?=\lo\modules\main\widgets\user\User::widget();?>
                 </div>
+
+                <?= \lo\modules\main\widgets\menu\Menu::widget(
+                    [
+                        "options" => ["class" => "nav nav-pills nav-stacked"],
+                        "parentCode" => 'main',
+                    ]
+                ); ?>
             </div>
             <div class="col-xs-9">
 

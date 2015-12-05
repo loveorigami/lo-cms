@@ -69,7 +69,7 @@ AppAsset::register($this);
         <div class="row">
             <div class="col-xs-3">
                 <div class="well">
-                    <?=\lo\core\widgets\user\User::widget();?>
+                    <?=\lo\modules\main\widgets\user\User::widget();?>
                 </div>
             </div>
             <div class="col-xs-9">

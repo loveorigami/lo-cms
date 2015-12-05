@@ -7,6 +7,17 @@ return [
         // Pages
         //['pattern'=>'page/<slug>', 'route'=>'page/view'],
 
+        '' => 'site/index',
+/*        'contact' => 'site/contact',
+        //'<_a:(about|error)>' => 'main/default/<_a>',
+        //'<_a:(login|logout|signup|confirm-email|request-password-reset|reset-password)>' => 'user/default/<_a>',
+
+        'article/p<page:\d+>' => 'article/index',
+        'article/<slug:[\w\-]+>' => 'article/view',
+        'search/<q:[\w\-]+>' => 'search/default/index',
+        'origami.php' => 'article/test',
+        '<_c:[\w\-]+>' => '<_c>/index',*/
+
         // Articles
         ['pattern'=>'article/index', 'route'=>'article/index'],
         ['pattern'=>'article/attachment-download', 'route'=>'article/attachment-download'],
