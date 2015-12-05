@@ -11,17 +11,34 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log', 'plugins', 'admin'],
-    'controllerMap'=>[
+    'controllerMap' => [
         'elfinder' => [
             'class' => '\mihaildev\elfinder\PathController',
             'access' => ['admin'], //глобальный доступ к фаил менеджеру @ - для авторизорованных , ? - для гостей , чтоб открыть всем ['@', '?']
             'disabledCommands' => ['netmount'], //отключение ненужных команд https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#commands
             'root' => [
-                //'baseUrl' => '@storageUrl',
-                'basePath' => '@storage',
+                'baseUrl' => '', // /uploads
+                'basePath' => '@storage', // site.lo/uploads
                 'access' => ['read' => '*', 'write' => 'root'],
                 'name' => ['category' => 'backend', 'message' => 'Category'], // Yii::t($category, $message)
-                'driver'	 => 'LocalFileSystem',
+                'driver' => 'LocalFileSystem',
+                'options' => [
+                    'tmbSize' => '48',
+                    'acceptedName' => '/^[0-9a-z_\-.]+$/i', // i любой регистр только англ
+                    'imgLib' => 'gd'
+                ]
+            ]
+        ],
+        'elfinder-editor' => [
+            'class' => '\mihaildev\elfinder\PathController',
+            'access' => ['admin'], //глобальный доступ к фаил менеджеру @ - для авторизорованных , ? - для гостей , чтоб открыть всем ['@', '?']
+            'disabledCommands' => ['netmount'], //отключение ненужных команд https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#commands
+            'root' => [
+                'baseUrl' => '@editorUrl', // /uploads
+                'basePath' => '@storage', // site.lo/uploads
+                'access' => ['read' => '*', 'write' => 'root'],
+                'name' => ['category' => 'backend', 'message' => 'Category'], // Yii::t($category, $message)
+                'driver' => 'LocalFileSystem',
                 'options' => [
                     'tmbSize' => '48',
                     'acceptedName' => '/^[0-9a-z_\-.]+$/i', // i любой регистр только англ
@@ -33,14 +50,14 @@ return [
     'modules' => [
         'plugins' => [
             'class' => 'lo\plugins\Module',
-            'pluginsDir'=>[
+            'pluginsDir' => [
                 '@common/plugins',
                 '@lo/plugins/plugins',
             ]
         ],
         'user' => [
             'class' => 'dektrium\user\Module',
-           // 'layout' => '@backend/views/layouts/common',
+            // 'layout' => '@backend/views/layouts/common',
             'enableFlashMessages' => false,
             'enableRegistration' => false,
             'enableGeneratingPassword' => false,

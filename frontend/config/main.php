@@ -39,6 +39,9 @@ return [
             'class' => 'lo\plugins\components\EventBootstrap',
             'appId' => 'frontend'
         ],
+        'blocksProvider' => [
+            'class' => 'lo\core\components\BlocksProvider',
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

@@ -69,16 +69,28 @@ AppAsset::register($this);
         <div class="row">
             <div class="col-xs-3">
                 <div class="well">
-                    <?=\lo\modules\main\widgets\user\User::widget();?>
+                    <?= \lo\modules\main\widgets\user\User::widget(); ?>
                 </div>
 
                 <?= \lo\modules\main\widgets\menu\Menu::widget(
                     [
                         "options" => ["class" => "nav nav-pills nav-stacked"],
-                        "parentCode" => 'main',
+                        "parentCode" => Yii::$app->blocksProvider->getArea('left', 'main'),
                     ]
                 ); ?>
+
+                <br/>
+
+                <div class="well">
+                    <? echo \lo\modules\main\widgets\includes\IncludeItem::widget(
+                        [
+                            "code" => Yii::$app->blocksProvider->getArea('left', 'demo'),
+                        ]
+                    ); ?>
+                </div>
+
             </div>
+
             <div class="col-xs-9">
 
                 <?= Breadcrumbs::widget([
