@@ -61,5 +61,11 @@ return [
         'keyStorage' => [
             'class' => 'lo\core\components\keyStorage\KeyStorage'
         ],
+        'blocksProvider' => [
+            'class' => 'lo\core\components\BlocksProvider',
+        ],
+        'tagsConverter' => [
+            'class' => 'lo\core\components\TagsConverter',
+        ],
     ],
 ];
