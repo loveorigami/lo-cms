@@ -96,3 +96,10 @@ a.desc:after {
     height: 15px;
     overflow: hidden;
 }
+
+/*select2 fix*/
+.select2-container .select2-selection--single .select2-selection__rendered {
+    margin-top:0px;
+    padding-left: 0;
+    padding-right: 0;
+}
