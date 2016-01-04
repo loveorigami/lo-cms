@@ -59,7 +59,7 @@ return [
             ],
         ],
         'settings' => [
-            'class' => 'lo\core\components\keyStorage\KeyStorage'
+            'class' => 'lo\core\components\settings\Settings'
         ],
         'blocksProvider' => [
             'class' => 'lo\core\components\BlocksProvider',
