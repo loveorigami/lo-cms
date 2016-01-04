@@ -208,7 +208,7 @@ use mdm\admin\classes\MenuHelper;
 
  <?= ScrollUp::widget([
     'theme' => ScrollUp::THEME_IMAGE,
-    'themeDir' => '@lo/widgets/themes/default', // dir with theme file css.
+    'themeDir' => '@vendor/loveorigami/yii2-scrollup-widget/themes/default', // dir with theme file css.
         'options' => [
             'scrollText' => "To top", // Text for element
             'scrollName'=> 'scrollUp', // Element ID

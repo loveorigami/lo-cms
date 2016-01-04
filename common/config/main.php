@@ -58,7 +58,7 @@ return [
                 ],
             ],
         ],
-        'keyStorage' => [
+        'settings' => [
             'class' => 'lo\core\components\keyStorage\KeyStorage'
         ],
         'blocksProvider' => [
