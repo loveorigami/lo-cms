@@ -8,7 +8,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
-use lo\widgets\ScrollUp;
+use lo\widgets\scrollup\ScrollUp;
 use mdm\admin\classes\MenuHelper;
 
 ?>
@@ -208,7 +208,7 @@ use mdm\admin\classes\MenuHelper;
 
  <?= ScrollUp::widget([
     'theme' => ScrollUp::THEME_IMAGE,
-    'themeDir' => '@vendor/loveorigami/yii2-scrollup-widget/themes/default', // dir with theme file css.
+    'themeDir' => '@lo/widgets/scrollup/themes/default', // dir with theme file css.
         'options' => [
             'scrollText' => "To top", // Text for element
             'scrollName'=> 'scrollUp', // Element ID
