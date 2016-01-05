@@ -103,3 +103,7 @@ a.desc:after {
     padding-left: 0;
     padding-right: 0;
 }
+.select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
+    border: 0px solid #3c8dbc;
+    outline: medium none;
+}

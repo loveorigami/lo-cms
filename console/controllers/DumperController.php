@@ -39,14 +39,14 @@ class DumperController extends Controller
         ]);
 
         $this->tmpDb->open();
-        $query = "SELECT * FROM $table WHERE id_menu=3 AND id_cat!=1 ORDER BY pid, pos";
+        $query = "SELECT * FROM $table WHERE (id_menu=3 OR id_menu=4) AND id_cat!=1 ORDER BY pid, pos";
         $this->items = $this->tmpDb->createCommand($query)->queryAll();
 
     }
 
     public function actionCat()
     {
-        \Yii::$app->db->createCommand()->truncateTable('{{%love__cat_aph}}')->execute();
+        \Yii::$app->db->createCommand()->truncateTable('{{%love__cat}}')->execute();
 
         $this->actionDump('category');
         $a_link = [];
@@ -115,7 +115,7 @@ class DumperController extends Controller
         }
 
 
-        \Yii::$app->db->createCommand()->insert('{{%love__cat_aph}}', [
+        \Yii::$app->db->createCommand()->insert('{{%love__cat}}', [
             'id' => $i_id,
             'root' => $root,
             'lft' => $i_lft,
