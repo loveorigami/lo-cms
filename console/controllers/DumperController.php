@@ -39,14 +39,14 @@ class DumperController extends Controller
         ]);
 
         $this->tmpDb->open();
-        $query = "SELECT * FROM $table WHERE (id_menu=3 OR id_menu=4) AND id_cat!=1 ORDER BY pid, pos";
+        $query = "SELECT * FROM $table WHERE (id_menu=2) AND id_cat!=1 ORDER BY pid, pos";
         $this->items = $this->tmpDb->createCommand($query)->queryAll();
 
     }
 
     public function actionCat()
     {
-        \Yii::$app->db->createCommand()->truncateTable('{{%love__cat}}')->execute();
+       // \Yii::$app->db->createCommand()->truncateTable('{{%origami__cat}}')->execute();
 
         $this->actionDump('category');
         $a_link = [];
@@ -100,10 +100,10 @@ class DumperController extends Controller
         $root = 0;
 
         if ($row['image'] == 'nety.jpg') {
-            $image = '/love/cat/none.jpg';
+            $image = '/origami/cat/none.jpg';
         }
         else{
-            $image = '/love/cat/' . $row['image'];
+            $image = '/origami/cat/' . $row['image'];
         }
 
 
@@ -115,7 +115,7 @@ class DumperController extends Controller
         }
 
 
-        \Yii::$app->db->createCommand()->insert('{{%love__cat}}', [
+        \Yii::$app->db->createCommand()->insert('{{%origami__cat}}', [
             'id' => $i_id,
             'root' => $root,
             'lft' => $i_lft,
@@ -132,6 +132,7 @@ class DumperController extends Controller
             'slug' => $row['alias'],
             'intro' => $row['intro'],
             'intro2' => $row['subintro'],
+            'total_hits' => $row['total_hits'],
             'img' => $image,
 
         ])->execute();

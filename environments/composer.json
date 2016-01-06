@@ -20,7 +20,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core-cms.git"
+      "url": "https://loveorigami@bitbucket.org/loveorigami/lo-core.git"
     },
     {
       "type": "vcs",
@@ -63,7 +63,7 @@
     "marekpetras/yii2-calendarview-widget": "dev-master",
     "sjaakp/yii2-alphapager": "*",
 
-    "loveorigami/lo-core-cms": "*",
+    "loveorigami/lo-core": "*",
     "loveorigami/lo-module-core": "*",
     "loveorigami/lo-module-page": "*",
     "loveorigami/lo-module-eav": "*",
