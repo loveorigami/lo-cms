@@ -11,43 +11,39 @@ use yii\db\Connection;
 class CategoryController extends Controller
 {
 
-    /**
-     * Заполняет таблицу новостей со старой базы данных
-     * @param $tablePost string Имя старой таблицы
-     * @param $dbName string Имя базы данных
-     * @param $userName string Имя пользователя базы данных
-     * @param $password string Пароль пользователя базы данных
-     * @param $userId integer user_id кто написал новость
-     * @return int Код выхода
-     * @throws \yii\base\InvalidConfigException
-     * @throws \yii\db\Exception
-     */
-
     private $tmpDb;
+    private $tmpTbl = 'category';
+    private $table = '{{%love__cat}}';
+
     private $items = [];
-    private $i_count = 1;
-    private $a_link;
-    private $level = 1;
 
-
-
-
-
-
-    public function actionCheck()
+    public function actionInit()
     {
-        $query = "SELECT * FROM {{%love__author_cat}}";
-        $items = \Yii::$app->db->createCommand($query)->queryAll();
+        $this->tmpDb = new Connection([
+            'dsn' => 'mysql:host=localhost;dbname=orici',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+        ]);
 
-        foreach($items as $item){
-            $aut_id = $item['aut_id'];
-            $query2 = "SELECT * FROM {{%love__author}} WHERE id = $aut_id";
-            $items2 = \Yii::$app->db->createCommand($query2)->queryAll();
+        $this->tmpDb->open();
+        $query = "SELECT * FROM $this->tmpTbl  WHERE (id_menu=3 or id_menu=4) AND id_cat!=1 ORDER BY pid, pos";
+        $this->items = $this->tmpDb->createCommand($query)->queryAll();
 
-            if(!count($items2)) echo $aut_id.'</br>';
+        foreach ($this->items as $data) {
+            $this->write($data);
         }
 
+        echo "Success!\n";
+        return Controller::EXIT_CODE_NORMAL;
+    }
 
-        //\Yii::$app->db->createCommand()->insert('{{%love__author_cat}}')->execute();
+
+    private function write($data)
+    {
+        $id = $data['id_cat'];
+        \Yii::$app->db->createCommand()->update($this->table, [
+             'total_hits' => $data['total_hits'],
+        ], "id = $id")->execute();
     }
 }

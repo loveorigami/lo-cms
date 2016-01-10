@@ -28,6 +28,6 @@ return [
         ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/user', 'only' => ['index', 'view', 'options']],
 
         //Page
-        ['pattern'=>'<slug>', 'route'=>'page/page/view'],
+        //['pattern'=>'<slug>', 'route'=>'page/page/view'],
     ]
 ];
