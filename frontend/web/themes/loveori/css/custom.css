@@ -1,0 +1,143 @@
+/* Add here all your css styles (customizations) */
+.wrapper, .header{
+    background: none;
+    border:0;
+}
+
+.heading-v4 h1 {
+    display: inline-block;
+    line-height: 34px !important;
+    padding: 0 12px;
+    position: relative;
+}
+/*Headline v3*/
+.heading-v4 h1:before,
+.heading-v4 h1:after {
+    top: 15px;
+    height: 6px;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+}
+
+.boxed-layout {
+    background: #d1eaf9 url('../img/bg/bgclouds.jpg') repeat-x center top;
+    box-shadow: 0 0 0px #ccc;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0;
+}
+
+.breadcrumb {
+    background-color: #fbfbfb;
+    background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
+    background-repeat: repeat-x;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #ffffff inset;
+    list-style: outside none none;
+    margin: 0px 0px 15px 0px;
+    padding: 7px 14px;
+    width:100%;
+}
+
+.list-group {
+    margin:0px;
+}
+.list-group-item a {
+    font-weight: bold;
+}
+.list-group-item.active a {
+    background-color: #3498db;
+}
+
+.list-group-item ul li a {
+    font-weight: normal;
+}
+.list-group-item i {
+    color: #3498db;
+}
+
+.testimonials.testimonials-v2 .item p::after {
+    border-left: 25px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 20px solid;
+}
+.testimonials.testimonials-v1 p, .testimonials.testimonials-v2 p {
+    background: #c5eafd none repeat scroll 0 0;
+    font-size: 14px;
+    font-style: italic;
+    padding: 15px;
+}
+.testimonials.testimonials-v1 .item p::after, .testimonials.testimonials-v2 .item p::after {
+    border-left-style: inset;
+    border-right-style: inset;
+    border-top-color: #c5eafd;
+    content: " ";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+
+.summary{
+    color: #a0a0a0;
+    float: right;
+}
+
+ul.sorter  {
+    display: inline-block;
+    padding: 0;
+    float: left;
+}
+.sorter li {
+    display: inline-block;
+}
+.sorter a {
+    border-bottom: 1px dashed #22b5cd;
+    color: #22b5cd;
+    margin: 0 5px;
+    position: relative;
+}
+.sorter a:hover {
+    border-bottom: 1px dashed #42cae0;
+    color: #42cae0;
+    cursor: pointer;
+}
+
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}

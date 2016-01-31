@@ -30,6 +30,7 @@ class AppAsset extends AssetBundle
 
         // CSS Customization
         'css/custom.css',
+        'css/bootstrap-theme.css',
 
     ];
     public $js = [

@@ -71,7 +71,7 @@ use yii\bootstrap\Nav;
                 ];
             }
 
-            $menuItems[] = '<li>
+/*            $menuItems[] = '<li>
                         <i class="search fa fa-search search-btn"></i>
 
                         <div class="search-open">
@@ -82,7 +82,7 @@ use yii\bootstrap\Nav;
                                     </span>
                             </div>
                         </div>
-                </li>';
+                </li>';*/
 
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav nav'],

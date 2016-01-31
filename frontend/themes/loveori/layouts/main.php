@@ -22,16 +22,16 @@ $this->registerJs('App.init();');
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="boxed-layout container">
+
+<body class="boxed-layout ">
 <?php $this->beginBody() ?>
 <div class="wrapper row-offcanvas row-offcanvas-left">
-
     <?=$this->render('partials/header')?>
-    <?=$this->render('partials/breadcrumbs')?>
 
     <!--=== Content Part ===-->
-    <div class="container content">
+    <div class="container">
         <div class="row">
+            <?=$this->render('partials/breadcrumbs')?>
             <?= $content ?>
         </div>
     </div>
