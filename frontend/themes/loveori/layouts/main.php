@@ -38,6 +38,23 @@ $this->registerJs('App.init();');
     <!--/container-->
     <!--=== End Content Part ===-->
     <?=$this->render('partials/footer')?>
+    <?php \shifrin\noty\NotyWidget::widget([
+        'options' => [ // you can add js options here, see noty plugin page for available options
+            'dismissQueue' => true,
+            'layout' => 'topRight',
+            //'theme' => 'relax',
+/*            'animation' => [
+                'open' => 'animated flipInX',
+                'close' => 'animated flipOutX',
+            ],*/
+            'timeout' => 2000,
+        ],
+        'enableSessionFlash' => true,
+        'enableIcon' => true,
+        'registerAnimateCss' => false,
+        'registerButtonsCss' => false,
+        'registerFontAwesomeCss' => false,
+    ]); ?>
 </div>
 <!--/wrapper-->
 <?php $this->endBody() ?>
