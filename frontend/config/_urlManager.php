@@ -8,6 +8,7 @@ return [
         //['pattern'=>'page/<slug>', 'route'=>'page/view'],
 
         '' => 'site/index',
+        '~lo-redirect'                        => '/externallinks/redirect/redirect',
 /*        'contact' => 'site/contact',
         //'<_a:(about|error)>' => 'main/default/<_a>',
         //'<_a:(login|logout|signup|confirm-email|request-password-reset|reset-password)>' => 'user/default/<_a>',

@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'externalLinks'],
     'controllerNamespace' => 'frontend\controllers',
     'as beforeAction' => [
         'class' => 'frontend\events\AppLayout'
@@ -28,6 +28,9 @@ return [
             'confirmWithin' => 21600,
             'cost' => 12,
         ],
+        'externallinks' =>[
+            'class' => 'skeeks\yii2\externalLinks\ExternalLinksModule',
+        ],
     ],
 
     'components' => [
@@ -35,10 +38,10 @@ return [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['user'],
         ],
-/*        'plugins' => [
-            'class' => 'lo\plugins\components\EventBootstrap',
-            'appId' => 'frontend'
-        ],*/
+        /*        'plugins' => [
+                    'class' => 'lo\plugins\components\EventBootstrap',
+                    'appId' => 'frontend'
+                ],*/
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -52,6 +55,16 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'externalLinks' =>[
+            'class' => 'skeeks\yii2\externalLinks\ExternalLinksComponent',
+            //Additional
+            'enabled' => true,
+            'noReplaceLocalDomain' => true,
+            'backendRoute' => '/externallinks/redirect/redirect',
+            'backendRouteParam' => 'url',
+            'enabledB64Encode' => true,
+            'noReplaceLinksOnDomains' => [],
+         ],
         'view' => [
             'class' => \lo\core\components\View::className(),
             'theme' => [
