@@ -8,7 +8,7 @@ use yii\bootstrap\Nav;
     <div class="container">
 
         <!-- Logo -->
-        <a class="logo" href="index.html">
+        <a class="logo" href="/">
             <img src="/themes/loveori/img/logo1-default.png" alt="Logo">
         </a>
         <!-- End Logo -->
