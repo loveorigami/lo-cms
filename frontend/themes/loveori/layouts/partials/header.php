@@ -12,29 +12,28 @@ use yii\bootstrap\Nav;
             <img src="/themes/loveori/img/logo1-default.png" alt="Logo">
         </a>
         <!-- End Logo -->
-
         <!-- Topbar -->
-        <div class="topbar">
-            <ul class="loginbar pull-right">
-                <li class="hoverSelector">
-                    <i class="fa fa-globe"></i>
-                    <a>Languages</a>
-                    <ul class="languages hoverSelectorBlock">
-                        <li class="active">
-                            <a href="#">English <i class="fa fa-check"></i></a>
-                        </li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">Russian</a></li>
-                        <li><a href="#">German</a></li>
-                    </ul>
-                </li>
-                <li class="topbar-devider"></li>
-                <li><a href="page_faq.html">Help</a></li>
-                <li class="topbar-devider"></li>
-                <li><a href="page_login.html">Login</a></li>
-            </ul>
+        <div class="row">
+            <?= \lo\modules\main\widgets\menu\Menu::widget(
+                [
+                    "options" => [
+                        'id'=>'topbar-nav',
+                        'class' => 'topbar-list topbar-menu pull-right',
+                        //'parentLevel'=>0,
+                    ],
+                    "sub_options" => [
+                        'class' => 'topbar-dropdown',
+                    ],
+                    "parentCode" => Yii::$app->user->isGuest ?
+                        Yii::$app->blocksProvider->getMenu('top', 'topbar-guest') :
+                        Yii::$app->blocksProvider->getMenu('top', 'topbar-user'),
+                    'level'=>2
+                ]
+            ); ?>
         </div>
         <!-- End Topbar -->
+
+
 
         <!-- Toggle get grouped for better mobile display -->
         <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -56,20 +55,6 @@ use yii\bootstrap\Nav;
                 ['label' => 'Aphorism', 'url' => ['/love/aphorism/index']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
-            if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/register']];
-                $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
-            } else {
-                $menuItems[] = [
-                    'label' => 'Profile',
-                    'url' => ['/user/settings/profile'],
-                ];
-                $menuItems[] = [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/user/security/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ];
-            }
 
 /*            $menuItems[] = '<li>
                         <i class="search fa fa-search search-btn"></i>
