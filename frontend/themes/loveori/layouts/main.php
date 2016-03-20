@@ -11,7 +11,10 @@ use frontend\widgets\Alert;
 AppAsset::register($this);
 $this->registerJs('App.init();');
 
+\lo\modules\noty\widgets\Noty::widget();
+
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -35,9 +38,11 @@ $this->registerJs('App.init();');
             <?= $content ?>
         </div>
     </div>
+    <div class="log"></div>
     <!--/container-->
     <!--=== End Content Part ===-->
     <?=$this->render('partials/footer')?>
+
     <?php \shifrin\noty\NotyWidget::widget([
         'options' => [ // you can add js options here, see noty plugin page for available options
             'dismissQueue' => true,
@@ -55,6 +60,7 @@ $this->registerJs('App.init();');
         'registerButtonsCss' => false,
         'registerFontAwesomeCss' => false,
     ]); ?>
+
 </div>
 <!--/wrapper-->
 <?php $this->endBody() ?>

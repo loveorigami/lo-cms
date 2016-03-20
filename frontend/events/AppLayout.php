@@ -19,12 +19,15 @@ class AppLayout extends \yii\base\Behavior
 
     public function events(){
         return [
-            \yii\web\Controller::EVENT_BEFORE_ACTION => 'setLayout'
+            \yii\web\Controller::EVENT_BEFORE_ACTION => 'setLayout',
         ];
     }
 
     public function setLayout()
     {
+        list ($route, $params) = Yii::$app->getRequest()->resolve();
+        if ($route === 'debug/default/view') return;
+
         if (!Yii::$app->request->isAjax) {
             $this->initLayout();
         }
@@ -39,7 +42,7 @@ class AppLayout extends \yii\base\Behavior
         $class = $this->templateClass;
         $models = $class::find()->published()->orderBy(['pos' => SORT_ASC])->all();
 
-        foreach ($models As $model) {
+        foreach ($models as $model) {
             if ($model->isSuitable()) {
                 Yii::$app->controller->layout = $model->layout;
                 return;

@@ -122,7 +122,6 @@ var App = function () {
             handleTopBarSubMenu();         
             handleToggle();
             handleHeader();
-            handleHoverSelector();
             handleEqualHeightColumns();
         },
 
