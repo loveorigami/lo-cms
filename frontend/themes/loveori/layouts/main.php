@@ -11,8 +11,6 @@ use frontend\widgets\Alert;
 AppAsset::register($this);
 $this->registerJs('App.init();');
 
-\lo\modules\noty\widgets\Noty::widget();
-
 ?>
 
 <?php $this->beginPage() ?>
@@ -29,37 +27,57 @@ $this->registerJs('App.init();');
 <body class="boxed-layout ">
 <?php $this->beginBody() ?>
 <div class="wrapper row-offcanvas row-offcanvas-left">
-    <?=$this->render('partials/header')?>
+    <?= $this->render('partials/header') ?>
 
     <!--=== Content Part ===-->
     <div class="container">
         <div class="row">
-            <?=$this->render('partials/breadcrumbs')?>
+            <?= $this->render('partials/breadcrumbs') ?>
             <?= $content ?>
         </div>
     </div>
-    <div class="log"></div>
+
     <!--/container-->
     <!--=== End Content Part ===-->
-    <?=$this->render('partials/footer')?>
+    <?= $this->render('partials/footer') ?>
 
-    <?php \shifrin\noty\NotyWidget::widget([
-        'options' => [ // you can add js options here, see noty plugin page for available options
-            'dismissQueue' => true,
-            'layout' => 'topRight',
-            //'theme' => 'relax',
-/*            'animation' => [
-                'open' => 'animated flipInX',
-                'close' => 'animated flipOutX',
-            ],*/
-            'timeout' => 2000,
-        ],
-        'enableSessionFlash' => true,
-        'enableIcon' => true,
-        'registerAnimateCss' => false,
-        'registerButtonsCss' => false,
-        'registerFontAwesomeCss' => false,
+    <?= \lo\modules\noty\widgets\Noty::widget([
+        'widget' => 'toastr', // noty
+        'options' => [
+/*
+            // jNoty
+             'dismissQueue' => true,
+             'layout' => 'topRight',
+             'timeout' => 2000,
+             'theme' => 'relax',
+
+             'animation' => [
+                 'open' => 'animated flipInX',
+                 'close' => 'animated flipOutX',
+             ],
+*/
+
+            // toastr
+            "closeButton" => false,
+            "debug" => false,
+            "newestOnTop" => true,
+/*
+            "progressBar" => false,
+            "positionClass" => "toast-top-left",
+            "preventDuplicates" => false,
+            "onclick" => null,
+            "showDuration" => "300",
+            "hideDuration" => "1000",
+            "timeOut" => "5000",
+            "extendedTimeOut" => "1000",
+            "showEasing" => "swing",
+            "hideEasing" => "linear",
+            "showMethod" => "fadeIn",
+            "hideMethod" => "fadeOut"
+*/
+        ]
     ]); ?>
+
 
 </div>
 <!--/wrapper-->
