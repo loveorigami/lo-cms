@@ -1,9 +1,7 @@
 <?php
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use frontend\themes\loveori\assets\AppAsset;
-use frontend\widgets\Alert;
+use lo\modules\noty\widgets\Noty;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -41,43 +39,14 @@ $this->registerJs('App.init();');
     <!--=== End Content Part ===-->
     <?= $this->render('partials/footer') ?>
 
-    <?= \lo\modules\noty\widgets\Noty::widget([
-        'widget' => 'toastr', // noty
+    <?= Noty::widget([
+        'theme' => Noty::THEME_TOASTR,
         'options' => [
-/*
-            // jNoty
-             'dismissQueue' => true,
-             'layout' => 'topRight',
-             'timeout' => 2000,
-             'theme' => 'relax',
-
-             'animation' => [
-                 'open' => 'animated flipInX',
-                 'close' => 'animated flipOutX',
-             ],
-*/
-
-            // toastr
-            "closeButton" => false,
-            "debug" => false,
-            "newestOnTop" => true,
-/*
-            "progressBar" => false,
-            "positionClass" => "toast-top-left",
-            "preventDuplicates" => false,
-            "onclick" => null,
-            "showDuration" => "300",
-            "hideDuration" => "1000",
-            "timeOut" => "5000",
-            "extendedTimeOut" => "1000",
-            "showEasing" => "swing",
-            "hideEasing" => "linear",
-            "showMethod" => "fadeIn",
-            "hideMethod" => "fadeOut"
-*/
-        ]
+            'closeButton' => false,
+            'debug' => false,
+            'newestOnTop' => true,
+        ],
     ]); ?>
-
 
 </div>
 <!--/wrapper-->
