@@ -12,3 +12,4 @@ Yii::setAlias('vendor', dirname(dirname(__DIR__)) . '/vendor');
 Yii::setAlias('@frontendUrl', getenv('FRONTEND_URL'));
 Yii::setAlias('@backendUrl', getenv('BACKEND_URL'));
 Yii::setAlias('@storageUrl', getenv('STORAGE_URL'));
+Yii::setAlias('@editorUrl', '/'.getenv('STORAGE_DIR'));

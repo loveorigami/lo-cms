@@ -17,6 +17,7 @@ require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/../../common/config/bootstrap.php');
 require(__DIR__ . '/../config/bootstrap.php');
 
+<<<<<<< HEAD
 $manager = new Config(
     [
         new PhpProvider(__DIR__ . '/../../common/config/{{,*.}global,{,*.}local}.php'),
@@ -24,6 +25,14 @@ $manager = new Config(
         new \lo\modules\sight\ModuleConfig(),
     ],
     YII_DEBUG ? null : new CacheProvider(__DIR__ . '/../runtime/app-config.php')
+=======
+$config = yii\helpers\ArrayHelper::merge(
+    require(__DIR__ . '/../../common/config/main.php'),
+    require(__DIR__ . '/../../common/config/main-local.php'),
+    require(__DIR__ . '/../config/main.php'),
+    require(__DIR__ . '/../config/main-local.php'),
+    \lo\core\helpers\ConfigHelper::getModulesConfigs($params["enabledModules"])
+>>>>>>> origin/master
 );
 
 (new Application($manager->getConfig()))->run();

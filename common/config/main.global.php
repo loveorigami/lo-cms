@@ -54,8 +54,14 @@ return [
                 ],
             ],
         ],
-        'keyStorage' => [
-            'class' => 'lo\core\components\keyStorage\KeyStorage'
+        'settings' => [
+            'class' => 'lo\core\components\settings\Settings'
+        ],
+        'blocksProvider' => [
+            'class' => 'lo\core\components\BlocksProvider',
+        ],
+        'tagsConverter' => [
+            'class' => 'lo\core\components\TagsConverter',
         ],
     ],
 ];
