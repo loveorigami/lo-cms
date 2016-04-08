@@ -19,9 +19,6 @@ return [
             'class' => 'lo\modules\page\Module',
             'defaultRoute' => 'page'
         ],
-        'noty' => [
-            'class' => 'lo\modules\noty\Module',
-        ],
         // Configuration Yii2-User Frontend //
         'user' => [
             'class' => 'dektrium\user\Module',

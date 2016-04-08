@@ -9,6 +9,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use lo\widgets\scrollup\ScrollUp;
+use lo\modules\noty\widgets\Wrapper;
 use mdm\admin\classes\MenuHelper;
 
 ?>
@@ -192,9 +193,6 @@ use mdm\admin\classes\MenuHelper;
 
             <!-- Main content -->
             <section class="content" id="ajax-loader">
-                <?php
-                echo \lo\core\widgets\Alert::widget();
-                ?>
                 <?php echo $content ?>
             </section>
             <!-- /.content -->
@@ -221,4 +219,31 @@ use mdm\admin\classes\MenuHelper;
         ]
     ]);
 ?>
+
+<?= Wrapper::widget([
+           'layerClass' => 'lo\modules\noty\widgets\layers\Toastr',
+            'options' => [
+               'closeButton' => false,
+               'debug' => false,
+               'newestOnTop' => true,
+            ],
+
+    /*   'layerClass' => 'lo\modules\noty\widgets\layers\Noty',
+     'layerOptions' => [
+         'registerAnimateCss' => false,
+         'registerButtonsCss' => false
+     ],
+     'options' => [
+         'dismissQueue' => true,
+         'layout' => 'topRight',
+         'timeout' => 3000,
+         'theme' => 'relax',
+         //'modal' => 'true       /*            'animation'=>[
+                         'open' => 'animated bounceInLeft',
+                         'close' => 'animated bounceInLeft',
+                         'easing' => 'swing',
+                         'speed' => 500
+                     ]
+    ]*/
+]); ?>
 <?php $this->endContent(); ?>

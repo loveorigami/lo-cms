@@ -3,8 +3,12 @@ return [
     'name' => 'LoveOrigami',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'sourceLanguage' => 'en-US',
-    'language' => 'ru-RU', //ru-RU
-    'modules' => [],
+    'language' => 'ru', //ru-RU
+    'modules' => [
+        'noty' => [
+            'class' => 'lo\modules\noty\Module',
+        ],
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

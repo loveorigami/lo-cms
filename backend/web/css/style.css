@@ -107,3 +107,7 @@ a.desc:after {
     border: 0px solid #3c8dbc;
     outline: medium none;
 }
+
+.fa-font-family{
+    font-family: 'FontAwesome';
+}

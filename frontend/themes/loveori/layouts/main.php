@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use frontend\themes\loveori\assets\AppAsset;
-use lo\modules\noty\widgets\Noty;
+use lo\modules\noty\widgets\Wrapper;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -30,6 +30,52 @@ $this->registerJs('App.init();');
     <!--=== Content Part ===-->
     <div class="container">
         <div class="row">
+            <?php
+/**/        \Yii::$app->getSession()->setFlash('error', 'noty error');
+            \Yii::$app->getSession()->setFlash('info', 'noty info');
+            \Yii::$app->getSession()->setFlash('success', 'ajax success');
+            \Yii::$app->getSession()->setFlash('warning', 'ajax warning');
+            ?>
+            <?= Wrapper::widget([
+                'layerClass' => 'lo\modules\noty\widgets\layers\Notifyjs',
+                'options' => [
+                    // whether to hide the notification on click
+                    'clickToHide' => true,
+
+                    // whether to auto-hide the notification
+                    'autoHide' => true,
+
+                    // if autoHide, hide after milliseconds
+                    'autoHideDelay' => 5000,
+
+                    // show the arrow pointing at the element
+                    'arrowShow' => true,
+
+                    // arrow size in pixels
+                    'arrowSize' => 5,
+
+                    // position defines the notification position though uses the defaults below
+                    'position' => 'top right',
+
+                    // default style
+                    'style' => 'bootstrap',
+
+                    // show animation
+                    'showAnimation' => 'slideDown',
+
+                    // show animation duration
+                    'showDuration' => 400,
+
+                    // hide animation
+                    'hideAnimation' => 'slideUp',
+
+                    // hide animation duration
+                    'hideDuration' => 200,
+
+                    // padding between element and notification
+                    'gap' => 50
+                ],
+            ]); ?>
             <?= $this->render('partials/breadcrumbs') ?>
             <?= $content ?>
         </div>
@@ -38,15 +84,6 @@ $this->registerJs('App.init();');
     <!--/container-->
     <!--=== End Content Part ===-->
     <?= $this->render('partials/footer') ?>
-
-    <?= Noty::widget([
-        'theme' => Noty::THEME_TOASTR,
-        'options' => [
-            'closeButton' => false,
-            'debug' => false,
-            'newestOnTop' => true,
-        ],
-    ]); ?>
 
 </div>
 <!--/wrapper-->
