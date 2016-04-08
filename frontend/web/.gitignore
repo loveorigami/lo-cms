@@ -1,2 +1,5 @@
 *
+
 !.gitignore
+!.htaccess
+!/themes/basic
