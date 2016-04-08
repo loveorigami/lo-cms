@@ -1,4 +1,8 @@
 <?php
+use yii\web\Application;
+use Zelenin\Zend\Expressive\Config\Manager\Config;
+use Zelenin\Zend\Expressive\Config\Provider\CacheProvider;
+
 // Composer
 require(__DIR__ . '/../../vendor/autoload.php');
 
@@ -12,13 +16,9 @@ require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/../../common/config/bootstrap.php');
 require(__DIR__ . '/../config/bootstrap.php');
 
-$config = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/../../common/config/main.global.php'),
-    require(__DIR__ . '/../../common/config/main.local.php'),
-    require(__DIR__ . '/../config/main.global.php'),
-    require(__DIR__ . '/../config/main.local.php'),
-    \lo\core\helpers\ConfigHelper::getModulesConfigs($params["enabledModules"])
+$manager = new Config(
+    require(__DIR__ . '/../config/app-local.php'),
+    YII_DEBUG ? null : new CacheProvider(__DIR__ . '/../runtime/app-config.php')
 );
 
-$application = new yii\web\Application($config);
-$application->run();
+(new Application($manager->getConfig()))->run();
