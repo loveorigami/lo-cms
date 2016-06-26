@@ -9,6 +9,8 @@ class Migration extends \yii\db\Migration
     /**
      * @inheritdoc
      */
+    protected $tableGroup = 'gin_';
+
     public function createTable($table, $columns, $options = null)
     {
         if ($options === null && $this->db->driverName === 'mysql') {
@@ -16,6 +18,35 @@ class Migration extends \yii\db\Migration
             $options = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
         parent::createTable($table, $columns, $options);
+    }
+
+    protected function stderr($string)
+    {
+        if (Console::streamSupportsAnsiColors(\STDOUT)) {
+            $string = Console::ansiFormat("    Error: " . $string, [Console::FG_RED]);
+        }
+        return fwrite(\STDERR, $string);
+    }
+
+    /**
+     * Real table name builder
+     * @param string $name table name
+     * @return string
+     */
+    protected function tn($name)
+    {
+        return '{{%' . $this->tableGroup . '__' . $name . '}}';
+    }
+
+    /**
+     * Foreign key relation names generator
+     * @param string $table1 first table in relation
+     * @param string $table2 second table in relation
+     * @return string
+     */
+    protected function fk($table1, $table2)
+    {
+        return 'fk_' . $this->tableGroup . '__' . $table1 . '_' . $table2;
     }
 
 }

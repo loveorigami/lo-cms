@@ -18,7 +18,8 @@ return [
         'migrate'=>[
             'class'=>'yii\console\controllers\MigrateController',
             'migrationPath'=>'@common/migrations',
-            'migrationTable'=>'{{%system_migration}}'
+            'migrationTable'=>'{{%system_migration}}',
+            'templateFile' => '@common/migrations/views/migration.php',
         ],
 /*        'rbac'=>[
             'class'=>'console\controllers\RbacController'
