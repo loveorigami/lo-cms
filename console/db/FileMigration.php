@@ -55,7 +55,7 @@ class FileMigration extends Migration
         }
 
         $command      = "{$this->mysqlExecutable} -h{$hostName} -P{$port} -u{$this->db->username} -p{$this->db->password} {$databaseName} < \"{$this->file}\"";
-        echo "    ".$command . "\n"; // TODO echo only with --verbose
+        echo "    ".$command . "\n"; 
         exec($command, $output, $return);
 
         if ($return !== 0) {
