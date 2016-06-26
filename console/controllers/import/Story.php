@@ -23,6 +23,11 @@ class Story
         
         $slug2 = $this->checkSlug($slug, $data['id_story']);
 
+        $img =$data['preload'] ? '/love/story/'.$data['preload'] : '';
+
+
+        // TODO обработать картинки на тексте
+
         \Yii::$app->db->createCommand()->insert($tbl, [
             'id' => $data['id_story'],
             'status' => $data['is_activ'],
@@ -41,7 +46,7 @@ class Story
             'epigraph' => $data['epigraph'],
             'intro' => $data['intro'],
             'prim' => $data['prim'],
-            'img' => $data['preload'],
+            'img' => $img,
             'total_hits' => $data['view'],
 
         ])->execute();
