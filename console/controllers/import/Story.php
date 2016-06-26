@@ -36,6 +36,8 @@ class Story
             'slug' => $slug2,
             'text' => $data['story'],
             'lib_id' => $data['id_wrt'],
+            'aut_id' => $data['id_aut'],
+            'aut2_id' => $data['id_aut2'],
             'epigraph' => $data['epigraph'],
             'intro' => $data['intro'],
             'prim' => $data['prim'],
@@ -45,8 +47,8 @@ class Story
         ])->execute();
 
 
-        $this->addAuthor($data['id_story'], $data['id_aut']);
-        $this->addAuthor($data['id_story'], $data['id_aut2']);
+        //$this->addAuthor($data['id_story'], $data['id_aut']);
+        //$this->addAuthor($data['id_story'], $data['id_aut2']);
     }
 
     protected function addAuthor($story_id, $aut_id){
