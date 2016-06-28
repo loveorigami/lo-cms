@@ -69,9 +69,10 @@ return [
             'class' => \lo\core\components\View::className(),
             'theme' => [
                 'pathMap' => [
-                    '@frontend/views' => '@frontend/themes/loveori',
-
-                    '@frontend/views' => '@frontend/themes/basic',
+                    '@frontend/views' =>[
+                        '@frontend/themes/bsorigami',
+                        '@frontend/themes/basic',
+                    ] ,
                     '@frontend/modules' => '@frontend/themes/basic/modules',
                 ]
             ],

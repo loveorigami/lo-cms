@@ -7,7 +7,7 @@ return [
         // Pages
         //['pattern'=>'page/<slug>', 'route'=>'page/view'],
 
-        '' => 'site/index',
+        ['pattern' => '/', 'route' => 'site/index', 'verb' => 'GET'],
         '~lo-redirect'                        => '/externallinks/redirect/redirect',
 /*        'contact' => 'site/contact',
         //'<_a:(about|error)>' => 'main/default/<_a>',
