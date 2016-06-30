@@ -1,14 +1,35 @@
 <?php
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Nav;
+use lo\modules\main\widgets\menu\Menu;
 
 ?>
 
 <div class="logo"><a href="index.html"><img src="/themes/bsorigami/img/logo.png" alt="CZSale" title="Lo"/></a></div>
-
+<!-- Topbar -->
+<div class="row">
+    <?php
+    echo Menu::widget(
+        [
+            "options" => [
+                'id' => 'topbar-nav',
+                'class' => 'topbar-list topbar-menu pull-right',
+                //'parentLevel'=>0,
+            ],
+            "sub_options" => [
+                'class' => 'topbar-dropdown',
+            ],
+            "parentCode" => Yii::$app->user->isGuest ?
+                Yii::$app->blocksProvider->getMenu('top', 'topbar-guest') :
+                Yii::$app->blocksProvider->getMenu('top', 'topbar-user'),
+            'level' => 2
+        ]
+    );
+    ?>
+</div>
+<!-- End Topbar -->
 
 <?php
-
 
 
 NavBar::begin([ // отрываем виджет
@@ -18,6 +39,7 @@ NavBar::begin([ // отрываем виджет
         'class' => 'navbar navbar-default', // стили главной панели
     ],
 ]);
+
 echo Nav::widget([
     'options' => ['class' => 'nav navbar-nav navbar-right'], // стили ul
     'items' => [

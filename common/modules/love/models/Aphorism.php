@@ -25,7 +25,7 @@ class Aphorism extends \lo\core\db\ActiveRecord
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;
 
-    public $tplDir = '@lo/modules/love/modules/admin/views/aphorism/tpl/';
+    public $tplDir = '@common/modules/love/modules/admin/views/aphorism/tpl/';
     /**
      * @inheritdoc
      */

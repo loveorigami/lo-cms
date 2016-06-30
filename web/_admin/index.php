@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(E_ALL & ~E_STRICT);
+
 use yii\web\Application;
 use Zelenin\Zend\Expressive\Config\Manager\Config;
 use Zelenin\Zend\Expressive\Config\Provider\CacheProvider;

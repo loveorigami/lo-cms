@@ -3,12 +3,13 @@ return [
     'class'=>'yii\web\UrlManager',
     'enablePrettyUrl'=>true,
     'showScriptName'=>false,
-    'rules'=> [
+    'rules'=>[
+        // url rules
         // Pages
         //['pattern'=>'page/<slug>', 'route'=>'page/view'],
-
-        ['pattern' => '/', 'route' => 'site/index', 'verb' => 'GET'],
-        '~lo-redirect'                        => '/externallinks/redirect/redirect',
+        '' => 'site/index',
+       // ['pattern' => '/', 'route' => 'site/index', 'verb' => 'GET'],
+        //'~lo-redirect'                        => '/externallinks/redirect/redirect',
 /*        'contact' => 'site/contact',
         //'<_a:(about|error)>' => 'main/default/<_a>',
         //'<_a:(login|logout|signup|confirm-email|request-password-reset|reset-password)>' => 'user/default/<_a>',
@@ -20,13 +21,13 @@ return [
         '<_c:[\w\-]+>' => '<_c>/index',*/
 
         // Articles
-        ['pattern'=>'article/index', 'route'=>'article/index'],
-        ['pattern'=>'article/attachment-download', 'route'=>'article/attachment-download'],
-        ['pattern'=>'article/<slug>', 'route'=>'article/view'],
+        //['pattern'=>'article/index', 'route'=>'article/index'],
+        //['pattern'=>'article/attachment-download', 'route'=>'article/attachment-download'],
+        //['pattern'=>'article/<slug>', 'route'=>'article/view'],
 
         // Api
-        ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/article', 'only' => ['index', 'view', 'options']],
-        ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/user', 'only' => ['index', 'view', 'options']],
+        //['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/article', 'only' => ['index', 'view', 'options']],
+        //['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/user', 'only' => ['index', 'view', 'options']],
 
         //Page
         //['pattern'=>'<slug>', 'route'=>'page/page/view'],

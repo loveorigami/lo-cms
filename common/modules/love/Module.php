@@ -4,8 +4,6 @@ namespace common\modules\love;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'common\modules\love\controllers';
-
     public function init()
     {
         parent::init();

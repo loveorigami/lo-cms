@@ -33,7 +33,7 @@ class AphorismSearch extends Aphorism
      * Возвращает провайдер данных
      * @return ActiveDataProvider
      */
-    public function search($params, $options = [])
+    public function publicSearch($params, $options = [])
     {
         $options = ArrayHelper::merge($this->options, $options);
 
