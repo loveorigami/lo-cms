@@ -15,7 +15,7 @@ class <?= $className ?> extends Migration
     public $tableGroup = "module";
 
     const TBL = 'item';
-    //const TBL_CAT = 'cat';
+    //const TBL_PARENT = 'cat';
 
     public function up()
     {
@@ -34,18 +34,24 @@ class <?= $className ?> extends Migration
         $this->createIndex('idx_table_name_status', $this->tn(self::TBL), 'status');
 
 /*
-        $this->addForeignKey(
-            $this->fk(self::TBL_CAT, self::TBL),
-            $this->tn(self::TBL_CAT), 'cat_id',
-            $this->tn(self::TBL), 'id',
-            'CASCADE', 'RESTRICT'
-        );
+    $this->addForeignKey(
+        $this->fk(self::TBL, self::TBL_PARENT),
+        $this->tn(self::TBL), 'cat_id',
+        $this->tn(self::TBL_PARENT), 'id',
+        'RESTRICT', 'RESTRICT'
+    );
 */
     }
 
     public function down()
     {
-        $this->dropTable($this->tableName);
+        $this->dropTable($this->tn(self::TBL));
+/*
+        $this->dropForeignKey(
+            $this->fk(self::TBL, self::TBL_PARENT),
+            $this->tn(self::TBL)
+        );
+*/
     }
 
 
