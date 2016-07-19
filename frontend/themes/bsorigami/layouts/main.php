@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use frontend\themes\bsorigami\assets\AppAsset;
-use lo\modules\noty\widgets\Wrapper;
+use lo\modules\noty\Wrapper;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -29,20 +29,7 @@ AppAsset::register($this);
     <!--=== Content Part ===-->
     <div class="row content">
         <?= Wrapper::widget([
-            'layerClass' => 'lo\modules\noty\widgets\layers\Noty',
-            'layerOptions' => [
-                'registerAnimateCss' => false,
-                'registerButtonsCss' => false
-            ],
-            // clientOptions
-            'options' => [
-                'dismissQueue' => true,
-                'layout' => 'topRight',
-                'timeout' => 3000,
-                'theme' => 'relax',
-
-                // and more for this library...
-            ],
+            'layerClass' => lo\modules\noty\layers\Noty::class,
         ]); ?>
 
         <?= $content ?>
