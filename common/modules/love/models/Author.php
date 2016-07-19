@@ -2,7 +2,9 @@
 
 namespace common\modules\love\models;
 
-use Yii;
+use lo\core\db\ActiveRecord;
+use lo\core\rbac\ConstraintTrait;
+use lo\core\behaviors\ManyManySaver;
 
 
 /**
@@ -17,20 +19,15 @@ use Yii;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Author extends \lo\core\db\ActiveRecord
+class Author extends ActiveRecord
 {
 
-    use \lo\core\rbac\ConstraintTrait;
+    use ConstraintTrait;
 
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;
 
     public $tplDir = '@lo/modules/love/modules/admin/views/author/tpl/';
-
-    /**
-     * @var array массив идентификаторов связанных категорий
-     */
-    protected $_categoriesIds;
 
     /**
      * @inheritdoc
@@ -56,32 +53,10 @@ class Author extends \lo\core\db\ActiveRecord
         $arr = parent::behaviors();
 
         $arr["manyManySaver"] = [
-            'class' => \lo\core\behaviors\ManyManySaver::class,
+            'class' => ManyManySaver::class,
             'names' => ['categories'],
         ];
         return $arr;
-    }
-
-    /**
-     * Получение идентификаторов связанных категорий
-     * @return array
-     */
-    public function getCategoriesIds()
-    {
-        if (!is_array($this->_categoriesIds) AND !$this->isNewRecord) {
-            $this->_categoriesIds = $this->getManyManyIds("categories");
-        }
-
-        return $this->_categoriesIds;
-    }
-
-    /**
-     * Установка идентификаторов связанных категорий
-     * @param array $categoriesIds
-     */
-    public function setCategoriesIds($categoriesIds)
-    {
-        $this->_categoriesIds = $categoriesIds;
     }
 
     /**

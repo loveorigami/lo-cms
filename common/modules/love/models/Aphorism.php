@@ -2,12 +2,13 @@
 
 namespace common\modules\love\models;
 
-use Yii;
-use lo\modules\vote\models\AggregateRating;
+use lo\modules\vote\behaviors\RatingBehavior;
+use lo\core\db\ActiveRecord;
+use lo\core\rbac\ConstraintTrait;
 
 
 /**
- * This is the model class for table "page".
+ * This is the model class for table "love__aph".
  *
  * @property integer $id
  * @property string $slug
@@ -17,10 +18,10 @@ use lo\modules\vote\models\AggregateRating;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Aphorism extends \lo\core\db\ActiveRecord
+class Aphorism extends ActiveRecord
 {
 
-    use \lo\core\rbac\ConstraintTrait;
+    use ConstraintTrait;
 
     const STATUS_DRAFT = 0;
     const STATUS_PUBLISHED = 1;
@@ -42,7 +43,7 @@ class Aphorism extends \lo\core\db\ActiveRecord
         $arr = parent::behaviors();
 
         $arr["vote"] = [
-            'class' => \lo\modules\vote\behaviors\RatingBehavior::class,
+            'class' => RatingBehavior::class,
         ];
         return $arr;
     }

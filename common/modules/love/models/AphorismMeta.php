@@ -3,6 +3,7 @@ namespace common\modules\love\models;
 
 use Yii;
 use lo\core\db\MetaFields;
+use lo\core\db\fields;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -42,7 +43,7 @@ class AphorismMeta extends MetaFields
 
             "text" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextAreaField::class,
+                    "class" => fields\TextAreaField::class,
                     "title" => Yii::t('backend', 'Aphorism'),
                     "showInGrid" => true,
                     "isRequired" => true,
@@ -53,7 +54,7 @@ class AphorismMeta extends MetaFields
 
             "aut_id" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\AjaxOneField::class,
+                    "class" => fields\AjaxOneField::class,
                     "inputClassOptions" => [
                         'loadUrl' => ['author/list'],
                     ],
@@ -71,7 +72,7 @@ class AphorismMeta extends MetaFields
 
             "lib_id" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\AjaxOneField::class,
+                    "class" => fields\AjaxOneField::class,
                     "inputClassOptions" => [
                         //'modalUrl' => ['lib/create'],
                         'loadUrl' => ['lib/list'],
@@ -90,7 +91,7 @@ class AphorismMeta extends MetaFields
 
             "prim_id" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\AjaxOneField::class,
+                    "class" => fields\AjaxOneField::class,
                     "inputClassOptions" => [
                         'loadUrl' => ['prim/list'],
                     ],
@@ -103,7 +104,7 @@ class AphorismMeta extends MetaFields
 
             "prim_str" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::class,
+                    "class" => fields\TextField::class,
                     "title" => Yii::t('backend', 'Prim'),
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -112,7 +113,7 @@ class AphorismMeta extends MetaFields
             ],
             "lib_str" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::class,
+                    "class" => fields\TextField::class,
                     "title" => Yii::t('backend', 'Lib'),
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -121,7 +122,7 @@ class AphorismMeta extends MetaFields
             ],
             "dop" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::class,
+                    "class" => fields\TextField::class,
                     "title" => Yii::t('backend', 'Dop'),
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -130,7 +131,7 @@ class AphorismMeta extends MetaFields
             ],
             "hash" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\HashField::class,
+                    "class" => fields\HashField::class,
                     "inputClassOptions" => [
                         'options' => ['readonly'=>true],
                     ],
